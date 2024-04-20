@@ -1,0 +1,588 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		168D56E42BD3CDFE0034AEA2 /* BetterFlashcardsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168D56E32BD3CDFE0034AEA2 /* BetterFlashcardsApp.swift */; };
+		168D56E62BD3CDFE0034AEA2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168D56E52BD3CDFE0034AEA2 /* ContentView.swift */; };
+		168D56E82BD3CE010034AEA2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 168D56E72BD3CE010034AEA2 /* Assets.xcassets */; };
+		168D56EB2BD3CE010034AEA2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 168D56EA2BD3CE010034AEA2 /* Preview Assets.xcassets */; };
+		168D56F52BD3CE010034AEA2 /* BetterFlashcardsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168D56F42BD3CE010034AEA2 /* BetterFlashcardsTests.swift */; };
+		168D56FF2BD3CE010034AEA2 /* BetterFlashcardsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168D56FE2BD3CE010034AEA2 /* BetterFlashcardsUITests.swift */; };
+		168D57012BD3CE010034AEA2 /* BetterFlashcardsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168D57002BD3CE010034AEA2 /* BetterFlashcardsUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		168D56F12BD3CE010034AEA2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 168D56D82BD3CDFE0034AEA2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 168D56DF2BD3CDFE0034AEA2;
+			remoteInfo = BetterFlashcards;
+		};
+		168D56FB2BD3CE010034AEA2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 168D56D82BD3CDFE0034AEA2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 168D56DF2BD3CDFE0034AEA2;
+			remoteInfo = BetterFlashcards;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		168D56E02BD3CDFE0034AEA2 /* BetterFlashcards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BetterFlashcards.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		168D56E32BD3CDFE0034AEA2 /* BetterFlashcardsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetterFlashcardsApp.swift; sourceTree = "<group>"; };
+		168D56E52BD3CDFE0034AEA2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		168D56E72BD3CE010034AEA2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		168D56EA2BD3CE010034AEA2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		168D56F02BD3CE010034AEA2 /* BetterFlashcardsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BetterFlashcardsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		168D56F42BD3CE010034AEA2 /* BetterFlashcardsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetterFlashcardsTests.swift; sourceTree = "<group>"; };
+		168D56FA2BD3CE010034AEA2 /* BetterFlashcardsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BetterFlashcardsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		168D56FE2BD3CE010034AEA2 /* BetterFlashcardsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetterFlashcardsUITests.swift; sourceTree = "<group>"; };
+		168D57002BD3CE010034AEA2 /* BetterFlashcardsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetterFlashcardsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		168D56DD2BD3CDFE0034AEA2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		168D56ED2BD3CE010034AEA2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		168D56F72BD3CE010034AEA2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		168D56D72BD3CDFE0034AEA2 = {
+			isa = PBXGroup;
+			children = (
+				168D56E22BD3CDFE0034AEA2 /* BetterFlashcards */,
+				168D56F32BD3CE010034AEA2 /* BetterFlashcardsTests */,
+				168D56FD2BD3CE010034AEA2 /* BetterFlashcardsUITests */,
+				168D56E12BD3CDFE0034AEA2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		168D56E12BD3CDFE0034AEA2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				168D56E02BD3CDFE0034AEA2 /* BetterFlashcards.app */,
+				168D56F02BD3CE010034AEA2 /* BetterFlashcardsTests.xctest */,
+				168D56FA2BD3CE010034AEA2 /* BetterFlashcardsUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		168D56E22BD3CDFE0034AEA2 /* BetterFlashcards */ = {
+			isa = PBXGroup;
+			children = (
+				168D56E32BD3CDFE0034AEA2 /* BetterFlashcardsApp.swift */,
+				168D56E52BD3CDFE0034AEA2 /* ContentView.swift */,
+				168D56E72BD3CE010034AEA2 /* Assets.xcassets */,
+				168D56E92BD3CE010034AEA2 /* Preview Content */,
+			);
+			path = BetterFlashcards;
+			sourceTree = "<group>";
+		};
+		168D56E92BD3CE010034AEA2 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				168D56EA2BD3CE010034AEA2 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		168D56F32BD3CE010034AEA2 /* BetterFlashcardsTests */ = {
+			isa = PBXGroup;
+			children = (
+				168D56F42BD3CE010034AEA2 /* BetterFlashcardsTests.swift */,
+			);
+			path = BetterFlashcardsTests;
+			sourceTree = "<group>";
+		};
+		168D56FD2BD3CE010034AEA2 /* BetterFlashcardsUITests */ = {
+			isa = PBXGroup;
+			children = (
+				168D56FE2BD3CE010034AEA2 /* BetterFlashcardsUITests.swift */,
+				168D57002BD3CE010034AEA2 /* BetterFlashcardsUITestsLaunchTests.swift */,
+			);
+			path = BetterFlashcardsUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		168D56DF2BD3CDFE0034AEA2 /* BetterFlashcards */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 168D57042BD3CE010034AEA2 /* Build configuration list for PBXNativeTarget "BetterFlashcards" */;
+			buildPhases = (
+				168D56DC2BD3CDFE0034AEA2 /* Sources */,
+				168D56DD2BD3CDFE0034AEA2 /* Frameworks */,
+				168D56DE2BD3CDFE0034AEA2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BetterFlashcards;
+			productName = BetterFlashcards;
+			productReference = 168D56E02BD3CDFE0034AEA2 /* BetterFlashcards.app */;
+			productType = "com.apple.product-type.application";
+		};
+		168D56EF2BD3CE010034AEA2 /* BetterFlashcardsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 168D57072BD3CE010034AEA2 /* Build configuration list for PBXNativeTarget "BetterFlashcardsTests" */;
+			buildPhases = (
+				168D56EC2BD3CE010034AEA2 /* Sources */,
+				168D56ED2BD3CE010034AEA2 /* Frameworks */,
+				168D56EE2BD3CE010034AEA2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				168D56F22BD3CE010034AEA2 /* PBXTargetDependency */,
+			);
+			name = BetterFlashcardsTests;
+			productName = BetterFlashcardsTests;
+			productReference = 168D56F02BD3CE010034AEA2 /* BetterFlashcardsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		168D56F92BD3CE010034AEA2 /* BetterFlashcardsUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 168D570A2BD3CE010034AEA2 /* Build configuration list for PBXNativeTarget "BetterFlashcardsUITests" */;
+			buildPhases = (
+				168D56F62BD3CE010034AEA2 /* Sources */,
+				168D56F72BD3CE010034AEA2 /* Frameworks */,
+				168D56F82BD3CE010034AEA2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				168D56FC2BD3CE010034AEA2 /* PBXTargetDependency */,
+			);
+			name = BetterFlashcardsUITests;
+			productName = BetterFlashcardsUITests;
+			productReference = 168D56FA2BD3CE010034AEA2 /* BetterFlashcardsUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		168D56D82BD3CDFE0034AEA2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					168D56DF2BD3CDFE0034AEA2 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					168D56EF2BD3CE010034AEA2 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 168D56DF2BD3CDFE0034AEA2;
+					};
+					168D56F92BD3CE010034AEA2 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 168D56DF2BD3CDFE0034AEA2;
+					};
+				};
+			};
+			buildConfigurationList = 168D56DB2BD3CDFE0034AEA2 /* Build configuration list for PBXProject "BetterFlashcards" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 168D56D72BD3CDFE0034AEA2;
+			productRefGroup = 168D56E12BD3CDFE0034AEA2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				168D56DF2BD3CDFE0034AEA2 /* BetterFlashcards */,
+				168D56EF2BD3CE010034AEA2 /* BetterFlashcardsTests */,
+				168D56F92BD3CE010034AEA2 /* BetterFlashcardsUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		168D56DE2BD3CDFE0034AEA2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				168D56EB2BD3CE010034AEA2 /* Preview Assets.xcassets in Resources */,
+				168D56E82BD3CE010034AEA2 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		168D56EE2BD3CE010034AEA2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		168D56F82BD3CE010034AEA2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		168D56DC2BD3CDFE0034AEA2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				168D56E62BD3CDFE0034AEA2 /* ContentView.swift in Sources */,
+				168D56E42BD3CDFE0034AEA2 /* BetterFlashcardsApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		168D56EC2BD3CE010034AEA2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				168D56F52BD3CE010034AEA2 /* BetterFlashcardsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		168D56F62BD3CE010034AEA2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				168D56FF2BD3CE010034AEA2 /* BetterFlashcardsUITests.swift in Sources */,
+				168D57012BD3CE010034AEA2 /* BetterFlashcardsUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		168D56F22BD3CE010034AEA2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 168D56DF2BD3CDFE0034AEA2 /* BetterFlashcards */;
+			targetProxy = 168D56F12BD3CE010034AEA2 /* PBXContainerItemProxy */;
+		};
+		168D56FC2BD3CE010034AEA2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 168D56DF2BD3CDFE0034AEA2 /* BetterFlashcards */;
+			targetProxy = 168D56FB2BD3CE010034AEA2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		168D57022BD3CE010034AEA2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		168D57032BD3CE010034AEA2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		168D57052BD3CE010034AEA2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"BetterFlashcards/Preview Content\"";
+				DEVELOPMENT_TEAM = B5ZCY8Y722;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = net.koshakji.BetterFlashcards;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		168D57062BD3CE010034AEA2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"BetterFlashcards/Preview Content\"";
+				DEVELOPMENT_TEAM = B5ZCY8Y722;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = net.koshakji.BetterFlashcards;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		168D57082BD3CE010034AEA2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = B5ZCY8Y722;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = net.koshakji.BetterFlashcardsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BetterFlashcards.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/BetterFlashcards";
+			};
+			name = Debug;
+		};
+		168D57092BD3CE010034AEA2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = B5ZCY8Y722;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = net.koshakji.BetterFlashcardsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BetterFlashcards.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/BetterFlashcards";
+			};
+			name = Release;
+		};
+		168D570B2BD3CE010034AEA2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = B5ZCY8Y722;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = net.koshakji.BetterFlashcardsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BetterFlashcards;
+			};
+			name = Debug;
+		};
+		168D570C2BD3CE010034AEA2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = B5ZCY8Y722;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = net.koshakji.BetterFlashcardsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BetterFlashcards;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		168D56DB2BD3CDFE0034AEA2 /* Build configuration list for PBXProject "BetterFlashcards" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				168D57022BD3CE010034AEA2 /* Debug */,
+				168D57032BD3CE010034AEA2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		168D57042BD3CE010034AEA2 /* Build configuration list for PBXNativeTarget "BetterFlashcards" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				168D57052BD3CE010034AEA2 /* Debug */,
+				168D57062BD3CE010034AEA2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		168D57072BD3CE010034AEA2 /* Build configuration list for PBXNativeTarget "BetterFlashcardsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				168D57082BD3CE010034AEA2 /* Debug */,
+				168D57092BD3CE010034AEA2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		168D570A2BD3CE010034AEA2 /* Build configuration list for PBXNativeTarget "BetterFlashcardsUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				168D570B2BD3CE010034AEA2 /* Debug */,
+				168D570C2BD3CE010034AEA2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 168D56D82BD3CDFE0034AEA2 /* Project object */;
+}
