@@ -70,6 +70,16 @@ extension DIContainerProtocol {
         )
         
         register(
+            type: FlashCardRepositoryProtocol.self,
+            lazySingleton: {
+                FlashCardNetworkRepository(
+                    client: $0.forceResolve(),
+                    tokenProvider: $0.forceResolve()
+                )
+            }
+        )
+        
+        register(
             type: BookRepositoryProtocol.self,
             lazySingleton: {
                 BookNetworkRepository(
