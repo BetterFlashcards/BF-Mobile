@@ -13,5 +13,5 @@ protocol FlashCardRepositoryProtocol {
     func create(flashCard: FlashCard) async throws -> FlashCard
     func update(flashCard: FlashCard) async throws -> FlashCard
     func add(practice: FlashCardPractice) async throws -> FlashCard
-    func delete(flashCard: FlashCard) async throws -> FlashCard
+    func delete(flashCard: FlashCard) async throws
 }

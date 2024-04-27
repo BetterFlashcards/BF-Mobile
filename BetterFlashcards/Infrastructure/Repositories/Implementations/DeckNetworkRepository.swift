@@ -31,8 +31,8 @@ class DeckNetworkRepository: BaseAuthenticatedNetworking, DeckRepositoryProtocol
         return try convertResult(result: result)
     }
     
-    func delete(deck: Deck) async throws -> Deck {
+    func delete(deck: Deck) async throws {
         let result = await client.make(request: deckRequests.delete(at: deck.id), headers: try await headers())
-        return try convertResult(result: result)
+        _ = try convertResult(result: result)
     }
 }

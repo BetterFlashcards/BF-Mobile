@@ -12,5 +12,5 @@ protocol BookRepositoryProtocol {
     func fetch(by bookID: Book.ID) async throws -> Book?
     func create(book: Book) async throws -> Book
     func update(book: Book) async throws -> Book
-    func delete(book: Book) async throws -> Book
+    func delete(book: Book) async throws
 }
