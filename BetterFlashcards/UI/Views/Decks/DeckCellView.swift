@@ -10,9 +10,9 @@ import SwiftUI
 struct DeckCellView: View {
     let deck: Deck
     var body: some View {
-        VStack {
+        VStack(alignment: .leading) {
             Text(deck.name)
-            if let language = deck.language {
+            if let language = deck.language, !language.isEmpty {
                 Text(language)
             }
         }
