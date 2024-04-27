@@ -68,9 +68,7 @@
 		168D57782BD3F0150034AEA2 /* FlashCardServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168D57772BD3F0150034AEA2 /* FlashCardServiceProtocol.swift */; };
 		16F31DE02BD5936F00BCC67B /* ServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F31DDF2BD5936F00BCC67B /* ServiceError.swift */; };
 		16F31DE32BD598CA00BCC67B /* IdentifiedCollections in Frameworks */ = {isa = PBXBuildFile; productRef = 16F31DE22BD598CA00BCC67B /* IdentifiedCollections */; };
-		16F31DE52BD5AD4E00BCC67B /* BookDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F31DE42BD5AD4E00BCC67B /* BookDetailViewModel.swift */; };
 		16F31DE72BD5AD5700BCC67B /* DeckListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F31DE62BD5AD5700BCC67B /* DeckListPresenter.swift */; };
-		16F31DE92BD5AD5F00BCC67B /* DeckDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F31DE82BD5AD5F00BCC67B /* DeckDetailViewModel.swift */; };
 		16F31DEB2BD5ADF100BCC67B /* DeckListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F31DEA2BD5ADF100BCC67B /* DeckListScreen.swift */; };
 		16F31DED2BD5BEBD00BCC67B /* ListViewPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F31DEC2BD5BEBD00BCC67B /* ListViewPresenterProtocol.swift */; };
 		16F31DEF2BD5BEE200BCC67B /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F31DEE2BD5BEE200BCC67B /* ListView.swift */; };
@@ -155,9 +153,7 @@
 		168D57752BD3F00D0034AEA2 /* BookServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookServiceProtocol.swift; sourceTree = "<group>"; };
 		168D57772BD3F0150034AEA2 /* FlashCardServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashCardServiceProtocol.swift; sourceTree = "<group>"; };
 		16F31DDF2BD5936F00BCC67B /* ServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceError.swift; sourceTree = "<group>"; };
-		16F31DE42BD5AD4E00BCC67B /* BookDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailViewModel.swift; sourceTree = "<group>"; };
 		16F31DE62BD5AD5700BCC67B /* DeckListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckListPresenter.swift; sourceTree = "<group>"; };
-		16F31DE82BD5AD5F00BCC67B /* DeckDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckDetailViewModel.swift; sourceTree = "<group>"; };
 		16F31DEA2BD5ADF100BCC67B /* DeckListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckListScreen.swift; sourceTree = "<group>"; };
 		16F31DEC2BD5BEBD00BCC67B /* ListViewPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewPresenterProtocol.swift; sourceTree = "<group>"; };
 		16F31DEE2BD5BEE200BCC67B /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
@@ -200,6 +196,73 @@
 				16889D9A2BDD1E0A00E09A9C /* FormLabelledField.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		16889D9F2BDD200400E09A9C /* Books */ = {
+			isa = PBXGroup;
+			children = (
+				168D57692BD3EBB50034AEA2 /* BookListScreen.swift */,
+				16889D832BDD028C00E09A9C /* BookCellView.swift */,
+			);
+			path = Books;
+			sourceTree = "<group>";
+		};
+		16889DA02BDD200A00E09A9C /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				16889D8F2BDD0F2B00E09A9C /* AuthScreen.swift */,
+				16889D8D2BDD0EB500E09A9C /* LoginView.swift */,
+				16889D952BDD141400E09A9C /* RegisterView.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		16889DA12BDD200E00E09A9C /* Decks */ = {
+			isa = PBXGroup;
+			children = (
+				16F31DEA2BD5ADF100BCC67B /* DeckListScreen.swift */,
+				16889D852BDD02C200E09A9C /* DeckCellView.swift */,
+			);
+			path = Decks;
+			sourceTree = "<group>";
+		};
+		16889DA22BDD201200E09A9C /* Flashcards */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Flashcards;
+			sourceTree = "<group>";
+		};
+		16889DA32BDD203A00E09A9C /* Decks */ = {
+			isa = PBXGroup;
+			children = (
+				16F31DE62BD5AD5700BCC67B /* DeckListPresenter.swift */,
+			);
+			path = Decks;
+			sourceTree = "<group>";
+		};
+		16889DA42BDD204B00E09A9C /* Books */ = {
+			isa = PBXGroup;
+			children = (
+				168D57672BD3EB8A0034AEA2 /* BookListPresenter.swift */,
+			);
+			path = Books;
+			sourceTree = "<group>";
+		};
+		16889DA52BDD205800E09A9C /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				16889D892BDD0B0900E09A9C /* AuthenticationPresenter.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		16889DA62BDD206900E09A9C /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				16889D872BDD0AC200E09A9C /* AuthenticationViewModel.swift */,
+			);
+			path = Auth;
 			sourceTree = "<group>";
 		};
 		168D56D72BD3CDFE0034AEA2 = {
@@ -405,12 +468,10 @@
 		168D57632BD3E9490034AEA2 /* Presenters */ = {
 			isa = PBXGroup;
 			children = (
-				168D57672BD3EB8A0034AEA2 /* BookListPresenter.swift */,
-				16F31DE42BD5AD4E00BCC67B /* BookDetailViewModel.swift */,
-				16F31DE62BD5AD5700BCC67B /* DeckListPresenter.swift */,
-				16F31DE82BD5AD5F00BCC67B /* DeckDetailViewModel.swift */,
+				16889DA52BDD205800E09A9C /* Auth */,
+				16889DA42BDD204B00E09A9C /* Books */,
+				16889DA32BDD203A00E09A9C /* Decks */,
 				16F31DEC2BD5BEBD00BCC67B /* ListViewPresenterProtocol.swift */,
-				16889D892BDD0B0900E09A9C /* AuthenticationPresenter.swift */,
 			);
 			path = Presenters;
 			sourceTree = "<group>";
@@ -418,15 +479,12 @@
 		168D57642BD3E96B0034AEA2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				16889DA02BDD200A00E09A9C /* Auth */,
+				16889D9F2BDD200400E09A9C /* Books */,
+				16889DA12BDD200E00E09A9C /* Decks */,
+				16889DA22BDD201200E09A9C /* Flashcards */,
 				16889D992BDD1E0000E09A9C /* Components */,
 				168D56E52BD3CDFE0034AEA2 /* HomeScreen.swift */,
-				16889D8F2BDD0F2B00E09A9C /* AuthScreen.swift */,
-				16889D8D2BDD0EB500E09A9C /* LoginView.swift */,
-				16889D952BDD141400E09A9C /* RegisterView.swift */,
-				168D57692BD3EBB50034AEA2 /* BookListScreen.swift */,
-				16889D832BDD028C00E09A9C /* BookCellView.swift */,
-				16F31DEA2BD5ADF100BCC67B /* DeckListScreen.swift */,
-				16889D852BDD02C200E09A9C /* DeckCellView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -468,8 +526,8 @@
 		16F31DF22BD5C51700BCC67B /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				16889DA62BDD206900E09A9C /* Auth */,
 				16F31DF02BD5C4D400BCC67B /* ListViewModel.swift */,
-				16889D872BDD0AC200E09A9C /* AuthenticationViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -626,7 +684,6 @@
 				168D57682BD3EB8A0034AEA2 /* BookListPresenter.swift in Sources */,
 				168D57622BD3E6880034AEA2 /* DI.swift in Sources */,
 				16889D902BDD0F2B00E09A9C /* AuthScreen.swift in Sources */,
-				16F31DE52BD5AD4E00BCC67B /* BookDetailViewModel.swift in Sources */,
 				168D57742BD3F0040034AEA2 /* DeckServiceProtocol.swift in Sources */,
 				16F31DE02BD5936F00BCC67B /* ServiceError.swift in Sources */,
 				168D56E62BD3CDFE0034AEA2 /* HomeScreen.swift in Sources */,
@@ -651,7 +708,6 @@
 				168D57402BD3D4420034AEA2 /* NetworkConstants.swift in Sources */,
 				168D576A2BD3EBB50034AEA2 /* BookListScreen.swift in Sources */,
 				168D572A2BD3D1D00034AEA2 /* DeckService.swift in Sources */,
-				16F31DE92BD5AD5F00BCC67B /* DeckDetailViewModel.swift in Sources */,
 				168D572C2BD3D1D70034AEA2 /* BookService.swift in Sources */,
 				168D56E42BD3CDFE0034AEA2 /* BetterFlashcardsApp.swift in Sources */,
 				16889D822BDCFEB600E09A9C /* UserDTO.swift in Sources */,
