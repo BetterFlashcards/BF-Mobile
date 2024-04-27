@@ -37,7 +37,7 @@ class BookService: BookServiceProtocol {
     }
     
     func delete(_ book: Book) async throws -> Book {
-        let book = try await bookRepo.delete(book: book)
+        try await bookRepo.delete(book: book)
         eventSubject.send(.deleted(book))
         return book
     }

@@ -34,7 +34,7 @@ enum DeckRequests {
         detailsGroup(for: deckID).request(path: "/", method: .put)
     }
     
-    static func delete(at deckID: Deck.ID) -> AuthenticatedRequest<Nothing, Deck> {
+    static func delete(at deckID: Deck.ID) -> AuthenticatedRequest<Nothing, Nothing?> {
         detailsGroup(for: deckID).request(path: "/", method: .delete)
     }
 }

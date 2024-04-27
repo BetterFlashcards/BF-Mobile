@@ -12,5 +12,5 @@ protocol DeckRepositoryProtocol {
     func fetch(by deckID: Deck.ID) async throws -> Deck?
     func create(deck: Deck) async throws -> Deck
     func update(deck: Deck) async throws -> Deck
-    func delete(deck: Deck) async throws -> Deck
+    func delete(deck: Deck) async throws
 }

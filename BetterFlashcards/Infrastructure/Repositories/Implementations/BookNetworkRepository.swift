@@ -31,9 +31,9 @@ class BookNetworkRepository: BaseAuthenticatedNetworking, BookRepositoryProtocol
         return try convertResult(result: result)
     }
     
-    func delete(book: Book) async throws -> Book {
+    func delete(book: Book) async throws {
         let result = await client.make(request: bookRequests.delete(at: book.id), headers: try await headers())
-        return try convertResult(result: result)
+        _ = try convertResult(result: result)
     }
 
 }

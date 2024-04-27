@@ -34,7 +34,7 @@ enum BookRequests {
         detailsGroup(for: bookID).request(path: "/", method: .put)
     }
     
-    static func delete(at bookID: Book.ID) -> AuthenticatedRequest<Nothing, Book> {
+    static func delete(at bookID: Book.ID) -> AuthenticatedRequest<Nothing, Nothing?> {
         detailsGroup(for: bookID).request(path: "/", method: .delete)
     }
 }
