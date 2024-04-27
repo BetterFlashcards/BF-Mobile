@@ -81,6 +81,11 @@ class DeckDetailPresenter: ObservableObject {
         }
     }
     
+    func viewCardsTapped() {
+        guard let deckID = viewModel.id else { return }
+        viewModel.sheet = .cardList(for: deckID)
+    }
+    
     func handle(_ event: DeckServiceEvent) {
         switch event {
         case .updated(let deck) where deck.id == self.viewModel.id:

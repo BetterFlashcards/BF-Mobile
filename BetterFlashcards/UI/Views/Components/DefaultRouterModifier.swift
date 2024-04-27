@@ -12,12 +12,15 @@ enum NavigationDestination: Hashable {
     case bookDetails(Book)
     case deckList
     case deckDetails(Deck)
+    case cardDetails(FlashCard)
 }
 
 enum SheetDestination: Hashable, Identifiable {
     case homeScreen
     case bookCreation
     case deckCreation
+    case cardCreation
+    case cardList(for: Deck.ID)
     
     var id: Int { self.hashValue }
 }
@@ -37,7 +40,9 @@ private struct DefaultRouterModifier<V: BaseViewModel>: ViewModifier {
                     DeckListScreen()
                 case .deckDetails(let deck):
                     DeckDetailScreen(deck: deck)
-                    
+                case .cardDetails(let card):
+                    FlashCardGridCell(flashCard: card)
+                        .frame(width: 300, height: 300)
                 }
             }
             .sheet(item: $viewModel.sheet, content: view(for:))
@@ -53,6 +58,12 @@ private struct DefaultRouterModifier<V: BaseViewModel>: ViewModifier {
             Text("Book creation")
         case .deckCreation:
             DeckDetailScreen()
+        case .cardCreation:
+            Text("Card Creation")
+        case .cardList(let deckID):
+            CardList(for: deckID)
+                .presentationDetents([.medium, .large])
+                .presentationDragIndicator(.visible)
         }
     }
 }
