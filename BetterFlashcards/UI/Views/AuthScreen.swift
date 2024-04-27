@@ -54,7 +54,7 @@ struct AuthView: View {
                     )
                 }
             }.fullScreenCover(isPresented: $viewModel.isLoggedIn) {
-                ContentView()
+                HomeScreen()
             }
         }
     }
