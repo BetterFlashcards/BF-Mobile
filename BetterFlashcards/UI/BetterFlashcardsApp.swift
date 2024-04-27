@@ -6,12 +6,14 @@
 //
 
 import SwiftUI
+import DIContainer
 
 @main
 struct BetterFlashcardsApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            AuthView()
+                .environment(\.di, DIContainer().withMockServices())
         }
     }
 }

@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import DIContainer
 
 struct ContentView: View {
     var body: some View {
@@ -20,9 +19,8 @@ struct ContentView: View {
                     .tabItem {
                         Label("Books", systemImage: "book")
                     }
-                
             }
-        }.environment(\.di, DIContainer().withMockServices())
+        }
     }
 }
 
