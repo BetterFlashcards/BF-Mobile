@@ -8,8 +8,7 @@
 import Foundation
 import IdentifiedCollections
 
-@MainActor
-class ListViewModel<Item: Identifiable>: ObservableObject {
+class ListViewModel<Item: Identifiable>: BaseViewModel {
     var currentPage = 0
     var hasNextPage = true
     @Published var list: IdentifiedArrayOf<Item> = []

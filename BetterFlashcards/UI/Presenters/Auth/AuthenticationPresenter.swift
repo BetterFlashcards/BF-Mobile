@@ -61,8 +61,10 @@ class AuthenticationPresenter: ObservableObject {
     private func handle(_ event: AuthenticationServiceEvent) {
         switch event {
         case .loggedOut:
+            viewModel.fullScreen = nil
             viewModel.isLoggedIn = false
         case .loggedIn(let user), .registered(let user):
+            viewModel.fullScreen = .homeScreen
             viewModel.isLoggedIn = true
             viewModel.username = user.username
         }

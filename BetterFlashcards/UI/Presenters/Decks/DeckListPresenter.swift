@@ -9,10 +9,10 @@ import Foundation
 import Combine
 
 class DeckListPresenter: ListViewPresenterProtocol, ObservableObject {
-    let deckService: any DeckServiceProtocol
-    var cancelSet: Set<AnyCancellable> = []
+    @Published var viewModel = ListViewModel<Deck>()
     
-    var viewModel = ListViewModel<Deck>()
+    private let deckService: any DeckServiceProtocol
+    private var cancelSet: Set<AnyCancellable> = []
     
     init(deckService: any DeckServiceProtocol) {
         self.deckService = deckService
@@ -24,6 +24,10 @@ class DeckListPresenter: ListViewPresenterProtocol, ObservableObject {
             .sink { [weak self] event in
                 self?.handle(event)
             }.store(in: &cancelSet)
+    }
+    
+    func addTapped() {
+        viewModel.sheet = .deckCreation
     }
     
     func getFullList() async throws -> [Deck] {

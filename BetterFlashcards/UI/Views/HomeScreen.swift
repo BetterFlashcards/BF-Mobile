@@ -9,17 +9,15 @@ import SwiftUI
 
 struct HomeScreen: View {
     var body: some View {
-        NavigationView {
-            TabView {
-                DeckListScreen()
-                    .tabItem {
-                        Label("Library", systemImage: "rectangle.on.rectangle.angled")
-                    }
-                BookListScreen()
-                    .tabItem {
-                        Label("Books", systemImage: "book")
-                    }
-            }
+        TabView {
+            DeckListScreen()
+                .tabItem {
+                    Label("Library", systemImage: "rectangle.on.rectangle.angled")
+                }
+            BookListScreen()
+                .tabItem {
+                    Label("Books", systemImage: "book")
+                }
         }
     }
 }

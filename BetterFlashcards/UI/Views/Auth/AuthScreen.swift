@@ -20,6 +20,7 @@ struct AuthView: View {
     var body: some View {
         NavigationStack {
             MainView(presenter: presenter)
+                .withDefaultRouter(viewModel: presenter.viewModel)
                 .task {
                     await presenter.setup()
                 }
@@ -53,8 +54,6 @@ struct AuthView: View {
                         onLogin: { presenter.switchType() }
                     )
                 }
-            }.fullScreenCover(isPresented: $viewModel.isLoggedIn) {
-                HomeScreen()
             }
         }
     }
