@@ -45,8 +45,13 @@ struct DeckDetailScreen: View {
                         TextField("Language", text: $viewModel.language)
                     }
                 }
+
                 Button("Save") { presenter.save() }
                     .buttonStyle(.borderedProminent)
+                
+                Button("Delete") { presenter.delete() }
+                    .buttonStyle(.borderedProminent)
+                    .tint(.red)
             }
         }
     }

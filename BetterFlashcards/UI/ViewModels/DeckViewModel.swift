@@ -14,7 +14,6 @@ class DeckViewModel: BaseViewModel {
     
     @Published var isLoading: Bool
     @Published var errorMessage: String?
-    @Published var shouldDismiss: Bool
     
     init(id: Int? = nil, name: String, language: String) {
         self.id = id
@@ -23,6 +22,5 @@ class DeckViewModel: BaseViewModel {
         
         self.isLoading = false
         self.errorMessage = nil
-        self.shouldDismiss = false
     }
 }
