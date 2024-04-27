@@ -30,7 +30,7 @@ extension EnvironmentValues {
         self.di.forceResolve()
     }
     
-    var auth: AuthenticationProtocol {
+    var auth: AuthenticationServiceProtocol {
         self.di.forceResolve()
     }
 }

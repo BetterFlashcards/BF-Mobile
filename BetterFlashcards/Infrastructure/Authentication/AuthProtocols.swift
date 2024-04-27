@@ -8,10 +8,12 @@
 import Foundation
 
 protocol AuthenticationProtocol {
-    func login(username: String, password: String) async throws
-    func register(username: String, password: String) async throws
+    func login(username: String, password: String) async throws -> User
+    func register(username: String, password: String) async throws -> User
 }
 
 protocol TokenProviderProtocol {
-    func token() async throws -> String
+    func token() throws -> String
+    func user() -> User?
+    func clearUserInfo()
 }
