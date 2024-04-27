@@ -13,4 +13,4 @@ struct Book {
     var author: String
 }
 
-extension Book: Identifiable, Codable {}
+extension Book: Identifiable, Codable, Hashable {}

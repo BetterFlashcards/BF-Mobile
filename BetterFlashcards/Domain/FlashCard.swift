@@ -16,4 +16,4 @@ struct FlashCard {
     var relatedBookID: Book.ID?
 }
 
-extension FlashCard: Identifiable, Codable {}
+extension FlashCard: Identifiable, Codable, Hashable {}
