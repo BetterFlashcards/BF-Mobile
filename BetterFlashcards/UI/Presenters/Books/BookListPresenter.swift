@@ -10,10 +10,10 @@ import Combine
 
 @MainActor
 class BookListPresenter: ListViewPresenterProtocol, ObservableObject {
-    let bookService: any BookServiceProtocol
-    var cancelSet: Set<AnyCancellable> = []
+    @Published var viewModel = ListViewModel<Book>()
     
-    var viewModel = ListViewModel<Book>()
+    private let bookService: any BookServiceProtocol
+    private var cancelSet: Set<AnyCancellable> = []
     
     init(bookService: any BookServiceProtocol) {
         self.bookService = bookService
