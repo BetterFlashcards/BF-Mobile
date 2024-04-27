@@ -8,12 +8,8 @@
 import Foundation
 import Combine
 
-protocol BookServiceProtocol: GenericBasicServiceProtocol where Item == Book, Event == BookServiceEvent {
+protocol BookServiceProtocol: GenericBasicServiceProtocol where Item == Book {
     
 }
 
-enum BookServiceEvent {
-    case added(Book)
-    case updated(Book)
-    case deleted(Book)
-}
+typealias BookServiceEvent = BasicServiceEvent<Book>
