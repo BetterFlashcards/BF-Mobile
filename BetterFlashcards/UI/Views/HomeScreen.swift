@@ -7,15 +7,15 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct HomeScreen: View {
     var body: some View {
         NavigationView {
             TabView {
-                DeckListView()
+                DeckListScreen()
                     .tabItem {
                         Label("Library", systemImage: "rectangle.on.rectangle.angled")
                     }
-                BookListView()
+                BookListScreen()
                     .tabItem {
                         Label("Books", systemImage: "book")
                     }
@@ -26,6 +26,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        HomeScreen()
     }
 }

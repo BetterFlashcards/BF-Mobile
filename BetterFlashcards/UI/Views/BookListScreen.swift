@@ -8,7 +8,7 @@
 import SwiftUI
 import GRDBQuery
 
-struct BookListView: View {
+struct BookListScreen: View {
     @EnvironmentStateObject var presenter: BookListPresenter
     
     init() {
