@@ -21,6 +21,7 @@
 		16889D962BDD141400E09A9C /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16889D952BDD141400E09A9C /* RegisterView.swift */; };
 		16889D982BDD19EC00E09A9C /* MockAuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16889D972BDD19EC00E09A9C /* MockAuthenticationService.swift */; };
 		16889D9B2BDD1E0A00E09A9C /* FormLabelledField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16889D9A2BDD1E0A00E09A9C /* FormLabelledField.swift */; };
+		16889DA82BDD218E00E09A9C /* PaginatedListViewPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16889DA72BDD218E00E09A9C /* PaginatedListViewPresenterProtocol.swift */; };
 		168D56E42BD3CDFE0034AEA2 /* BetterFlashcardsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168D56E32BD3CDFE0034AEA2 /* BetterFlashcardsApp.swift */; };
 		168D56E62BD3CDFE0034AEA2 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168D56E52BD3CDFE0034AEA2 /* HomeScreen.swift */; };
 		168D56E82BD3CE010034AEA2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 168D56E72BD3CE010034AEA2 /* Assets.xcassets */; };
@@ -107,6 +108,7 @@
 		16889D952BDD141400E09A9C /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		16889D972BDD19EC00E09A9C /* MockAuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAuthenticationService.swift; sourceTree = "<group>"; };
 		16889D9A2BDD1E0A00E09A9C /* FormLabelledField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormLabelledField.swift; sourceTree = "<group>"; };
+		16889DA72BDD218E00E09A9C /* PaginatedListViewPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginatedListViewPresenterProtocol.swift; sourceTree = "<group>"; };
 		168D56E02BD3CDFE0034AEA2 /* BetterFlashcards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BetterFlashcards.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		168D56E32BD3CDFE0034AEA2 /* BetterFlashcardsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetterFlashcardsApp.swift; sourceTree = "<group>"; };
 		168D56E52BD3CDFE0034AEA2 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
@@ -472,6 +474,7 @@
 				16889DA42BDD204B00E09A9C /* Books */,
 				16889DA32BDD203A00E09A9C /* Decks */,
 				16F31DEC2BD5BEBD00BCC67B /* ListViewPresenterProtocol.swift */,
+				16889DA72BDD218E00E09A9C /* PaginatedListViewPresenterProtocol.swift */,
 			);
 			path = Presenters;
 			sourceTree = "<group>";
@@ -727,6 +730,7 @@
 				168D57282BD3D1C50034AEA2 /* AuthProtocols.swift in Sources */,
 				168D57662BD3E9A90034AEA2 /* EnvironmentValues.swift in Sources */,
 				168D57582BD3E2BA0034AEA2 /* KeychainOptions.swift in Sources */,
+				16889DA82BDD218E00E09A9C /* PaginatedListViewPresenterProtocol.swift in Sources */,
 				168D575B2BD3E35C0034AEA2 /* KeychainKeys.swift in Sources */,
 				16889D8E2BDD0EB500E09A9C /* LoginView.swift in Sources */,
 				168D57482BD3DD1F0034AEA2 /* BaseNetworking.swift in Sources */,
