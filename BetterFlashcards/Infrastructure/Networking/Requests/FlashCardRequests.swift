@@ -9,18 +9,48 @@ import Foundation
 import APIClient
 
 enum FlashCardRequests {
-    static func group(deckID: Deck.ID) -> any GroupProtocol {
+    // MARK: Groups
+    
+    static let group = Group(host: NetworkConstants.baseURL, path: NetworkConstants.flashCardPath)
+    
+    static func deckGroup(deckID: Deck.ID) -> any GroupProtocol {
         DeckRequests
             .detailsGroup(for: deckID)
-            .subgroup(path:  NetworkConstants.flashCardPath)
+            .subgroup(path:  NetworkConstants.deckCardsPath)
     }
     
+    static func deckDetailsGroup(deckID: Deck.ID, cardID: FlashCard.ID) -> any GroupProtocol {
+        deckGroup(deckID: deckID).subgroup(path: "/\(cardID)")
+    }
+    
+    // MARK: Top Level
     static func add(to deckID: Deck.ID) -> AuthenticatedRequest<CreateFlashCardDTO, FlashCard> {
-        group(deckID: deckID).request(path: "/", method: .post)
+        deckGroup(deckID: deckID).request(path: "/", method: .post)
     }
     
     static func list(for deckID: Deck.ID) -> AuthenticatedRequest<Nothing, [FlashCard]> {
-        group(deckID: deckID).request(path: "/")
+        deckGroup(deckID: deckID).request(path: "/")
+    }
+    
+    static func due(for deckID: Deck.ID) -> AuthenticatedRequest<Nothing, [FlashCard]> {
+        DeckRequests
+            .detailsGroup(for: deckID)
+            .subgroup(path: NetworkConstants.deckCardsDuePath)
+            .request(path: "/")
+    }
+    
+    // MARK: Details
+    static func update(in deckID: Deck.ID, cardID: FlashCard.ID) -> AuthenticatedRequest<FlashCard, FlashCard> {
+        deckDetailsGroup(deckID: deckID, cardID: cardID).request(path: "/", method: .put)
+    }
+    
+    static func delete(from deckID: Deck.ID, cardID: FlashCard.ID)  -> AuthenticatedRequest<Nothing, Nothing?> {
+        deckDetailsGroup(deckID: deckID, cardID: cardID).request(path: "/", method: .delete)
+    }
+    
+    // MARK: Practice
+    static func updateReview(for cardID: FlashCard.ID) -> AuthenticatedRequest<FlashCardPracticeDTO, Nothing?> {
+        group.request(path: NetworkConstants.updateReviewPath, method: .put)
     }
 }
 

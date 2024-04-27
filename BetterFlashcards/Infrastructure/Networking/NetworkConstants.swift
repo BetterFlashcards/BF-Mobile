@@ -13,6 +13,9 @@ enum NetworkConstants {
     static let loginPath = "/login"
     static let register = "/register"
     static let deckPath = "/api/decks"
-    static let flashCardPath = "/flashcards"
+    static let flashCardPath = "/api/cards"
+    static let deckCardsPath = "/cards"
+    static let deckCardsDuePath = "/due-cards"
+    static let updateReviewPath = "/update_review_data"
     static let bookPath = "/api/books"
 }
