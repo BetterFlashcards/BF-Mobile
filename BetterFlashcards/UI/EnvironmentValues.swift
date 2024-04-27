@@ -26,7 +26,7 @@ extension EnvironmentValues {
         self.di.forceResolve()
     }
     
-    var flashcardService: FlashCardService {
+    var flashcardService: any FlashCardServiceProtocol {
         self.di.forceResolve()
     }
     

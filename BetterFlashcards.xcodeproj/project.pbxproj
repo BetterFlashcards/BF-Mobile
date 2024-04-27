@@ -77,6 +77,9 @@
 		168D57762BD3F00D0034AEA2 /* BookServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168D57752BD3F00D0034AEA2 /* BookServiceProtocol.swift */; };
 		168D57782BD3F0150034AEA2 /* FlashCardServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168D57772BD3F0150034AEA2 /* FlashCardServiceProtocol.swift */; };
 		16E89E3C2BDD6B2700BFC761 /* FlashCardPracticeDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E89E3B2BDD6B2700BFC761 /* FlashCardPracticeDTO.swift */; };
+		16E89E412BDD713800BFC761 /* FlashCardListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E89E402BDD713800BFC761 /* FlashCardListPresenter.swift */; };
+		16E89E432BDD725200BFC761 /* CardList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E89E422BDD725200BFC761 /* CardList.swift */; };
+		16E89E452BDD73A800BFC761 /* FlashCardGridCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E89E442BDD73A800BFC761 /* FlashCardGridCell.swift */; };
 		16F31DE02BD5936F00BCC67B /* ServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F31DDF2BD5936F00BCC67B /* ServiceError.swift */; };
 		16F31DE32BD598CA00BCC67B /* IdentifiedCollections in Frameworks */ = {isa = PBXBuildFile; productRef = 16F31DE22BD598CA00BCC67B /* IdentifiedCollections */; };
 		16F31DE72BD5AD5700BCC67B /* DeckListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F31DE62BD5AD5700BCC67B /* DeckListPresenter.swift */; };
@@ -174,6 +177,9 @@
 		168D57752BD3F00D0034AEA2 /* BookServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookServiceProtocol.swift; sourceTree = "<group>"; };
 		168D57772BD3F0150034AEA2 /* FlashCardServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashCardServiceProtocol.swift; sourceTree = "<group>"; };
 		16E89E3B2BDD6B2700BFC761 /* FlashCardPracticeDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashCardPracticeDTO.swift; sourceTree = "<group>"; };
+		16E89E402BDD713800BFC761 /* FlashCardListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashCardListPresenter.swift; sourceTree = "<group>"; };
+		16E89E422BDD725200BFC761 /* CardList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardList.swift; sourceTree = "<group>"; };
+		16E89E442BDD73A800BFC761 /* FlashCardGridCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashCardGridCell.swift; sourceTree = "<group>"; };
 		16F31DDF2BD5936F00BCC67B /* ServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceError.swift; sourceTree = "<group>"; };
 		16F31DE62BD5AD5700BCC67B /* DeckListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckListPresenter.swift; sourceTree = "<group>"; };
 		16F31DEA2BD5ADF100BCC67B /* DeckListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckListScreen.swift; sourceTree = "<group>"; };
@@ -253,6 +259,8 @@
 		16889DA22BDD201200E09A9C /* Flashcards */ = {
 			isa = PBXGroup;
 			children = (
+				16E89E422BDD725200BFC761 /* CardList.swift */,
+				16E89E442BDD73A800BFC761 /* FlashCardGridCell.swift */,
 			);
 			path = Flashcards;
 			sourceTree = "<group>";
@@ -501,6 +509,7 @@
 				16889DA52BDD205800E09A9C /* Auth */,
 				16889DA42BDD204B00E09A9C /* Books */,
 				16889DA32BDD203A00E09A9C /* Decks */,
+				16E89E3F2BDD712500BFC761 /* FlashCards */,
 				16F31DEC2BD5BEBD00BCC67B /* ListViewPresenterProtocol.swift */,
 				16889DA72BDD218E00E09A9C /* PaginatedListViewPresenterProtocol.swift */,
 			);
@@ -552,6 +561,14 @@
 				168D572D2BD3D1E10034AEA2 /* FlashCardService.swift */,
 			);
 			path = Implementations;
+			sourceTree = "<group>";
+		};
+		16E89E3F2BDD712500BFC761 /* FlashCards */ = {
+			isa = PBXGroup;
+			children = (
+				16E89E402BDD713800BFC761 /* FlashCardListPresenter.swift */,
+			);
+			path = FlashCards;
 			sourceTree = "<group>";
 		};
 		16F31DF22BD5C51700BCC67B /* ViewModels */ = {
@@ -708,6 +725,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				16889D8C2BDD0D1600E09A9C /* User.swift in Sources */,
+				16E89E432BDD725200BFC761 /* CardList.swift in Sources */,
 				168D576F2BD3EFD00034AEA2 /* MockBookService.swift in Sources */,
 				168D57142BD3CEC00034AEA2 /* Deck.swift in Sources */,
 				168D57122BD3CE3F0034AEA2 /* FlashCard.swift in Sources */,
@@ -725,6 +743,7 @@
 				168D57552BD3E2930034AEA2 /* KeychainWrapper.swift in Sources */,
 				168D57222BD3D0E40034AEA2 /* FlashCardPractice.swift in Sources */,
 				16889DB22BDD2C5F00E09A9C /* DeckDetailPresenter.swift in Sources */,
+				16E89E452BDD73A800BFC761 /* FlashCardGridCell.swift in Sources */,
 				16889D802BDCFDFD00E09A9C /* GenericBasicServiceProtocol.swift in Sources */,
 				16E89E3C2BDD6B2700BFC761 /* FlashCardPracticeDTO.swift in Sources */,
 				16889D942BDD109F00E09A9C /* AuthenticationServiceProtocol.swift in Sources */,
@@ -753,6 +772,7 @@
 				16889D822BDCFEB600E09A9C /* UserDTO.swift in Sources */,
 				168D57462BD3DB5C0034AEA2 /* DeckNetworkRepository.swift in Sources */,
 				168D571E2BD3CFB90034AEA2 /* BookRepositoryProtocol.swift in Sources */,
+				16E89E412BDD713800BFC761 /* FlashCardListPresenter.swift in Sources */,
 				168D57442BD3D9870034AEA2 /* BookRequests.swift in Sources */,
 				16889D862BDD02C200E09A9C /* DeckCellView.swift in Sources */,
 				168D57502BD3DFEC0034AEA2 /* AuthRequests.swift in Sources */,

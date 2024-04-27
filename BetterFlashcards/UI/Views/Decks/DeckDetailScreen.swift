@@ -23,6 +23,7 @@ struct DeckDetailScreen: View {
     
     var body: some View {
         MainView(presenter: presenter)
+            .task { presenter.setup() }
     }
     
     private struct MainView: View {
@@ -44,6 +45,12 @@ struct DeckDetailScreen: View {
                     FormLabelledField(label: "Language") {
                         TextField("Language", text: $viewModel.language)
                     }
+                    
+                    if viewModel.id != nil {
+                        Button("View Cards") {
+                            presenter.viewCardsTapped()
+                        }
+                    }
                 }
 
                 Button("Save") { presenter.save() }
@@ -53,6 +60,7 @@ struct DeckDetailScreen: View {
                     .buttonStyle(.borderedProminent)
                     .tint(.red)
             }
+            .withDefaultRouter(viewModel: presenter.viewModel)
         }
     }
 }
