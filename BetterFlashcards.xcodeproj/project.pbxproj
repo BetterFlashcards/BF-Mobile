@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		16889D802BDCFDFD00E09A9C /* GenericBasicServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16889D7F2BDCFDFD00E09A9C /* GenericBasicServiceProtocol.swift */; };
+		16889D822BDCFEB600E09A9C /* UserDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16889D812BDCFEB600E09A9C /* UserDTO.swift */; };
+		16889D842BDD028C00E09A9C /* BookCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16889D832BDD028C00E09A9C /* BookCellView.swift */; };
+		16889D862BDD02C200E09A9C /* DeckCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16889D852BDD02C200E09A9C /* DeckCellView.swift */; };
 		168D56E42BD3CDFE0034AEA2 /* BetterFlashcardsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168D56E32BD3CDFE0034AEA2 /* BetterFlashcardsApp.swift */; };
 		168D56E62BD3CDFE0034AEA2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168D56E52BD3CDFE0034AEA2 /* ContentView.swift */; };
 		168D56E82BD3CE010034AEA2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 168D56E72BD3CE010034AEA2 /* Assets.xcassets */; };
@@ -14,6 +18,53 @@
 		168D56F52BD3CE010034AEA2 /* BetterFlashcardsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168D56F42BD3CE010034AEA2 /* BetterFlashcardsTests.swift */; };
 		168D56FF2BD3CE010034AEA2 /* BetterFlashcardsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168D56FE2BD3CE010034AEA2 /* BetterFlashcardsUITests.swift */; };
 		168D57012BD3CE010034AEA2 /* BetterFlashcardsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168D57002BD3CE010034AEA2 /* BetterFlashcardsUITestsLaunchTests.swift */; };
+		168D57122BD3CE3F0034AEA2 /* FlashCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168D57112BD3CE3F0034AEA2 /* FlashCard.swift */; };
+		168D57142BD3CEC00034AEA2 /* Deck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168D57132BD3CEC00034AEA2 /* Deck.swift */; };
+		168D57162BD3CF1D0034AEA2 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168D57152BD3CF1D0034AEA2 /* Book.swift */; };
+		168D571C2BD3CFAF0034AEA2 /* DeckRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168D571B2BD3CFAF0034AEA2 /* DeckRepositoryProtocol.swift */; };
+		168D571E2BD3CFB90034AEA2 /* BookRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168D571D2BD3CFB90034AEA2 /* BookRepositoryProtocol.swift */; };
+		168D57202BD3CFC40034AEA2 /* FlashCardRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168D571F2BD3CFC40034AEA2 /* FlashCardRepositoryProtocol.swift */; };
+		168D57222BD3D0E40034AEA2 /* FlashCardPractice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168D57212BD3D0E40034AEA2 /* FlashCardPractice.swift */; };
+		168D57282BD3D1C50034AEA2 /* AuthProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168D57272BD3D1C50034AEA2 /* AuthProtocols.swift */; };
+		168D572A2BD3D1D00034AEA2 /* DeckService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168D57292BD3D1D00034AEA2 /* DeckService.swift */; };
+		168D572C2BD3D1D70034AEA2 /* BookService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168D572B2BD3D1D70034AEA2 /* BookService.swift */; };
+		168D572E2BD3D1E10034AEA2 /* FlashCardService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168D572D2BD3D1E10034AEA2 /* FlashCardService.swift */; };
+		168D57332BD3D2F00034AEA2 /* APIClient in Frameworks */ = {isa = PBXBuildFile; productRef = 168D57322BD3D2F00034AEA2 /* APIClient */; };
+		168D57362BD3D3140034AEA2 /* DIContainer in Frameworks */ = {isa = PBXBuildFile; productRef = 168D57352BD3D3140034AEA2 /* DIContainer */; };
+		168D57392BD3D33C0034AEA2 /* GRDBQuery in Frameworks */ = {isa = PBXBuildFile; productRef = 168D57382BD3D33C0034AEA2 /* GRDBQuery */; };
+		168D573E2BD3D3F80034AEA2 /* DeckRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168D573D2BD3D3F80034AEA2 /* DeckRequests.swift */; };
+		168D57402BD3D4420034AEA2 /* NetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168D573F2BD3D4420034AEA2 /* NetworkConstants.swift */; };
+		168D57422BD3D5D70034AEA2 /* FlashCardRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168D57412BD3D5D70034AEA2 /* FlashCardRequests.swift */; };
+		168D57442BD3D9870034AEA2 /* BookRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168D57432BD3D9870034AEA2 /* BookRequests.swift */; };
+		168D57462BD3DB5C0034AEA2 /* DeckNetworkRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168D57452BD3DB5C0034AEA2 /* DeckNetworkRepository.swift */; };
+		168D57482BD3DD1F0034AEA2 /* BaseNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168D57472BD3DD1F0034AEA2 /* BaseNetworking.swift */; };
+		168D574A2BD3DD400034AEA2 /* BookNetworkRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168D57492BD3DD400034AEA2 /* BookNetworkRepository.swift */; };
+		168D574E2BD3DFC90034AEA2 /* AuthProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168D574D2BD3DFC90034AEA2 /* AuthProvider.swift */; };
+		168D57502BD3DFEC0034AEA2 /* AuthRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168D574F2BD3DFEC0034AEA2 /* AuthRequests.swift */; };
+		168D57532BD3E04B0034AEA2 /* LoginResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168D57522BD3E04B0034AEA2 /* LoginResponseDTO.swift */; };
+		168D57552BD3E2930034AEA2 /* KeychainWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168D57542BD3E2930034AEA2 /* KeychainWrapper.swift */; };
+		168D57582BD3E2BA0034AEA2 /* KeychainOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168D57572BD3E2BA0034AEA2 /* KeychainOptions.swift */; };
+		168D575B2BD3E35C0034AEA2 /* KeychainKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168D575A2BD3E35C0034AEA2 /* KeychainKeys.swift */; };
+		168D575E2BD3E4880034AEA2 /* AuthError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168D575D2BD3E4880034AEA2 /* AuthError.swift */; };
+		168D57622BD3E6880034AEA2 /* DI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168D57612BD3E6880034AEA2 /* DI.swift */; };
+		168D57662BD3E9A90034AEA2 /* EnvironmentValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168D57652BD3E9A90034AEA2 /* EnvironmentValues.swift */; };
+		168D57682BD3EB8A0034AEA2 /* BookListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168D57672BD3EB8A0034AEA2 /* BookListPresenter.swift */; };
+		168D576A2BD3EBB50034AEA2 /* BookListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168D57692BD3EBB50034AEA2 /* BookListView.swift */; };
+		168D576D2BD3EFC30034AEA2 /* MockDeckService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168D576C2BD3EFC30034AEA2 /* MockDeckService.swift */; };
+		168D576F2BD3EFD00034AEA2 /* MockBookService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168D576E2BD3EFD00034AEA2 /* MockBookService.swift */; };
+		168D57712BD3EFD90034AEA2 /* MockFlashCardService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168D57702BD3EFD90034AEA2 /* MockFlashCardService.swift */; };
+		168D57742BD3F0040034AEA2 /* DeckServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168D57732BD3F0040034AEA2 /* DeckServiceProtocol.swift */; };
+		168D57762BD3F00D0034AEA2 /* BookServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168D57752BD3F00D0034AEA2 /* BookServiceProtocol.swift */; };
+		168D57782BD3F0150034AEA2 /* FlashCardServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168D57772BD3F0150034AEA2 /* FlashCardServiceProtocol.swift */; };
+		16F31DE02BD5936F00BCC67B /* ServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F31DDF2BD5936F00BCC67B /* ServiceError.swift */; };
+		16F31DE32BD598CA00BCC67B /* IdentifiedCollections in Frameworks */ = {isa = PBXBuildFile; productRef = 16F31DE22BD598CA00BCC67B /* IdentifiedCollections */; };
+		16F31DE52BD5AD4E00BCC67B /* BookDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F31DE42BD5AD4E00BCC67B /* BookDetailViewModel.swift */; };
+		16F31DE72BD5AD5700BCC67B /* DeckListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F31DE62BD5AD5700BCC67B /* DeckListPresenter.swift */; };
+		16F31DE92BD5AD5F00BCC67B /* DeckDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F31DE82BD5AD5F00BCC67B /* DeckDetailViewModel.swift */; };
+		16F31DEB2BD5ADF100BCC67B /* DeckListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F31DEA2BD5ADF100BCC67B /* DeckListView.swift */; };
+		16F31DED2BD5BEBD00BCC67B /* ListViewPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F31DEC2BD5BEBD00BCC67B /* ListViewPresenterProtocol.swift */; };
+		16F31DEF2BD5BEE200BCC67B /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F31DEE2BD5BEE200BCC67B /* ListView.swift */; };
+		16F31DF12BD5C4D400BCC67B /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F31DF02BD5C4D400BCC67B /* ListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +85,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		16889D7F2BDCFDFD00E09A9C /* GenericBasicServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericBasicServiceProtocol.swift; sourceTree = "<group>"; };
+		16889D812BDCFEB600E09A9C /* UserDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDTO.swift; sourceTree = "<group>"; };
+		16889D832BDD028C00E09A9C /* BookCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCellView.swift; sourceTree = "<group>"; };
+		16889D852BDD02C200E09A9C /* DeckCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckCellView.swift; sourceTree = "<group>"; };
 		168D56E02BD3CDFE0034AEA2 /* BetterFlashcards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BetterFlashcards.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		168D56E32BD3CDFE0034AEA2 /* BetterFlashcardsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetterFlashcardsApp.swift; sourceTree = "<group>"; };
 		168D56E52BD3CDFE0034AEA2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -44,6 +99,49 @@
 		168D56FA2BD3CE010034AEA2 /* BetterFlashcardsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BetterFlashcardsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		168D56FE2BD3CE010034AEA2 /* BetterFlashcardsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetterFlashcardsUITests.swift; sourceTree = "<group>"; };
 		168D57002BD3CE010034AEA2 /* BetterFlashcardsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetterFlashcardsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		168D57112BD3CE3F0034AEA2 /* FlashCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashCard.swift; sourceTree = "<group>"; };
+		168D57132BD3CEC00034AEA2 /* Deck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deck.swift; sourceTree = "<group>"; };
+		168D57152BD3CF1D0034AEA2 /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
+		168D571B2BD3CFAF0034AEA2 /* DeckRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckRepositoryProtocol.swift; sourceTree = "<group>"; };
+		168D571D2BD3CFB90034AEA2 /* BookRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookRepositoryProtocol.swift; sourceTree = "<group>"; };
+		168D571F2BD3CFC40034AEA2 /* FlashCardRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashCardRepositoryProtocol.swift; sourceTree = "<group>"; };
+		168D57212BD3D0E40034AEA2 /* FlashCardPractice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashCardPractice.swift; sourceTree = "<group>"; };
+		168D57272BD3D1C50034AEA2 /* AuthProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthProtocols.swift; sourceTree = "<group>"; };
+		168D57292BD3D1D00034AEA2 /* DeckService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckService.swift; sourceTree = "<group>"; };
+		168D572B2BD3D1D70034AEA2 /* BookService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookService.swift; sourceTree = "<group>"; };
+		168D572D2BD3D1E10034AEA2 /* FlashCardService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashCardService.swift; sourceTree = "<group>"; };
+		168D573D2BD3D3F80034AEA2 /* DeckRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckRequests.swift; sourceTree = "<group>"; };
+		168D573F2BD3D4420034AEA2 /* NetworkConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConstants.swift; sourceTree = "<group>"; };
+		168D57412BD3D5D70034AEA2 /* FlashCardRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashCardRequests.swift; sourceTree = "<group>"; };
+		168D57432BD3D9870034AEA2 /* BookRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookRequests.swift; sourceTree = "<group>"; };
+		168D57452BD3DB5C0034AEA2 /* DeckNetworkRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckNetworkRepository.swift; sourceTree = "<group>"; };
+		168D57472BD3DD1F0034AEA2 /* BaseNetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNetworking.swift; sourceTree = "<group>"; };
+		168D57492BD3DD400034AEA2 /* BookNetworkRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookNetworkRepository.swift; sourceTree = "<group>"; };
+		168D574D2BD3DFC90034AEA2 /* AuthProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthProvider.swift; sourceTree = "<group>"; };
+		168D574F2BD3DFEC0034AEA2 /* AuthRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRequests.swift; sourceTree = "<group>"; };
+		168D57522BD3E04B0034AEA2 /* LoginResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponseDTO.swift; sourceTree = "<group>"; };
+		168D57542BD3E2930034AEA2 /* KeychainWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainWrapper.swift; sourceTree = "<group>"; };
+		168D57572BD3E2BA0034AEA2 /* KeychainOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainOptions.swift; sourceTree = "<group>"; };
+		168D575A2BD3E35C0034AEA2 /* KeychainKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainKeys.swift; sourceTree = "<group>"; };
+		168D575D2BD3E4880034AEA2 /* AuthError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthError.swift; sourceTree = "<group>"; };
+		168D57612BD3E6880034AEA2 /* DI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DI.swift; sourceTree = "<group>"; };
+		168D57652BD3E9A90034AEA2 /* EnvironmentValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentValues.swift; sourceTree = "<group>"; };
+		168D57672BD3EB8A0034AEA2 /* BookListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookListPresenter.swift; sourceTree = "<group>"; };
+		168D57692BD3EBB50034AEA2 /* BookListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookListView.swift; sourceTree = "<group>"; };
+		168D576C2BD3EFC30034AEA2 /* MockDeckService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDeckService.swift; sourceTree = "<group>"; };
+		168D576E2BD3EFD00034AEA2 /* MockBookService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockBookService.swift; sourceTree = "<group>"; };
+		168D57702BD3EFD90034AEA2 /* MockFlashCardService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockFlashCardService.swift; sourceTree = "<group>"; };
+		168D57732BD3F0040034AEA2 /* DeckServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckServiceProtocol.swift; sourceTree = "<group>"; };
+		168D57752BD3F00D0034AEA2 /* BookServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookServiceProtocol.swift; sourceTree = "<group>"; };
+		168D57772BD3F0150034AEA2 /* FlashCardServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashCardServiceProtocol.swift; sourceTree = "<group>"; };
+		16F31DDF2BD5936F00BCC67B /* ServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceError.swift; sourceTree = "<group>"; };
+		16F31DE42BD5AD4E00BCC67B /* BookDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailViewModel.swift; sourceTree = "<group>"; };
+		16F31DE62BD5AD5700BCC67B /* DeckListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckListPresenter.swift; sourceTree = "<group>"; };
+		16F31DE82BD5AD5F00BCC67B /* DeckDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckDetailViewModel.swift; sourceTree = "<group>"; };
+		16F31DEA2BD5ADF100BCC67B /* DeckListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckListView.swift; sourceTree = "<group>"; };
+		16F31DEC2BD5BEBD00BCC67B /* ListViewPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewPresenterProtocol.swift; sourceTree = "<group>"; };
+		16F31DEE2BD5BEE200BCC67B /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
+		16F31DF02BD5C4D400BCC67B /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +149,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				168D57332BD3D2F00034AEA2 /* APIClient in Frameworks */,
+				16F31DE32BD598CA00BCC67B /* IdentifiedCollections in Frameworks */,
+				168D57362BD3D3140034AEA2 /* DIContainer in Frameworks */,
+				168D57392BD3D33C0034AEA2 /* GRDBQuery in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,8 +196,10 @@
 		168D56E22BD3CDFE0034AEA2 /* BetterFlashcards */ = {
 			isa = PBXGroup;
 			children = (
-				168D56E32BD3CDFE0034AEA2 /* BetterFlashcardsApp.swift */,
-				168D56E52BD3CDFE0034AEA2 /* ContentView.swift */,
+				168D57102BD3CE240034AEA2 /* UI */,
+				168D570F2BD3CE1F0034AEA2 /* Domain */,
+				168D570E2BD3CE180034AEA2 /* Infrastructure */,
+				168D570D2BD3CE110034AEA2 /* App */,
 				168D56E72BD3CE010034AEA2 /* Assets.xcassets */,
 				168D56E92BD3CE010034AEA2 /* Preview Content */,
 			);
@@ -127,6 +231,211 @@
 			path = BetterFlashcardsUITests;
 			sourceTree = "<group>";
 		};
+		168D570D2BD3CE110034AEA2 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				168D57192BD3CF920034AEA2 /* Services */,
+				16F31DDF2BD5936F00BCC67B /* ServiceError.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		168D570E2BD3CE180034AEA2 /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				168D575C2BD3E3B50034AEA2 /* Authentication */,
+				168D57182BD3CF880034AEA2 /* Networking */,
+				168D57172BD3CF820034AEA2 /* Repositories */,
+				168D57562BD3E29F0034AEA2 /* Utilities */,
+			);
+			path = Infrastructure;
+			sourceTree = "<group>";
+		};
+		168D570F2BD3CE1F0034AEA2 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				168D57112BD3CE3F0034AEA2 /* FlashCard.swift */,
+				168D57212BD3D0E40034AEA2 /* FlashCardPractice.swift */,
+				168D57152BD3CF1D0034AEA2 /* Book.swift */,
+				168D57132BD3CEC00034AEA2 /* Deck.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		168D57102BD3CE240034AEA2 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				16F31DF22BD5C51700BCC67B /* ViewModels */,
+				168D57642BD3E96B0034AEA2 /* Views */,
+				168D57632BD3E9490034AEA2 /* Presenters */,
+				168D56E32BD3CDFE0034AEA2 /* BetterFlashcardsApp.swift */,
+				168D57652BD3E9A90034AEA2 /* EnvironmentValues.swift */,
+				168D57612BD3E6880034AEA2 /* DI.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		168D57172BD3CF820034AEA2 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				168D573B2BD3D37B0034AEA2 /* Implementations */,
+				168D573A2BD3D3750034AEA2 /* Protocols */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		168D57182BD3CF880034AEA2 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				168D57512BD3E03D0034AEA2 /* DTOs */,
+				168D573C2BD3D3D10034AEA2 /* Requests */,
+				168D573F2BD3D4420034AEA2 /* NetworkConstants.swift */,
+				168D57472BD3DD1F0034AEA2 /* BaseNetworking.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		168D57192BD3CF920034AEA2 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				168D57722BD3EFF80034AEA2 /* Protocols */,
+				168D57792BD3F01E0034AEA2 /* Implementations */,
+				168D576B2BD3EFB80034AEA2 /* Mocks */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		168D573A2BD3D3750034AEA2 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				168D571B2BD3CFAF0034AEA2 /* DeckRepositoryProtocol.swift */,
+				168D571D2BD3CFB90034AEA2 /* BookRepositoryProtocol.swift */,
+				168D571F2BD3CFC40034AEA2 /* FlashCardRepositoryProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		168D573B2BD3D37B0034AEA2 /* Implementations */ = {
+			isa = PBXGroup;
+			children = (
+				168D57452BD3DB5C0034AEA2 /* DeckNetworkRepository.swift */,
+				168D57492BD3DD400034AEA2 /* BookNetworkRepository.swift */,
+			);
+			path = Implementations;
+			sourceTree = "<group>";
+		};
+		168D573C2BD3D3D10034AEA2 /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				168D573D2BD3D3F80034AEA2 /* DeckRequests.swift */,
+				168D574F2BD3DFEC0034AEA2 /* AuthRequests.swift */,
+				168D57432BD3D9870034AEA2 /* BookRequests.swift */,
+				168D57412BD3D5D70034AEA2 /* FlashCardRequests.swift */,
+			);
+			path = Requests;
+			sourceTree = "<group>";
+		};
+		168D57512BD3E03D0034AEA2 /* DTOs */ = {
+			isa = PBXGroup;
+			children = (
+				168D57522BD3E04B0034AEA2 /* LoginResponseDTO.swift */,
+				16889D812BDCFEB600E09A9C /* UserDTO.swift */,
+			);
+			path = DTOs;
+			sourceTree = "<group>";
+		};
+		168D57562BD3E29F0034AEA2 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				168D57592BD3E31A0034AEA2 /* Keychain */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		168D57592BD3E31A0034AEA2 /* Keychain */ = {
+			isa = PBXGroup;
+			children = (
+				168D57572BD3E2BA0034AEA2 /* KeychainOptions.swift */,
+				168D57542BD3E2930034AEA2 /* KeychainWrapper.swift */,
+				168D575A2BD3E35C0034AEA2 /* KeychainKeys.swift */,
+			);
+			path = Keychain;
+			sourceTree = "<group>";
+		};
+		168D575C2BD3E3B50034AEA2 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				168D574D2BD3DFC90034AEA2 /* AuthProvider.swift */,
+				168D57272BD3D1C50034AEA2 /* AuthProtocols.swift */,
+				168D575D2BD3E4880034AEA2 /* AuthError.swift */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		168D57632BD3E9490034AEA2 /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				168D57672BD3EB8A0034AEA2 /* BookListPresenter.swift */,
+				16F31DE42BD5AD4E00BCC67B /* BookDetailViewModel.swift */,
+				16F31DE62BD5AD5700BCC67B /* DeckListPresenter.swift */,
+				16F31DE82BD5AD5F00BCC67B /* DeckDetailViewModel.swift */,
+				16F31DEC2BD5BEBD00BCC67B /* ListViewPresenterProtocol.swift */,
+			);
+			path = Presenters;
+			sourceTree = "<group>";
+		};
+		168D57642BD3E96B0034AEA2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				168D56E52BD3CDFE0034AEA2 /* ContentView.swift */,
+				168D57692BD3EBB50034AEA2 /* BookListView.swift */,
+				16889D832BDD028C00E09A9C /* BookCellView.swift */,
+				16F31DEA2BD5ADF100BCC67B /* DeckListView.swift */,
+				16889D852BDD02C200E09A9C /* DeckCellView.swift */,
+				16F31DEE2BD5BEE200BCC67B /* ListView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		168D576B2BD3EFB80034AEA2 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				168D576C2BD3EFC30034AEA2 /* MockDeckService.swift */,
+				168D57702BD3EFD90034AEA2 /* MockFlashCardService.swift */,
+				168D576E2BD3EFD00034AEA2 /* MockBookService.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		168D57722BD3EFF80034AEA2 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				168D57732BD3F0040034AEA2 /* DeckServiceProtocol.swift */,
+				168D57752BD3F00D0034AEA2 /* BookServiceProtocol.swift */,
+				168D57772BD3F0150034AEA2 /* FlashCardServiceProtocol.swift */,
+				16889D7F2BDCFDFD00E09A9C /* GenericBasicServiceProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		168D57792BD3F01E0034AEA2 /* Implementations */ = {
+			isa = PBXGroup;
+			children = (
+				168D57292BD3D1D00034AEA2 /* DeckService.swift */,
+				168D572B2BD3D1D70034AEA2 /* BookService.swift */,
+				168D572D2BD3D1E10034AEA2 /* FlashCardService.swift */,
+			);
+			path = Implementations;
+			sourceTree = "<group>";
+		};
+		16F31DF22BD5C51700BCC67B /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				16F31DF02BD5C4D400BCC67B /* ListViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +452,12 @@
 			dependencies = (
 			);
 			name = BetterFlashcards;
+			packageProductDependencies = (
+				168D57322BD3D2F00034AEA2 /* APIClient */,
+				168D57352BD3D3140034AEA2 /* DIContainer */,
+				168D57382BD3D33C0034AEA2 /* GRDBQuery */,
+				16F31DE22BD598CA00BCC67B /* IdentifiedCollections */,
+			);
 			productName = BetterFlashcards;
 			productReference = 168D56E02BD3CDFE0034AEA2 /* BetterFlashcards.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +530,12 @@
 				Base,
 			);
 			mainGroup = 168D56D72BD3CDFE0034AEA2;
+			packageReferences = (
+				168D57312BD3D2F00034AEA2 /* XCRemoteSwiftPackageReference "APIClient" */,
+				168D57342BD3D3140034AEA2 /* XCRemoteSwiftPackageReference "DIContainer" */,
+				168D57372BD3D33C0034AEA2 /* XCRemoteSwiftPackageReference "GRDBQuery" */,
+				16F31DE12BD598CA00BCC67B /* XCRemoteSwiftPackageReference "swift-identified-collections" */,
+			);
 			productRefGroup = 168D56E12BD3CDFE0034AEA2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -257,8 +578,55 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				168D576F2BD3EFD00034AEA2 /* MockBookService.swift in Sources */,
+				168D57142BD3CEC00034AEA2 /* Deck.swift in Sources */,
+				168D57122BD3CE3F0034AEA2 /* FlashCard.swift in Sources */,
+				168D57202BD3CFC40034AEA2 /* FlashCardRepositoryProtocol.swift in Sources */,
+				16F31DED2BD5BEBD00BCC67B /* ListViewPresenterProtocol.swift in Sources */,
+				168D57682BD3EB8A0034AEA2 /* BookListPresenter.swift in Sources */,
+				168D57622BD3E6880034AEA2 /* DI.swift in Sources */,
+				16F31DE52BD5AD4E00BCC67B /* BookDetailViewModel.swift in Sources */,
+				168D57742BD3F0040034AEA2 /* DeckServiceProtocol.swift in Sources */,
+				16F31DE02BD5936F00BCC67B /* ServiceError.swift in Sources */,
 				168D56E62BD3CDFE0034AEA2 /* ContentView.swift in Sources */,
+				168D57552BD3E2930034AEA2 /* KeychainWrapper.swift in Sources */,
+				168D57222BD3D0E40034AEA2 /* FlashCardPractice.swift in Sources */,
+				16889D802BDCFDFD00E09A9C /* GenericBasicServiceProtocol.swift in Sources */,
+				168D575E2BD3E4880034AEA2 /* AuthError.swift in Sources */,
+				168D572E2BD3D1E10034AEA2 /* FlashCardService.swift in Sources */,
+				168D57162BD3CF1D0034AEA2 /* Book.swift in Sources */,
+				168D573E2BD3D3F80034AEA2 /* DeckRequests.swift in Sources */,
+				16F31DEF2BD5BEE200BCC67B /* ListView.swift in Sources */,
+				16889D842BDD028C00E09A9C /* BookCellView.swift in Sources */,
+				168D57762BD3F00D0034AEA2 /* BookServiceProtocol.swift in Sources */,
+				168D57532BD3E04B0034AEA2 /* LoginResponseDTO.swift in Sources */,
+				16F31DF12BD5C4D400BCC67B /* ListViewModel.swift in Sources */,
+				168D571C2BD3CFAF0034AEA2 /* DeckRepositoryProtocol.swift in Sources */,
+				16F31DEB2BD5ADF100BCC67B /* DeckListView.swift in Sources */,
+				168D57402BD3D4420034AEA2 /* NetworkConstants.swift in Sources */,
+				168D576A2BD3EBB50034AEA2 /* BookListView.swift in Sources */,
+				168D572A2BD3D1D00034AEA2 /* DeckService.swift in Sources */,
+				16F31DE92BD5AD5F00BCC67B /* DeckDetailViewModel.swift in Sources */,
+				168D572C2BD3D1D70034AEA2 /* BookService.swift in Sources */,
 				168D56E42BD3CDFE0034AEA2 /* BetterFlashcardsApp.swift in Sources */,
+				16889D822BDCFEB600E09A9C /* UserDTO.swift in Sources */,
+				168D57462BD3DB5C0034AEA2 /* DeckNetworkRepository.swift in Sources */,
+				168D571E2BD3CFB90034AEA2 /* BookRepositoryProtocol.swift in Sources */,
+				168D57442BD3D9870034AEA2 /* BookRequests.swift in Sources */,
+				16889D862BDD02C200E09A9C /* DeckCellView.swift in Sources */,
+				168D57502BD3DFEC0034AEA2 /* AuthRequests.swift in Sources */,
+				168D576D2BD3EFC30034AEA2 /* MockDeckService.swift in Sources */,
+				168D57422BD3D5D70034AEA2 /* FlashCardRequests.swift in Sources */,
+				168D57782BD3F0150034AEA2 /* FlashCardServiceProtocol.swift in Sources */,
+				168D574E2BD3DFC90034AEA2 /* AuthProvider.swift in Sources */,
+				16F31DE72BD5AD5700BCC67B /* DeckListPresenter.swift in Sources */,
+				168D57712BD3EFD90034AEA2 /* MockFlashCardService.swift in Sources */,
+				168D57282BD3D1C50034AEA2 /* AuthProtocols.swift in Sources */,
+				168D57662BD3E9A90034AEA2 /* EnvironmentValues.swift in Sources */,
+				168D57582BD3E2BA0034AEA2 /* KeychainOptions.swift in Sources */,
+				168D575B2BD3E35C0034AEA2 /* KeychainKeys.swift in Sources */,
+				168D57482BD3DD1F0034AEA2 /* BaseNetworking.swift in Sources */,
+				168D574A2BD3DD400034AEA2 /* BookNetworkRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -583,6 +951,64 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		168D57312BD3D2F00034AEA2 /* XCRemoteSwiftPackageReference "APIClient" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/koshakji/APIClient";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.0.4;
+			};
+		};
+		168D57342BD3D3140034AEA2 /* XCRemoteSwiftPackageReference "DIContainer" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/koshakji/DIContainer.swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.0.5;
+			};
+		};
+		168D57372BD3D33C0034AEA2 /* XCRemoteSwiftPackageReference "GRDBQuery" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/groue/GRDBQuery";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.8.0;
+			};
+		};
+		16F31DE12BD598CA00BCC67B /* XCRemoteSwiftPackageReference "swift-identified-collections" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-identified-collections";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		168D57322BD3D2F00034AEA2 /* APIClient */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 168D57312BD3D2F00034AEA2 /* XCRemoteSwiftPackageReference "APIClient" */;
+			productName = APIClient;
+		};
+		168D57352BD3D3140034AEA2 /* DIContainer */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 168D57342BD3D3140034AEA2 /* XCRemoteSwiftPackageReference "DIContainer" */;
+			productName = DIContainer;
+		};
+		168D57382BD3D33C0034AEA2 /* GRDBQuery */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 168D57372BD3D33C0034AEA2 /* XCRemoteSwiftPackageReference "GRDBQuery" */;
+			productName = GRDBQuery;
+		};
+		16F31DE22BD598CA00BCC67B /* IdentifiedCollections */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 16F31DE12BD598CA00BCC67B /* XCRemoteSwiftPackageReference "swift-identified-collections" */;
+			productName = IdentifiedCollections;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 168D56D82BD3CDFE0034AEA2 /* Project object */;
 }
