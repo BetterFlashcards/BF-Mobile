@@ -13,4 +13,4 @@ struct Deck {
     var language: String?
 }
 
-extension Deck: Identifiable, Codable {}
+extension Deck: Identifiable, Codable, Hashable {}
