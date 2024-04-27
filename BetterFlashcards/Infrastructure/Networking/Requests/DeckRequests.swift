@@ -21,7 +21,7 @@ enum DeckRequests {
         group.request(path: "/")
     }
     
-    static func create() -> AuthenticatedRequest<Deck, Deck> {
+    static func create() -> AuthenticatedRequest<CreateDeckDTO, Deck> {
         group.request(path: "/", method: .post)
     }
     

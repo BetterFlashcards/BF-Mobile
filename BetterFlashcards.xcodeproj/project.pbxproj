@@ -22,6 +22,9 @@
 		16889D982BDD19EC00E09A9C /* MockAuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16889D972BDD19EC00E09A9C /* MockAuthenticationService.swift */; };
 		16889D9B2BDD1E0A00E09A9C /* FormLabelledField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16889D9A2BDD1E0A00E09A9C /* FormLabelledField.swift */; };
 		16889DA82BDD218E00E09A9C /* PaginatedListViewPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16889DA72BDD218E00E09A9C /* PaginatedListViewPresenterProtocol.swift */; };
+		16889DAA2BDD22FD00E09A9C /* CreateDeckDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16889DA92BDD22FD00E09A9C /* CreateDeckDTO.swift */; };
+		16889DAC2BDD242600E09A9C /* CreateBookDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16889DAB2BDD242600E09A9C /* CreateBookDTO.swift */; };
+		16889DAE2BDD244200E09A9C /* CreateFlashCardDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16889DAD2BDD244200E09A9C /* CreateFlashCardDTO.swift */; };
 		168D56E42BD3CDFE0034AEA2 /* BetterFlashcardsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168D56E32BD3CDFE0034AEA2 /* BetterFlashcardsApp.swift */; };
 		168D56E62BD3CDFE0034AEA2 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168D56E52BD3CDFE0034AEA2 /* HomeScreen.swift */; };
 		168D56E82BD3CE010034AEA2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 168D56E72BD3CE010034AEA2 /* Assets.xcassets */; };
@@ -109,6 +112,9 @@
 		16889D972BDD19EC00E09A9C /* MockAuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAuthenticationService.swift; sourceTree = "<group>"; };
 		16889D9A2BDD1E0A00E09A9C /* FormLabelledField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormLabelledField.swift; sourceTree = "<group>"; };
 		16889DA72BDD218E00E09A9C /* PaginatedListViewPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginatedListViewPresenterProtocol.swift; sourceTree = "<group>"; };
+		16889DA92BDD22FD00E09A9C /* CreateDeckDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateDeckDTO.swift; sourceTree = "<group>"; };
+		16889DAB2BDD242600E09A9C /* CreateBookDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateBookDTO.swift; sourceTree = "<group>"; };
+		16889DAD2BDD244200E09A9C /* CreateFlashCardDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateFlashCardDTO.swift; sourceTree = "<group>"; };
 		168D56E02BD3CDFE0034AEA2 /* BetterFlashcards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BetterFlashcards.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		168D56E32BD3CDFE0034AEA2 /* BetterFlashcardsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetterFlashcardsApp.swift; sourceTree = "<group>"; };
 		168D56E52BD3CDFE0034AEA2 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
@@ -434,6 +440,9 @@
 			isa = PBXGroup;
 			children = (
 				168D57522BD3E04B0034AEA2 /* LoginResponseDTO.swift */,
+				16889DA92BDD22FD00E09A9C /* CreateDeckDTO.swift */,
+				16889DAB2BDD242600E09A9C /* CreateBookDTO.swift */,
+				16889DAD2BDD244200E09A9C /* CreateFlashCardDTO.swift */,
 				16889D812BDCFEB600E09A9C /* UserDTO.swift */,
 			);
 			path = DTOs;
@@ -701,6 +710,8 @@
 				168D573E2BD3D3F80034AEA2 /* DeckRequests.swift in Sources */,
 				16F31DEF2BD5BEE200BCC67B /* ListView.swift in Sources */,
 				16889D842BDD028C00E09A9C /* BookCellView.swift in Sources */,
+				16889DAC2BDD242600E09A9C /* CreateBookDTO.swift in Sources */,
+				16889DAA2BDD22FD00E09A9C /* CreateDeckDTO.swift in Sources */,
 				16889D8A2BDD0B0900E09A9C /* AuthenticationPresenter.swift in Sources */,
 				168D57762BD3F00D0034AEA2 /* BookServiceProtocol.swift in Sources */,
 				168D57532BD3E04B0034AEA2 /* LoginResponseDTO.swift in Sources */,
@@ -724,6 +735,7 @@
 				168D57422BD3D5D70034AEA2 /* FlashCardRequests.swift in Sources */,
 				168D57782BD3F0150034AEA2 /* FlashCardServiceProtocol.swift in Sources */,
 				16889D982BDD19EC00E09A9C /* MockAuthenticationService.swift in Sources */,
+				16889DAE2BDD244200E09A9C /* CreateFlashCardDTO.swift in Sources */,
 				168D574E2BD3DFC90034AEA2 /* AuthProvider.swift in Sources */,
 				16F31DE72BD5AD5700BCC67B /* DeckListPresenter.swift in Sources */,
 				168D57712BD3EFD90034AEA2 /* MockFlashCardService.swift in Sources */,

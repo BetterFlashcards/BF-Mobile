@@ -15,7 +15,7 @@ enum FlashCardRequests {
             .subgroup(path:  NetworkConstants.flashCardPath)
     }
     
-    static func add(to deckID: Deck.ID) -> AuthenticatedRequest<FlashCard, FlashCard> {
+    static func add(to deckID: Deck.ID) -> AuthenticatedRequest<CreateFlashCardDTO, FlashCard> {
         group(deckID: deckID).request(path: "/", method: .post)
     }
     
