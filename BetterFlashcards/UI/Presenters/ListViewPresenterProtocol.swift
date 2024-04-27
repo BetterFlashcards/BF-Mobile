@@ -14,21 +14,12 @@ protocol ListViewPresenterProtocol<Item> {
     var viewModel: ListViewModel<Item> { get }
     
     func setup()
+    func firstLoad() async
     func getFullList() async throws -> [Item]
-    func getList(at: Int) async throws -> [Item]
     func delete(_: Item) async throws -> Item
-    func didDisplay(_ item: Item)
 }
 
 extension ListViewPresenterProtocol {
-    func didDisplay(_ item: Item) {
-        if viewModel.hasNextPage && item.id == viewModel.list.last?.id {
-            Task {
-                await self.load(page: viewModel.currentPage + 1)
-            }
-        }
-    }
-
     func firstLoad() async {
         setup()
         await loadAll()
@@ -49,23 +40,6 @@ extension ListViewPresenterProtocol {
             viewModel.list.removeAll()
             viewModel.list.append(contentsOf: items)
             viewModel.currentPage = 0
-        } catch {
-            viewModel.errorMessage = error.localizedDescription
-        }
-        viewModel.isLoading = false
-    }
-    
-    
-    func load(page: Int) async {
-        do {
-            viewModel.isLoading = true
-            let items = try await getList(at: page)
-            if items.isEmpty {
-                viewModel.hasNextPage = false
-            } else {
-                viewModel.list.append(contentsOf: items)
-            }
-            viewModel.currentPage = page
         } catch {
             viewModel.errorMessage = error.localizedDescription
         }

@@ -25,7 +25,9 @@ struct ListView<Presenter: ListViewPresenterProtocol, Cell>: View where Cell: Vi
             ForEach(viewModel.list) { item in
                 cellBuilder(item)
                     .onAppear {
-                        presenter.didDisplay(item)
+                        if let paginated = presenter as? any PaginatedListViewPresenterProtocol<Item> {
+                             paginated.didDisplay(item)
+                        }
                     }
             }.onDelete { indexSet in
                 guard let index = indexSet.first else { return }
