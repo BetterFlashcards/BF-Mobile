@@ -25,6 +25,9 @@
 		16889DAA2BDD22FD00E09A9C /* CreateDeckDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16889DA92BDD22FD00E09A9C /* CreateDeckDTO.swift */; };
 		16889DAC2BDD242600E09A9C /* CreateBookDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16889DAB2BDD242600E09A9C /* CreateBookDTO.swift */; };
 		16889DAE2BDD244200E09A9C /* CreateFlashCardDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16889DAD2BDD244200E09A9C /* CreateFlashCardDTO.swift */; };
+		16889DB02BDD2C1100E09A9C /* DeckViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16889DAF2BDD2C1100E09A9C /* DeckViewModel.swift */; };
+		16889DB22BDD2C5F00E09A9C /* DeckDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16889DB12BDD2C5F00E09A9C /* DeckDetailPresenter.swift */; };
+		16889DB42BDD30CB00E09A9C /* DeckDetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16889DB32BDD30CB00E09A9C /* DeckDetailScreen.swift */; };
 		16889DC22BDD509A00E09A9C /* DefaultRouterModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16889DC12BDD509900E09A9C /* DefaultRouterModifier.swift */; };
 		16889DC42BDD52FB00E09A9C /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16889DC32BDD52FB00E09A9C /* BaseViewModel.swift */; };
 		168D56E42BD3CDFE0034AEA2 /* BetterFlashcardsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168D56E32BD3CDFE0034AEA2 /* BetterFlashcardsApp.swift */; };
@@ -117,6 +120,9 @@
 		16889DA92BDD22FD00E09A9C /* CreateDeckDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateDeckDTO.swift; sourceTree = "<group>"; };
 		16889DAB2BDD242600E09A9C /* CreateBookDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateBookDTO.swift; sourceTree = "<group>"; };
 		16889DAD2BDD244200E09A9C /* CreateFlashCardDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateFlashCardDTO.swift; sourceTree = "<group>"; };
+		16889DAF2BDD2C1100E09A9C /* DeckViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckViewModel.swift; sourceTree = "<group>"; };
+		16889DB12BDD2C5F00E09A9C /* DeckDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckDetailPresenter.swift; sourceTree = "<group>"; };
+		16889DB32BDD30CB00E09A9C /* DeckDetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckDetailScreen.swift; sourceTree = "<group>"; };
 		16889DC12BDD509900E09A9C /* DefaultRouterModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultRouterModifier.swift; sourceTree = "<group>"; };
 		16889DC32BDD52FB00E09A9C /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		168D56E02BD3CDFE0034AEA2 /* BetterFlashcards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BetterFlashcards.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -234,6 +240,7 @@
 			isa = PBXGroup;
 			children = (
 				16F31DEA2BD5ADF100BCC67B /* DeckListScreen.swift */,
+				16889DB32BDD30CB00E09A9C /* DeckDetailScreen.swift */,
 				16889D852BDD02C200E09A9C /* DeckCellView.swift */,
 			);
 			path = Decks;
@@ -250,6 +257,7 @@
 			isa = PBXGroup;
 			children = (
 				16F31DE62BD5AD5700BCC67B /* DeckListPresenter.swift */,
+				16889DB12BDD2C5F00E09A9C /* DeckDetailPresenter.swift */,
 			);
 			path = Decks;
 			sourceTree = "<group>";
@@ -546,6 +554,7 @@
 				16889DA62BDD206900E09A9C /* Auth */,
 				16F31DF02BD5C4D400BCC67B /* ListViewModel.swift */,
 				16889DC32BDD52FB00E09A9C /* BaseViewModel.swift */,
+				16889DAF2BDD2C1100E09A9C /* DeckViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -708,6 +717,7 @@
 				16889D9B2BDD1E0A00E09A9C /* FormLabelledField.swift in Sources */,
 				168D57552BD3E2930034AEA2 /* KeychainWrapper.swift in Sources */,
 				168D57222BD3D0E40034AEA2 /* FlashCardPractice.swift in Sources */,
+				16889DB22BDD2C5F00E09A9C /* DeckDetailPresenter.swift in Sources */,
 				16889D802BDCFDFD00E09A9C /* GenericBasicServiceProtocol.swift in Sources */,
 				16889D942BDD109F00E09A9C /* AuthenticationServiceProtocol.swift in Sources */,
 				168D575E2BD3E4880034AEA2 /* AuthError.swift in Sources */,
@@ -719,6 +729,7 @@
 				16889D842BDD028C00E09A9C /* BookCellView.swift in Sources */,
 				16889DAC2BDD242600E09A9C /* CreateBookDTO.swift in Sources */,
 				16889DAA2BDD22FD00E09A9C /* CreateDeckDTO.swift in Sources */,
+				16889DB42BDD30CB00E09A9C /* DeckDetailScreen.swift in Sources */,
 				16889D8A2BDD0B0900E09A9C /* AuthenticationPresenter.swift in Sources */,
 				168D57762BD3F00D0034AEA2 /* BookServiceProtocol.swift in Sources */,
 				168D57532BD3E04B0034AEA2 /* LoginResponseDTO.swift in Sources */,
@@ -754,6 +765,7 @@
 				16889D8E2BDD0EB500E09A9C /* LoginView.swift in Sources */,
 				168D57482BD3DD1F0034AEA2 /* BaseNetworking.swift in Sources */,
 				168D574A2BD3DD400034AEA2 /* BookNetworkRepository.swift in Sources */,
+				16889DB02BDD2C1100E09A9C /* DeckViewModel.swift in Sources */,
 				16889DC22BDD509A00E09A9C /* DefaultRouterModifier.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
