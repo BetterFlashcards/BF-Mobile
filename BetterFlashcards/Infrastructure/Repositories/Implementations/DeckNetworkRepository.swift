@@ -21,7 +21,8 @@ class DeckNetworkRepository: BaseAuthenticatedNetworking, DeckRepositoryProtocol
     }
     
     func create(deck: Deck) async throws -> Deck {
-        let result = await client.make(request: deckRequests.create(), body: deck, headers: try await headers())
+        let dto = CreateDeckDTO(name: deck.name, language: deck.language ?? "")
+        let result = await client.make(request: deckRequests.create(), body: dto, headers: try await headers())
         return try convertResult(result: result)
     }
     

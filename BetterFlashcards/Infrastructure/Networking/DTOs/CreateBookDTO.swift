@@ -1,0 +1,13 @@
+//
+//  CreateBookDTO.swift
+//  BetterFlashcards
+//
+//  Created by Majd Koshakji on 27/04/2024.
+//
+
+import Foundation
+
+struct CreateBookDTO: Codable {
+    var title: String
+    var author: String
+}
