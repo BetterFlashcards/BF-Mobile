@@ -34,7 +34,7 @@ class BaseAuthenticatedNetworking: BaseNetworking {
     }
     
     func headers() async throws -> BearerHeaders<[String: String]> {
-        let token = try await tokenProvider.token()
+        let token = try tokenProvider.token()
         return BearerHeaders(token: token)
     }
 }

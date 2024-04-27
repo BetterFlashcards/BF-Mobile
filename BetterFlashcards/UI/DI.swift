@@ -32,6 +32,11 @@ extension DIContainerProtocol {
             type: (any BookServiceProtocol).self,
             eagerSingleton: MockBookService()
         )
+        
+        register(
+            type: AuthenticationServiceProtocol.self,
+            eagerSingleton: MockAuthenticationService()
+        )
         return self
     }
     
@@ -96,6 +101,16 @@ extension DIContainerProtocol {
             type: (any BookServiceProtocol).self,
             lazySingleton: {
                 BookService(bookRepo: $0.forceResolve())
+            }
+        )
+        
+        register(
+            type: AuthenticationServiceProtocol.self,
+            lazySingleton: {
+                AuthenticationService(
+                    auth: $0.forceResolve(),
+                    tokenProvider: $0.forceResolve()
+                )
             }
         )
         
