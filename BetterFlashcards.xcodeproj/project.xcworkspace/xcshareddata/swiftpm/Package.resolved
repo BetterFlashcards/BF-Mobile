@@ -1,0 +1,50 @@
+{
+  "pins" : [
+    {
+      "identity" : "apiclient",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/koshakji/APIClient",
+      "state" : {
+        "revision" : "57f1e22a5d2ec619543c94452751783f0282a57c",
+        "version" : "0.0.4"
+      }
+    },
+    {
+      "identity" : "dicontainer.swift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/koshakji/DIContainer.swift",
+      "state" : {
+        "revision" : "2dd84e2f51a50f0c218f7946f1d2fca3a181f5ad",
+        "version" : "0.0.5"
+      }
+    },
+    {
+      "identity" : "grdbquery",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/groue/GRDBQuery",
+      "state" : {
+        "revision" : "42fef11503d221229ec39201c08316b6930755b2",
+        "version" : "0.8.0"
+      }
+    },
+    {
+      "identity" : "swift-collections",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/swift-collections",
+      "state" : {
+        "revision" : "94cf62b3ba8d4bed62680a282d4c25f9c63c2efb",
+        "version" : "1.1.0"
+      }
+    },
+    {
+      "identity" : "swift-identified-collections",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/pointfreeco/swift-identified-collections",
+      "state" : {
+        "revision" : "d1e45f3e1eee2c9193f5369fa9d70a6ddad635e8",
+        "version" : "1.0.0"
+      }
+    }
+  ],
+  "version" : 2
+}
