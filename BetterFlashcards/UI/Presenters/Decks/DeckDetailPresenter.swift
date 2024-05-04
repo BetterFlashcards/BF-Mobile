@@ -29,6 +29,7 @@ class DeckDetailPresenter: ObservableObject {
     
     func setup()  {
         deckService.eventPublisher
+            .receive(on: DispatchQueue.main)
             .sink { [weak self] event in
                 self?.handle(event)
             }.store(in: &cancelSet)
