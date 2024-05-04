@@ -75,7 +75,6 @@ class DeckDetailPresenter: ObservableObject {
             let deck = Deck(id: id, name: viewModel.name, language: viewModel.language)
             do {
                 _ = try await deckService.delete(deck)
-                dismiss()
             } catch {
                 viewModel.errorMessage = error.localizedDescription
             }
