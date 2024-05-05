@@ -39,6 +39,7 @@ struct CardList: View {
                 LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 10) {
                     ForEach(viewModel.list) { card in
                         cell(for: card)
+                            .onAppear { presenter.didDisplay(card) }
                     }
                     if viewModel.isLoading {
                         ProgressView()

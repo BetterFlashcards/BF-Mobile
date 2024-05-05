@@ -8,7 +8,9 @@
 import Foundation
 import Combine
 
-class FlashCardListPresenter: ListViewPresenterProtocol, ObservableObject {
+class FlashCardListPresenter: PaginatedListViewPresenterProtocol, ObservableObject {
+    let pageSize = 20
+    
     @Published var viewModel = ListViewModel<FlashCard>()
     let deckID: Deck.ID
     
@@ -36,9 +38,8 @@ class FlashCardListPresenter: ListViewPresenterProtocol, ObservableObject {
         try await flashCardService.getList(for: deckID)
     }
     
-    func getList(at page: Int) async throws -> [Deck] {
-        // try await deckService.getList(at: page)
-        []
+    func getPaginatedList(at pagination: Pagination) async throws -> PaginatedList<FlashCard> {
+        try await flashCardService.getList(for: deckID, at: pagination)
     }
     
     func delete(_ flashCard: FlashCard) async throws -> FlashCard {
