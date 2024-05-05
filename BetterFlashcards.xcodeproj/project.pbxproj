@@ -84,6 +84,7 @@
 		16E89E4E2BE7AB9D00BFC761 /* ListDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E89E4D2BE7AB9D00BFC761 /* ListDTO.swift */; };
 		16E89E502BE7AD8500BFC761 /* PaginatedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E89E4F2BE7AD8500BFC761 /* PaginatedList.swift */; };
 		16E89E522BE7B0A700BFC761 /* PaginationQueryDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E89E512BE7B0A700BFC761 /* PaginationQueryDTO.swift */; };
+		16E89E542BE7BABF00BFC761 /* FlashCardResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E89E532BE7BABF00BFC761 /* FlashCardResponseDTO.swift */; };
 		16F31DE02BD5936F00BCC67B /* ServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F31DDF2BD5936F00BCC67B /* ServiceError.swift */; };
 		16F31DE32BD598CA00BCC67B /* IdentifiedCollections in Frameworks */ = {isa = PBXBuildFile; productRef = 16F31DE22BD598CA00BCC67B /* IdentifiedCollections */; };
 		16F31DE72BD5AD5700BCC67B /* DeckListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F31DE62BD5AD5700BCC67B /* DeckListPresenter.swift */; };
@@ -189,6 +190,7 @@
 		16E89E4D2BE7AB9D00BFC761 /* ListDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDTO.swift; sourceTree = "<group>"; };
 		16E89E4F2BE7AD8500BFC761 /* PaginatedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginatedList.swift; sourceTree = "<group>"; };
 		16E89E512BE7B0A700BFC761 /* PaginationQueryDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginationQueryDTO.swift; sourceTree = "<group>"; };
+		16E89E532BE7BABF00BFC761 /* FlashCardResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashCardResponseDTO.swift; sourceTree = "<group>"; };
 		16F31DDF2BD5936F00BCC67B /* ServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceError.swift; sourceTree = "<group>"; };
 		16F31DE62BD5AD5700BCC67B /* DeckListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckListPresenter.swift; sourceTree = "<group>"; };
 		16F31DEA2BD5ADF100BCC67B /* DeckListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckListScreen.swift; sourceTree = "<group>"; };
@@ -478,6 +480,7 @@
 			children = (
 				168D57522BD3E04B0034AEA2 /* LoginResponseDTO.swift */,
 				16E89E4D2BE7AB9D00BFC761 /* ListDTO.swift */,
+				16E89E532BE7BABF00BFC761 /* FlashCardResponseDTO.swift */,
 				16E89E512BE7B0A700BFC761 /* PaginationQueryDTO.swift */,
 				16889DA92BDD22FD00E09A9C /* CreateDeckDTO.swift */,
 				16889DAB2BDD242600E09A9C /* CreateBookDTO.swift */,
@@ -773,6 +776,7 @@
 				16889DAC2BDD242600E09A9C /* CreateBookDTO.swift in Sources */,
 				16889DAA2BDD22FD00E09A9C /* CreateDeckDTO.swift in Sources */,
 				16889DB42BDD30CB00E09A9C /* DeckDetailScreen.swift in Sources */,
+				16E89E542BE7BABF00BFC761 /* FlashCardResponseDTO.swift in Sources */,
 				16889D8A2BDD0B0900E09A9C /* AuthenticationPresenter.swift in Sources */,
 				168D57762BD3F00D0034AEA2 /* BookServiceProtocol.swift in Sources */,
 				168D57532BD3E04B0034AEA2 /* LoginResponseDTO.swift in Sources */,

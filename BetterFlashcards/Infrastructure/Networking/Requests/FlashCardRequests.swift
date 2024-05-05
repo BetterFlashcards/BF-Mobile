@@ -28,15 +28,15 @@ enum FlashCardRequests {
         deckGroup(deckID: deckID).request(path: "", method: .post)
     }
     
-    static func list(for deckID: Deck.ID) -> AuthenticatedRequest<Nothing, [FlashCard]> {
+    static func list(for deckID: Deck.ID) -> PaginatedAuthRequest<FlashCardResponseDTO> {
         deckGroup(deckID: deckID).request(path: "")
     }
     
-    static func due(for deckID: Deck.ID) -> AuthenticatedRequest<Nothing, [FlashCard]> {
+    static func due(for deckID: Deck.ID) -> PaginatedAuthRequest<FlashCardResponseDTO> {
         DeckRequests
             .detailsGroup(for: deckID)
             .subgroup(path: NetworkConstants.deckCardsDuePath)
-            .request(path: "/")
+            .request(path: "")
     }
     
     // MARK: Details
