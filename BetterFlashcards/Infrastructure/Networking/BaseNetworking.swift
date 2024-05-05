@@ -26,15 +26,15 @@ class BaseNetworking {
 }
 
 class BaseAuthenticatedNetworking: BaseNetworking {
-    let tokenProvider: any TokenProviderProtocol
+    let authStore: any AuthStoreProtocol
     
-    init(client: APIClient, tokenProvider: any TokenProviderProtocol) {
-        self.tokenProvider = tokenProvider
+    init(client: APIClient, authStore: any AuthStoreProtocol) {
+        self.authStore = authStore
         super.init(client: client)
     }
     
     func headers() async throws -> BearerHeaders<[String: String]> {
-        let token = try tokenProvider.token()
+        let token = try authStore.token()
         return BearerHeaders(token: token)
     }
 }

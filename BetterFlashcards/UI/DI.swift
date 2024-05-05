@@ -50,11 +50,12 @@ extension DIContainerProtocol {
             encoder: encoder,
             decoder: decoder
         )
-        let auth = AuthProvider(client: apiClient)
+        let authStore = AuthStore()
+        let authProvider = AuthProvider(authStore: authStore, client: apiClient)
         
         register(eagerSingleton: apiClient)
-        register(type: TokenProviderProtocol.self, eagerSingleton: auth)
-        register(type: AuthenticationProtocol.self, eagerSingleton: auth)
+        register(type: AuthStoreProtocol.self, eagerSingleton: authStore)
+        register(type: AuthProviderProtocol.self, eagerSingleton: authProvider)
         return self
     }
     
@@ -64,7 +65,7 @@ extension DIContainerProtocol {
             lazySingleton: {
                 DeckNetworkRepository(
                     client: $0.forceResolve(),
-                    tokenProvider: $0.forceResolve()
+                    authStore: $0.forceResolve()
                 )
             }
         )
@@ -74,7 +75,7 @@ extension DIContainerProtocol {
             lazySingleton: {
                 FlashCardNetworkRepository(
                     client: $0.forceResolve(),
-                    tokenProvider: $0.forceResolve()
+                    authStore: $0.forceResolve()
                 )
             }
         )
@@ -84,7 +85,7 @@ extension DIContainerProtocol {
             lazySingleton: {
                 BookNetworkRepository(
                     client: $0.forceResolve(),
-                    tokenProvider: $0.forceResolve()
+                    authStore: $0.forceResolve()
                 )
             }
         )
@@ -118,8 +119,8 @@ extension DIContainerProtocol {
             type: AuthenticationServiceProtocol.self,
             lazySingleton: {
                 AuthenticationService(
-                    auth: $0.forceResolve(),
-                    tokenProvider: $0.forceResolve()
+                    authProvider: $0.forceResolve(),
+                    authStore: $0.forceResolve()
                 )
             }
         )
