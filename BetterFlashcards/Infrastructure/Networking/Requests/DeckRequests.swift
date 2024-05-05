@@ -17,7 +17,7 @@ enum DeckRequests {
     }
     
     // MARK: Top Level
-    static func list() -> AuthenticatedRequest<Nothing, ListDTO<Deck>> {
+    static func list() -> AdvancedRequest<Nothing, BearerHeaders<[String: String]>, PaginationQueryDTO?, ListDTO<Deck>> {
         group.request(path: "")
     }
     
