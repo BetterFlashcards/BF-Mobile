@@ -24,6 +24,10 @@ class FlashCardService: FlashCardServiceProtocol {
         try await flashCardRepo.fetchAll(by: deckID)
     }
     
+    func getList(for deckID: Deck.ID, at pagination: Pagination) async throws -> PaginatedList<FlashCard> {
+        try await flashCardRepo.fetch(by: deckID, at: pagination)
+    }
+    
     func create(_ card: FlashCard) async throws -> FlashCard {
         let card = try await flashCardRepo.create(flashCard: card)
         eventSubject.send(.added(card))
@@ -45,6 +49,10 @@ class FlashCardService: FlashCardServiceProtocol {
     
     func dueList(for deckID: Deck.ID) async throws -> [FlashCard] {
         try await flashCardRepo.dueCards(for: deckID)
+    }
+    
+    func dueList(for deckID: Deck.ID, at pagination: Pagination) async throws -> PaginatedList<FlashCard> {
+        try await flashCardRepo.dueCards(for: deckID, at: pagination)
     }
     
     func save(practice: FlashCardPractice) async throws {
