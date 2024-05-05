@@ -12,7 +12,7 @@ class DeckNetworkRepository: BaseAuthenticatedNetworking, DeckRepositoryProtocol
     
     func fetchAll() async throws -> [Deck] {
         let result = await client.make(request: deckRequests.list(), headers: try await headers())
-        return try convertResult(result: result)
+        return try convertResult(result: result).items
     }
     
     func fetch(by deckID: Deck.ID) async throws -> Deck? {
