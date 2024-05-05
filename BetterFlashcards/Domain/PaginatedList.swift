@@ -16,4 +16,8 @@ struct PaginatedList<Item> {
     let items: [Item]
     let count: Int
     let pagination: Pagination
+    
+    var hasNextPage: Bool {
+        count > ((pagination.page + 1) * pagination.size) 
+    }
 }
