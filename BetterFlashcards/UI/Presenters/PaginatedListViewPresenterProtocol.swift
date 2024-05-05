@@ -9,7 +9,8 @@ import Foundation
 
 @MainActor
 protocol PaginatedListViewPresenterProtocol<Item>: ListViewPresenterProtocol {
-    func getList(at: Int) async throws -> [Item]
+    var pageSize: Int { get }
+    func getPaginatedList(at: Pagination) async throws -> PaginatedList<Item>
     func didDisplay(_ item: Item)
 }
 
@@ -30,13 +31,11 @@ extension PaginatedListViewPresenterProtocol {
     func load(page: Int) async {
         do {
             viewModel.isLoading = true
-            let items = try await getList(at: page)
-            if items.isEmpty {
-                viewModel.hasNextPage = false
-            } else {
-                viewModel.list.append(contentsOf: items)
-            }
-            viewModel.currentPage = page
+            let pagination = Pagination(page: page, size: self.pageSize)
+            let result = try await getPaginatedList(at: pagination)
+            viewModel.list.append(contentsOf: result.items)
+            viewModel.currentPage = result.pagination.page
+            viewModel.hasNextPage = result.hasNextPage
         } catch {
             viewModel.errorMessage = error.localizedDescription
         }

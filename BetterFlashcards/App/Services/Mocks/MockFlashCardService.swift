@@ -36,6 +36,14 @@ actor MockFlashCardService: FlashCardServiceProtocol {
         return deckCards[deckID] ?? []
     }
     
+    func getList(for deckID: Deck.ID, at pagination: Pagination) async throws -> PaginatedList<FlashCard> {
+        let cards = deckCards[deckID] ?? []
+        let start = pagination.page * pagination.size
+        let end = min(start + pagination.size, cards.count)
+        guard start < end else { return .init(items: [], count: 0, pagination: pagination) }
+        return .init(items: Array(cards[start..<end]), count: cards.count, pagination: pagination)
+    }
+    
     func create(_ card: FlashCard) async throws -> FlashCard {
         guard var deck = deckCards[card.deckID] else { throw ServiceError.notFound }
         deck.append(card)
@@ -66,6 +74,10 @@ actor MockFlashCardService: FlashCardServiceProtocol {
         
     func dueList(for deckID: Deck.ID) async throws -> [FlashCard] {
         try await getList(for: deckID)
+    }
+    
+    func dueList(for deckID: Deck.ID, at pagination: Pagination) async throws -> PaginatedList<FlashCard> {
+        try await getList(for: deckID, at: pagination)
     }
     
     func save(practice: FlashCardPractice) async throws {

@@ -17,24 +17,24 @@ enum DeckRequests {
     }
     
     // MARK: Top Level
-    static func list() -> AuthenticatedRequest<Nothing, [Deck]> {
-        group.request(path: "/")
+    static func list() -> PaginatedAuthRequest<Deck> {
+        group.request(path: "")
     }
     
     static func create() -> AuthenticatedRequest<CreateDeckDTO, Deck> {
-        group.request(path: "/", method: .post)
+        group.request(path: "", method: .post)
     }
     
     // MARK: Details
     static func details(for deckID: Deck.ID) -> AuthenticatedRequest<Nothing, Deck> {
-        detailsGroup(for: deckID).request(path: "/")
+        detailsGroup(for: deckID).request(path: "")
     }
 
     static func update(at deckID: Deck.ID) -> AuthenticatedRequest<Deck, Deck> {
-        detailsGroup(for: deckID).request(path: "/", method: .put)
+        detailsGroup(for: deckID).request(path: "", method: .put)
     }
     
     static func delete(at deckID: Deck.ID) -> AuthenticatedRequest<Nothing, Nothing?> {
-        detailsGroup(for: deckID).request(path: "/", method: .delete)
+        detailsGroup(for: deckID).request(path: "", method: .delete)
     }
 }

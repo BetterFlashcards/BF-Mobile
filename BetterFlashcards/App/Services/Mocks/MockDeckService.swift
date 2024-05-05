@@ -22,12 +22,12 @@ actor MockDeckService: DeckServiceProtocol {
     func getList() async throws -> [Deck] {
         return deckList
     }
-
-    func getList(at page: Int) async throws -> [Deck] {
-        let start = page * pageSize
-        let end = min(start + pageSize, deckList.count)
-        guard start < end else { return [] }
-        return Array(deckList[start..<end])
+    
+    func getList(at pagination: Pagination) async throws -> PaginatedList<Deck> {
+        let start = pagination.page * pagination.size
+        let end = min(start + pagination.size, deckList.count)
+        guard start < end else { return .init(items: [], count: 0, pagination: pagination) }
+        return .init(items: Array(deckList[start..<end]), count: deckList.count, pagination: pagination)
     }
     
     func create(_ deck: Deck) async throws -> Deck {

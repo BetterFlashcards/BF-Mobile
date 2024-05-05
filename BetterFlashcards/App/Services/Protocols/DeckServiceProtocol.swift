@@ -8,8 +8,6 @@
 import Foundation
 import Combine
 
-protocol DeckServiceProtocol: GenericBasicServiceProtocol where Item == Deck {
-    
-}
+protocol DeckServiceProtocol: GenericBasicServiceProtocol where Item == Deck { }
 
 typealias DeckServiceEvent = BasicServiceEvent<Deck>

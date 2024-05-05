@@ -12,7 +12,18 @@ class FlashCardNetworkRepository: BaseAuthenticatedNetworking, FlashCardReposito
     
     func fetchAll(by deckID: Deck.ID) async throws -> [FlashCard] {
         let result = await client.make(request: flashCardRequests.list(for: deckID), headers: try await headers())
-        return try convertResult(result: result)
+        return try convertResult(result: result).items.map(self.mapper(_:))
+    }
+    
+    func fetch(by deckID: Deck.ID, at pagination: Pagination) async throws -> PaginatedList<FlashCard> {
+        let result = await client.make(request: flashCardRequests.list(for: deckID), headers: try await headers(), queries: .init(pagination: pagination))
+        let response = try convertResult(result: result)
+        
+        return .init(
+            items: response.items.map(self.mapper(_:)),
+            count: response.count,
+            pagination: pagination
+        )
     }
     
     func fetch(by flashCardID: FlashCard.ID) async throws -> FlashCard? {
@@ -40,14 +51,36 @@ class FlashCardNetworkRepository: BaseAuthenticatedNetworking, FlashCardReposito
         _ = try convertResult(result: result)
     }
     
+    
+    func dueCards(for deckID: Deck.ID, at pagination: Pagination) async throws -> PaginatedList<FlashCard> {
+        let result = await client.make(request: flashCardRequests.due(for: deckID), headers: try await headers(), queries: .init(pagination: pagination))
+        let response = try convertResult(result: result)
+        
+        return .init(
+            items: response.items.map(self.mapper(_:)),
+            count: response.count,
+            pagination: pagination
+        )
+    }
+    
     func dueCards(for deckID: Deck.ID) async throws -> [FlashCard] {
         let result = await client.make(request: flashCardRequests.due(for: deckID), headers: try await headers())
-        return try convertResult(result: result)
+        return try convertResult(result: result).items.map(self.mapper(_:))
     }
     
     func add(practice: FlashCardPractice) async throws {
         let dto = FlashCardPracticeDTO(remembered: practice.result == .memorized)
         let result = await client.make(request: flashCardRequests.updateReview(for: practice.flashCardID), body: dto, headers: try await headers())
         _ = try convertResult(result: result)
+    }
+    
+    private func mapper(_ dto: FlashCardResponseDTO) -> FlashCard {
+        return FlashCard(
+            id: dto.id,
+            frontWord: dto.frontText,
+            backWord: dto.backText,
+            deckID: dto.deck.id,
+            isDraft: false
+        )
     }
 }
