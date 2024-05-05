@@ -24,6 +24,10 @@ class DeckService: DeckServiceProtocol {
         try await deckRepo.fetchAll()
     }
     
+    func getList(at pagination: Pagination) async throws -> PaginatedList<Deck> {
+        try await deckRepo.fetch(at: pagination)
+    }
+    
     func create(_ deck: Deck) async throws -> Deck {
         let deck = try await deckRepo.create(deck: deck)
         eventSubject.send(.added(deck))
