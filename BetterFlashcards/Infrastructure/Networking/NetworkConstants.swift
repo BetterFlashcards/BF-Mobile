@@ -9,8 +9,8 @@ import Foundation
 import APIClient
 
 enum NetworkConstants {
-    static let baseURL = ""
     static let scheme = "http"
+    static let baseURL = "18.234.173.119"
     static let authPath = "/api/auth"
     static let loginPath = "/login"
     static let register = "/register"
