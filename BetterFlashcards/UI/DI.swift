@@ -13,6 +13,7 @@ extension DIContainerProtocol {
     func withDefaultDependencyGraph() -> Self {
         return self
             .withDefaultUtilities()
+            .withDefaultAuth()
             .withNetworkRepositories()
             .withDefaultServices()
     }
@@ -50,12 +51,20 @@ extension DIContainerProtocol {
             encoder: encoder,
             decoder: decoder
         )
+        register(type: Client.self, eagerSingleton: apiClient)
+        return self
+    }
+    
+    private func withDefaultAuth() -> Self {
         let authStore = AuthStore()
-        let authProvider = AuthProvider(authStore: authStore, client: apiClient)
         
-        register(eagerSingleton: apiClient)
         register(type: AuthStoreProtocol.self, eagerSingleton: authStore)
-        register(type: AuthProviderProtocol.self, eagerSingleton: authProvider)
+        register(
+            type: AuthProviderProtocol.self,
+            lazySingleton: {
+                AuthProvider(authStore: $0.forceResolve(), client: $0.forceResolve())
+            }
+        )
         return self
     }
     

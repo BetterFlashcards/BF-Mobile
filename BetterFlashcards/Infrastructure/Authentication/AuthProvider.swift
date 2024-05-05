@@ -12,7 +12,7 @@ class AuthProvider: BaseNetworking, AuthProviderProtocol {
     let authRequests = AuthRequests.self
     let authStore: AuthStoreProtocol
     
-    init(authStore: AuthStoreProtocol, client: APIClient) {
+    init(authStore: AuthStoreProtocol, client: Client) {
         self.authStore = authStore
         super.init(client: client)
     }
