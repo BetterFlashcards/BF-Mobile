@@ -12,7 +12,13 @@ class BookNetworkRepository: BaseAuthenticatedNetworking, BookRepositoryProtocol
     
     func fetchAll() async throws -> [Book] {
         let result = await client.make(request: bookRequests.list(), headers: try await headers())
-        return try convertResult(result: result)
+        return try convertResult(result: result).items
+    }
+    
+    func fetch(at pagination: Pagination) async throws -> PaginatedList<Book> {
+        let result = await client.make(request: bookRequests.list(), headers: try await headers(), queries: PaginationQueryDTO(pagination: pagination))
+        let response = try convertResult(result: result)
+        return .init(items: response.items, count: response.count, pagination: pagination)
     }
     
     func fetch(by bookID: Book.ID) async throws -> Book? {

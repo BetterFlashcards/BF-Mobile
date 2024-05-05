@@ -17,7 +17,7 @@ enum BookRequests {
     }
     
     // MARK: Top Level
-    static func list() -> AuthenticatedRequest<Nothing, [Book]> {
+    static func list() -> PaginatedAuthRequest<Book> {
         group.request(path: "")
     }
     
