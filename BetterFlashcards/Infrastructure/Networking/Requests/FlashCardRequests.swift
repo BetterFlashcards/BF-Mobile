@@ -11,7 +11,7 @@ import APIClient
 enum FlashCardRequests {
     // MARK: Groups
     
-    static let group = Group(host: NetworkConstants.baseURL, path: NetworkConstants.flashCardPath)
+    static let group = NetworkConstants.baseGroup.subgroup(path: NetworkConstants.flashCardPath)
     
     static func deckGroup(deckID: Deck.ID) -> any GroupProtocol {
         DeckRequests

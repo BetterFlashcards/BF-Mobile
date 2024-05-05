@@ -9,7 +9,7 @@ import Foundation
 import APIClient
 
 enum DeckRequests {
-    static let group = Group(host: NetworkConstants.baseURL, path: NetworkConstants.deckPath)
+    static let group = NetworkConstants.baseGroup.subgroup(path: NetworkConstants.deckPath)
     
     // MARK: Subgroups
     static func detailsGroup(for deckID: Deck.ID) -> any GroupProtocol {

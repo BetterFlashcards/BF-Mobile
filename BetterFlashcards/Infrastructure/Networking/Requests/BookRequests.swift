@@ -9,7 +9,7 @@ import Foundation
 import APIClient
 
 enum BookRequests {
-    static let group = Group(host: NetworkConstants.baseURL, path: NetworkConstants.bookPath)
+    static let group = NetworkConstants.baseGroup.subgroup(path: NetworkConstants.bookPath)
     
     // MARK: Subgroups
     static func detailsGroup(for bookID: Book.ID) -> any GroupProtocol {
