@@ -8,8 +8,9 @@
 import Foundation
 import Combine
 
-class DeckListPresenter: ListViewPresenterProtocol, ObservableObject {
+class DeckListPresenter: PaginatedListViewPresenterProtocol, ObservableObject {
     @Published var viewModel = ListViewModel<Deck>()
+    let pageSize = 20
     
     private let deckService: any DeckServiceProtocol
     private var cancelSet: Set<AnyCancellable> = []
@@ -34,9 +35,8 @@ class DeckListPresenter: ListViewPresenterProtocol, ObservableObject {
         try await deckService.getList()
     }
     
-    func getList(at page: Int) async throws -> [Deck] {
-        // try await deckService.getList(at: page)
-        []
+    func getPaginatedList(at pagination: Pagination) async throws -> PaginatedList<Deck> {
+        try await deckService.getList(at: pagination)
     }
     
     func delete(_ deck: Deck) async throws -> Deck {
