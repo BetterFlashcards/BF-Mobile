@@ -82,6 +82,8 @@
 		16E89E452BDD73A800BFC761 /* FlashCardGridCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E89E442BDD73A800BFC761 /* FlashCardGridCell.swift */; };
 		16E89E4C2BE79EFB00BFC761 /* AuthStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E89E4B2BE79EFB00BFC761 /* AuthStore.swift */; };
 		16E89E4E2BE7AB9D00BFC761 /* ListDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E89E4D2BE7AB9D00BFC761 /* ListDTO.swift */; };
+		16E89E502BE7AD8500BFC761 /* PaginatedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E89E4F2BE7AD8500BFC761 /* PaginatedList.swift */; };
+		16E89E522BE7B0A700BFC761 /* PaginationQueryDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E89E512BE7B0A700BFC761 /* PaginationQueryDTO.swift */; };
 		16F31DE02BD5936F00BCC67B /* ServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F31DDF2BD5936F00BCC67B /* ServiceError.swift */; };
 		16F31DE32BD598CA00BCC67B /* IdentifiedCollections in Frameworks */ = {isa = PBXBuildFile; productRef = 16F31DE22BD598CA00BCC67B /* IdentifiedCollections */; };
 		16F31DE72BD5AD5700BCC67B /* DeckListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F31DE62BD5AD5700BCC67B /* DeckListPresenter.swift */; };
@@ -185,6 +187,8 @@
 		16E89E482BDD99D500BFC761 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		16E89E4B2BE79EFB00BFC761 /* AuthStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthStore.swift; sourceTree = "<group>"; };
 		16E89E4D2BE7AB9D00BFC761 /* ListDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDTO.swift; sourceTree = "<group>"; };
+		16E89E4F2BE7AD8500BFC761 /* PaginatedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginatedList.swift; sourceTree = "<group>"; };
+		16E89E512BE7B0A700BFC761 /* PaginationQueryDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginationQueryDTO.swift; sourceTree = "<group>"; };
 		16F31DDF2BD5936F00BCC67B /* ServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceError.swift; sourceTree = "<group>"; };
 		16F31DE62BD5AD5700BCC67B /* DeckListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckListPresenter.swift; sourceTree = "<group>"; };
 		16F31DEA2BD5ADF100BCC67B /* DeckListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckListScreen.swift; sourceTree = "<group>"; };
@@ -390,6 +394,7 @@
 				168D57152BD3CF1D0034AEA2 /* Book.swift */,
 				16889D8B2BDD0D1600E09A9C /* User.swift */,
 				168D57132BD3CEC00034AEA2 /* Deck.swift */,
+				16E89E4F2BE7AD8500BFC761 /* PaginatedList.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -473,6 +478,7 @@
 			children = (
 				168D57522BD3E04B0034AEA2 /* LoginResponseDTO.swift */,
 				16E89E4D2BE7AB9D00BFC761 /* ListDTO.swift */,
+				16E89E512BE7B0A700BFC761 /* PaginationQueryDTO.swift */,
 				16889DA92BDD22FD00E09A9C /* CreateDeckDTO.swift */,
 				16889DAB2BDD242600E09A9C /* CreateBookDTO.swift */,
 				16E89E3B2BDD6B2700BFC761 /* FlashCardPracticeDTO.swift */,
@@ -797,10 +803,12 @@
 				168D57712BD3EFD90034AEA2 /* MockFlashCardService.swift in Sources */,
 				168D57282BD3D1C50034AEA2 /* AuthProtocols.swift in Sources */,
 				168D57662BD3E9A90034AEA2 /* EnvironmentValues.swift in Sources */,
+				16E89E502BE7AD8500BFC761 /* PaginatedList.swift in Sources */,
 				168D57582BD3E2BA0034AEA2 /* KeychainOptions.swift in Sources */,
 				16889DA82BDD218E00E09A9C /* PaginatedListViewPresenterProtocol.swift in Sources */,
 				168D575B2BD3E35C0034AEA2 /* KeychainKeys.swift in Sources */,
 				16889D8E2BDD0EB500E09A9C /* LoginView.swift in Sources */,
+				16E89E522BE7B0A700BFC761 /* PaginationQueryDTO.swift in Sources */,
 				168D57482BD3DD1F0034AEA2 /* BaseNetworking.swift in Sources */,
 				168D574A2BD3DD400034AEA2 /* BookNetworkRepository.swift in Sources */,
 				16889DB02BDD2C1100E09A9C /* DeckViewModel.swift in Sources */,
