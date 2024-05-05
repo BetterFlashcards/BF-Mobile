@@ -36,7 +36,7 @@ extension DIContainerProtocol {
         
         register(
             type: AuthenticationServiceProtocol.self,
-            eagerSingleton: MockAuthenticationService()
+            lazySingleton: { MockAuthenticationService(authStore: AuthStore()) }
         )
         return self
     }
