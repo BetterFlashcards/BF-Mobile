@@ -9,8 +9,9 @@ import Foundation
 import Combine
 
 @MainActor
-class BookListPresenter: ListViewPresenterProtocol, ObservableObject {
+class BookListPresenter: PaginatedListViewPresenterProtocol, ObservableObject {
     @Published var viewModel = ListViewModel<Book>()
+    let pageSize = 20
     
     private let bookService: any BookServiceProtocol
     private var cancelSet: Set<AnyCancellable> = []
@@ -31,9 +32,8 @@ class BookListPresenter: ListViewPresenterProtocol, ObservableObject {
         try await bookService.getList()
     }
 
-    func getList(at page: Int) async throws -> [Book] {
-        // try await bookService.getList(at: page)
-        []
+    func getPaginatedList(at pagination: Pagination) async throws -> PaginatedList<Book> {
+        try await bookService.getList(at: pagination)
     }
  
     func delete(_ book: Book) async throws -> Book {
