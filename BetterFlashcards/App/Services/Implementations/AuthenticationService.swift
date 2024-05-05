@@ -9,8 +9,8 @@ import Foundation
 import Combine
 
 class AuthenticationService: AuthenticationServiceProtocol {
-    private let auth: AuthenticationProtocol
-    private let tokenProvider: TokenProviderProtocol
+    private let authProvider: AuthProviderProtocol
+    private let authStore: AuthStoreProtocol
     
     private let eventSubject: CurrentValueSubject<AuthenticationServiceEvent, Never>
     
@@ -18,26 +18,26 @@ class AuthenticationService: AuthenticationServiceProtocol {
         eventSubject.eraseToAnyPublisher()
     }
     
-    init(auth: AuthenticationProtocol, tokenProvider: TokenProviderProtocol) {
-        self.auth = auth
-        self.tokenProvider = tokenProvider
-        self.eventSubject = .init(AuthenticationServiceEvent(user: tokenProvider.user()))
+    init(authProvider: AuthProviderProtocol, authStore: AuthStoreProtocol) {
+        self.authProvider = authProvider
+        self.authStore = authStore
+        self.eventSubject = .init(AuthenticationServiceEvent(user: authStore.user()))
     }
     
     func login(username: String, password: String) async throws -> User {
-        let user = try await auth.login(username: username, password: password)
+        let user = try await authProvider.login(username: username, password: password)
         eventSubject.send(.loggedIn(user))
         return user
     }
     
     func register(username: String, password: String) async throws -> User {
-        let user = try await auth.register(username: username, password: password)
+        let user = try await authProvider.register(username: username, password: password)
         eventSubject.send(.registered(user))
         return user
     }
     
     func logout() {
-        tokenProvider.clearUserInfo()
+        authStore.clearUserInfo()
         eventSubject.send(.loggedOut)
     }
     

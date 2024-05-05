@@ -7,13 +7,14 @@
 
 import Foundation
 
-protocol AuthenticationProtocol {
+protocol AuthProviderProtocol {
     func login(username: String, password: String) async throws -> User
     func register(username: String, password: String) async throws -> User
 }
 
-protocol TokenProviderProtocol {
+protocol AuthStoreProtocol {
     func token() throws -> String
     func user() -> User?
     func clearUserInfo()
+    func store(user: User, token: String)
 }

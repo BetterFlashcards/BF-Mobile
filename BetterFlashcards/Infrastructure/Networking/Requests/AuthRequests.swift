@@ -9,7 +9,7 @@ import Foundation
 import APIClient
 
 enum AuthRequests {
-    static let group = Group(host: NetworkConstants.baseURL, path: NetworkConstants.authPath)
+    static let group = NetworkConstants.baseGroup.subgroup(path: NetworkConstants.authPath)
     
     // MARK: Top Level
     static func login() -> Request<UserDTO, LoginResponseDTO> {

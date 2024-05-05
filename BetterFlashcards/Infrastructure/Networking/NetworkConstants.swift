@@ -6,9 +6,11 @@
 //
 
 import Foundation
+import APIClient
 
 enum NetworkConstants {
     static let baseURL = ""
+    static let scheme = "http"
     static let authPath = "/api/auth"
     static let loginPath = "/login"
     static let register = "/register"
@@ -18,4 +20,10 @@ enum NetworkConstants {
     static let deckCardsDuePath = "/due-cards"
     static let updateReviewPath = "/update_review_data"
     static let bookPath = "/api/books"
+}
+
+extension NetworkConstants {
+    static var baseGroup: GroupProtocol {
+        Group(scheme: scheme, host: baseURL, port: nil, path: "")
+    }
 }

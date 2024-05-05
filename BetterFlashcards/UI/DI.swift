@@ -13,6 +13,7 @@ extension DIContainerProtocol {
     func withDefaultDependencyGraph() -> Self {
         return self
             .withDefaultUtilities()
+            .withDefaultAuth()
             .withNetworkRepositories()
             .withDefaultServices()
     }
@@ -35,7 +36,7 @@ extension DIContainerProtocol {
         
         register(
             type: AuthenticationServiceProtocol.self,
-            eagerSingleton: MockAuthenticationService()
+            lazySingleton: { MockAuthenticationService(authStore: AuthStore()) }
         )
         return self
     }
@@ -50,11 +51,20 @@ extension DIContainerProtocol {
             encoder: encoder,
             decoder: decoder
         )
-        let auth = AuthProvider(client: apiClient)
+        register(type: Client.self, eagerSingleton: apiClient)
+        return self
+    }
+    
+    private func withDefaultAuth() -> Self {
+        let authStore = AuthStore()
         
-        register(eagerSingleton: apiClient)
-        register(type: TokenProviderProtocol.self, eagerSingleton: auth)
-        register(type: AuthenticationProtocol.self, eagerSingleton: auth)
+        register(type: AuthStoreProtocol.self, eagerSingleton: authStore)
+        register(
+            type: AuthProviderProtocol.self,
+            lazySingleton: {
+                AuthProvider(authStore: $0.forceResolve(), client: $0.forceResolve())
+            }
+        )
         return self
     }
     
@@ -64,7 +74,7 @@ extension DIContainerProtocol {
             lazySingleton: {
                 DeckNetworkRepository(
                     client: $0.forceResolve(),
-                    tokenProvider: $0.forceResolve()
+                    authStore: $0.forceResolve()
                 )
             }
         )
@@ -74,7 +84,7 @@ extension DIContainerProtocol {
             lazySingleton: {
                 FlashCardNetworkRepository(
                     client: $0.forceResolve(),
-                    tokenProvider: $0.forceResolve()
+                    authStore: $0.forceResolve()
                 )
             }
         )
@@ -84,7 +94,7 @@ extension DIContainerProtocol {
             lazySingleton: {
                 BookNetworkRepository(
                     client: $0.forceResolve(),
-                    tokenProvider: $0.forceResolve()
+                    authStore: $0.forceResolve()
                 )
             }
         )
@@ -118,8 +128,8 @@ extension DIContainerProtocol {
             type: AuthenticationServiceProtocol.self,
             lazySingleton: {
                 AuthenticationService(
-                    auth: $0.forceResolve(),
-                    tokenProvider: $0.forceResolve()
+                    authProvider: $0.forceResolve(),
+                    authStore: $0.forceResolve()
                 )
             }
         )

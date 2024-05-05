@@ -6,63 +6,30 @@
 //
 
 import Foundation
+import APIClient
 
-class AuthProvider: BaseNetworking, AuthenticationProtocol, TokenProviderProtocol {
+class AuthProvider: BaseNetworking, AuthProviderProtocol {
     let authRequests = AuthRequests.self
+    let authStore: AuthStoreProtocol
+    
+    init(authStore: AuthStoreProtocol, client: Client) {
+        self.authStore = authStore
+        super.init(client: client)
+    }
 
     func login(username: String, password: String) async throws -> User {
         let result = await client.make(request: authRequests.login(), body: UserDTO(username: username, password: password))
         let login = try convertResult(result: result)
-        store(login)
-        return User(id: login.userID, username: login.username)
+        let user = User(id: login.userID, username: login.username)
+        authStore.store(user: user, token: login.token)
+        return user
     }
     
     func register(username: String, password: String) async throws -> User {
         let result = await client.make(request: authRequests.register(), body: UserDTO(username: username, password: password))
         let login = try convertResult(result: result)
-        store(login)
-        return User(id: login.userID, username: login.username)
-    }
-
-    func user() -> User? {
-        guard
-            let username = KeychainWrapper.standard.string(forKey: KeychainKeys.username.rawValue),
-            let userID = KeychainWrapper.standard.integer(forKey: KeychainKeys.userID.rawValue)
-        else {
-            return nil
-        }
-        return User(id: userID, username: username)
-    }
-
-    func token() throws -> String {
-        guard
-            let token = KeychainWrapper.standard.string(forKey: KeychainKeys.token.rawValue)
-        else {
-            throw AuthError.tokenUnavailable
-        }
-        return token
-    }
-    
-    func clearUserInfo() {
-        KeychainWrapper.standard.removeObject(forKey: KeychainKeys.token.rawValue)
-        KeychainWrapper.standard.removeObject(forKey: KeychainKeys.username.rawValue)
-        KeychainWrapper.standard.removeObject(forKey: KeychainKeys.userID.rawValue)
-    }
-    
-    private func store(_ login: LoginResponseDTO) {
-        KeychainWrapper.standard.set(
-            login.token,
-            forKey: KeychainKeys.token.rawValue
-        )
-        
-        KeychainWrapper.standard.set(
-            login.username,
-            forKey: KeychainKeys.username.rawValue
-        )
-        
-        KeychainWrapper.standard.set(
-            login.userID,
-            forKey: KeychainKeys.userID.rawValue
-        )
+        let user = User(id: login.userID, username: login.username)
+        authStore.store(user: user, token: login.token)
+        return user
     }
 }
