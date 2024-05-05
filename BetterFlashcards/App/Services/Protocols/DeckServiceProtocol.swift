@@ -8,8 +8,6 @@
 import Foundation
 import Combine
 
-protocol DeckServiceProtocol: GenericBasicServiceProtocol where Item == Deck {
-    func getList(at: Pagination) async throws -> PaginatedList<Item>
-}
+protocol DeckServiceProtocol: GenericBasicServiceProtocol where Item == Deck { }
 
 typealias DeckServiceEvent = BasicServiceEvent<Deck>

@@ -23,7 +23,7 @@ actor MockBookService: BookServiceProtocol {
         return bookList
     }
     
-    func getList(pagination: Pagination) async throws -> PaginatedList<Book> {
+    func getList(at pagination: Pagination) async throws -> PaginatedList<Book> {
         let start = pagination.page * pagination.size
         let end = min(start + pagination.size, bookList.count)
         guard start < end else { return .init(items: [], count: 0, pagination: pagination) }

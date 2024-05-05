@@ -24,6 +24,10 @@ class BookService: BookServiceProtocol {
         try await bookRepo.fetchAll()
     }
     
+    func getList(at pagination: Pagination) async throws -> PaginatedList<Book> {
+        try await bookRepo.fetch(at: pagination)
+    }
+    
     func create(_ book: Book) async throws -> Book {
         let book = try await bookRepo.create(book: book)
         eventSubject.send(.added(book))
