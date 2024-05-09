@@ -26,13 +26,29 @@ class AuthStore: AuthStoreProtocol {
         return token
     }
     
+    func refresh() throws -> String {
+        guard
+            let token = KeychainWrapper.standard.string(forKey: KeychainKeys.refreshToken.rawValue)
+        else {
+            throw AuthError.tokenUnavailable
+        }
+        return token
+    }
+    
     func clearUserInfo() {
         KeychainWrapper.standard.removeObject(forKey: KeychainKeys.accessToken.rawValue)
         KeychainWrapper.standard.removeObject(forKey: KeychainKeys.refreshToken.rawValue)
         KeychainWrapper.standard.removeObject(forKey: KeychainKeys.username.rawValue)
     }
     
-    func store(user: User, accessToken: String, refreshToken: String) {
+    func store(user: User) {
+        KeychainWrapper.standard.set(
+            user.username,
+            forKey: KeychainKeys.username.rawValue
+        )
+    }
+    
+    func store(accessToken: String, refreshToken: String) {
         KeychainWrapper.standard.set(
             accessToken,
             forKey: KeychainKeys.accessToken.rawValue
@@ -41,11 +57,6 @@ class AuthStore: AuthStoreProtocol {
         KeychainWrapper.standard.set(
             refreshToken,
             forKey: KeychainKeys.refreshToken.rawValue
-        )
-        
-        KeychainWrapper.standard.set(
-            user.username,
-            forKey: KeychainKeys.username.rawValue
         )
     }
 }

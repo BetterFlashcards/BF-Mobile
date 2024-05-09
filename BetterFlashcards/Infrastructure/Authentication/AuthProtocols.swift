@@ -14,7 +14,9 @@ protocol AuthProviderProtocol {
 
 protocol AuthStoreProtocol {
     func token() throws -> String
+    func refresh() throws -> String
     func user() -> User?
     func clearUserInfo()
-    func store(user: User, accessToken: String, refreshToken: String)
+    func store(user: User)
+    func store(accessToken: String, refreshToken: String)
 }

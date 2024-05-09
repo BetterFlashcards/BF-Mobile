@@ -21,7 +21,8 @@ class AuthProvider: BaseNetworking, AuthProviderProtocol {
         let result = await client.make(request: authRequests.login(), body: UserDTO(username: username, password: password))
         let login = try convertResult(result: result)
         let user = User(username: login.username ?? username)
-        authStore.store(user: user, accessToken: login.access, refreshToken: login.refresh)
+        authStore.store(user: user)
+        authStore.store(accessToken: login.access, refreshToken: login.refresh)
         return user
     }
     
@@ -29,7 +30,8 @@ class AuthProvider: BaseNetworking, AuthProviderProtocol {
         let result = await client.make(request: authRequests.register(), body: UserDTO(username: username, password: password))
         let login = try convertResult(result: result)
         let user = User(username: login.username ?? username)
-        authStore.store(user: user, accessToken: login.access, refreshToken: login.refresh)
+        authStore.store(user: user)
+        authStore.store(accessToken: login.access, refreshToken: login.refresh)
         return user
     }
 }
