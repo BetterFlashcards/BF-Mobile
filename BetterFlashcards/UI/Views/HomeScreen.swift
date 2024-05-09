@@ -8,16 +8,24 @@
 import SwiftUI
 
 struct HomeScreen: View {
+    @Environment(\.auth) var auth
+
     var body: some View {
-        TabView {
-            DeckListScreen()
-                .tabItem {
-                    Label("Library", systemImage: "rectangle.on.rectangle.angled")
+        NavigationStack {
+            List {
+                NavigationLink(
+                    destination: { DeckListScreen() } ,
+                    label: { Label("Library", systemImage: "rectangle.on.rectangle.angled") }
+                )
+                NavigationLink(
+                    destination: { BookListScreen() } ,
+                    label: { Label("Books", systemImage: "book") }
+                )
+                Button("Logout") {
+                    Task { await auth.logout() }
                 }
-            BookListScreen()
-                .tabItem {
-                    Label("Books", systemImage: "book")
-                }
+            }.navigationBarTitle("Better Flashcards")
+            .navigationBarTitleDisplayMode(.large)
         }
     }
 }

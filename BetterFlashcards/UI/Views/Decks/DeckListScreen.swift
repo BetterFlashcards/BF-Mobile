@@ -18,18 +18,16 @@ struct DeckListScreen: View {
     }
     
     var body: some View {
-        NavigationStack {
-            ListView(presenter: presenter) { deck in
-                NavigationLink(to: .deckDetails(deck)) {
-                    DeckCellView(deck: deck)
-                }
-            }.toolbar {
-                ToolbarItemGroup(placement: .navigationBarTrailing) {
-                    Button("Add") { presenter.addTapped() }
-                }
-            }.withDefaultRouter(viewModel: presenter.viewModel)
-            .navigationTitle("Decks")
-        }
+        ListView(presenter: presenter) { deck in
+            NavigationLink(to: .deckDetails(deck)) {
+                DeckCellView(deck: deck)
+            }
+        }.toolbar {
+            ToolbarItemGroup(placement: .navigationBarTrailing) {
+                Button("Add") { presenter.addTapped() }
+            }
+        }.withDefaultRouter(viewModel: presenter.viewModel)
+        .navigationTitle("Decks")
     }
 }
 
