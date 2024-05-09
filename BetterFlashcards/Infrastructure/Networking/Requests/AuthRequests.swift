@@ -16,14 +16,13 @@ enum AuthRequests {
         group.request(path: NetworkConstants.loginPath, method: .post)
     }
     
-    static func refresh() -> Request<Nothing, LoginResponseDTO> {
+    static func refresh() -> Request<RefreshDTO, LoginResponseDTO> {
         group.request(path: NetworkConstants.refreshPath, method: .post)
     }
     
-    static func verify() -> Request<Nothing, LoginResponseDTO> {
+    static func verify() -> Request<VerifyDTO, Nothing> {
         group.request(path: NetworkConstants.verifyPath, method: .post)
     }
-    
     
     static func register() -> Request<UserDTO, LoginResponseDTO> {
         NetworkConstants.baseGroup.request(path: NetworkConstants.registerPath, method: .post)

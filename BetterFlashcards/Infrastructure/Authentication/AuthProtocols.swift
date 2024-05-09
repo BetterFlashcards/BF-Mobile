@@ -10,6 +10,8 @@ import Foundation
 protocol AuthProviderProtocol {
     func login(username: String, password: String) async throws -> User
     func register(username: String, password: String) async throws -> User
+    func refresh(token: String) async throws -> String
+    func verify(token: String) async throws -> Bool
 }
 
 protocol AuthStoreProtocol {
