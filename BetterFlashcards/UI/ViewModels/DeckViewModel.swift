@@ -13,7 +13,6 @@ class DeckViewModel: BaseViewModel {
     @Published var language: String
     
     @Published var isLoading: Bool
-    @Published var errorMessage: String?
     
     init(id: Int? = nil, name: String, language: String) {
         self.id = id
@@ -21,6 +20,5 @@ class DeckViewModel: BaseViewModel {
         self.language = language
         
         self.isLoading = false
-        self.errorMessage = nil
     }
 }

@@ -12,14 +12,12 @@ class AuthenticationViewModel: BaseViewModel {
     @Published var password: String
     @Published var isLoggedIn: Bool
     @Published var type: AuthType
-    @Published var errorMessage: String?
     
     init(username: String = "", password: String = "") {
         self.username = username
         self.password = password
         self.type = .register
         self.isLoggedIn = false
-        self.errorMessage = nil
     }
     
     enum AuthType {
