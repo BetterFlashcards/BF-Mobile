@@ -6,26 +6,33 @@
 //
 
 import SwiftUI
+import GRDBQuery
 
 struct HomeScreen: View {
-    @Environment(\.auth) var auth
+    @EnvironmentStateObject var presenter: HomePresenter
+    
+    init() {
+        self._presenter = EnvironmentStateObject {
+            HomePresenter(auth: $0.auth)
+        }
+    }
 
     var body: some View {
         NavigationStack {
-            List {
-                NavigationLink(
-                    destination: { DeckListScreen() } ,
-                    label: { Label("Library", systemImage: "rectangle.on.rectangle.angled") }
-                )
-                NavigationLink(
-                    destination: { BookListScreen() } ,
-                    label: { Label("Books", systemImage: "book") }
-                )
-                Button("Logout") {
-                    Task { await auth.logout() }
+            VStack {
+                List {
+                    NavigationLink(to: .deckList) {
+                        Label("Library", systemImage: "rectangle.on.rectangle.angled")
+                    }
+                    NavigationLink(to: .bookList) {
+                        Label("Books", systemImage: "book")
+                    }
                 }
+                Button("Logout") { presenter.logout() }
+                    .buttonStyle(.borderedProminent)
             }.navigationBarTitle("Better Flashcards")
             .navigationBarTitleDisplayMode(.large)
+            .withDefaultRouter(viewModel: presenter.viewModel)
         }
     }
 }

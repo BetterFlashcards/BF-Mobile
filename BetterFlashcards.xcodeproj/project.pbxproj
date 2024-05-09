@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1601D0432BED0AD400DAE123 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1601D0422BED0AD400DAE123 /* HomePresenter.swift */; };
 		16889D802BDCFDFD00E09A9C /* GenericBasicServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16889D7F2BDCFDFD00E09A9C /* GenericBasicServiceProtocol.swift */; };
 		16889D822BDCFEB600E09A9C /* UserDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16889D812BDCFEB600E09A9C /* UserDTO.swift */; };
 		16889D842BDD028C00E09A9C /* BookCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16889D832BDD028C00E09A9C /* BookCellView.swift */; };
@@ -115,6 +116,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1601D0422BED0AD400DAE123 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		16889D7F2BDCFDFD00E09A9C /* GenericBasicServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericBasicServiceProtocol.swift; sourceTree = "<group>"; };
 		16889D812BDCFEB600E09A9C /* UserDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDTO.swift; sourceTree = "<group>"; };
 		16889D832BDD028C00E09A9C /* BookCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCellView.swift; sourceTree = "<group>"; };
@@ -537,6 +539,7 @@
 				16889DA32BDD203A00E09A9C /* Decks */,
 				16E89E3F2BDD712500BFC761 /* FlashCards */,
 				16F31DEC2BD5BEBD00BCC67B /* ListViewPresenterProtocol.swift */,
+				1601D0422BED0AD400DAE123 /* HomePresenter.swift */,
 				16889DA72BDD218E00E09A9C /* PaginatedListViewPresenterProtocol.swift */,
 			);
 			path = Presenters;
@@ -813,6 +816,7 @@
 				168D57422BD3D5D70034AEA2 /* FlashCardRequests.swift in Sources */,
 				168D57782BD3F0150034AEA2 /* FlashCardServiceProtocol.swift in Sources */,
 				16889D982BDD19EC00E09A9C /* MockAuthenticationService.swift in Sources */,
+				1601D0432BED0AD400DAE123 /* HomePresenter.swift in Sources */,
 				16889DAE2BDD244200E09A9C /* CreateFlashCardDTO.swift in Sources */,
 				168D574E2BD3DFC90034AEA2 /* AuthProvider.swift in Sources */,
 				16F31DE72BD5AD5700BCC67B /* DeckListPresenter.swift in Sources */,
