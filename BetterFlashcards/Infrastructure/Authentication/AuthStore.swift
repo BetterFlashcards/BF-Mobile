@@ -10,17 +10,16 @@ import Foundation
 class AuthStore: AuthStoreProtocol {
     func user() -> User? {
         guard
-            let username = KeychainWrapper.standard.string(forKey: KeychainKeys.username.rawValue),
-            let userID = KeychainWrapper.standard.integer(forKey: KeychainKeys.userID.rawValue)
+            let username = KeychainWrapper.standard.string(forKey: KeychainKeys.username.rawValue)
         else {
             return nil
         }
-        return User(id: userID, username: username)
+        return User(username: username)
     }
 
     func token() throws -> String {
         guard
-            let token = KeychainWrapper.standard.string(forKey: KeychainKeys.token.rawValue)
+            let token = KeychainWrapper.standard.string(forKey: KeychainKeys.accessToken.rawValue)
         else {
             throw AuthError.tokenUnavailable
         }
@@ -28,25 +27,25 @@ class AuthStore: AuthStoreProtocol {
     }
     
     func clearUserInfo() {
-        KeychainWrapper.standard.removeObject(forKey: KeychainKeys.token.rawValue)
+        KeychainWrapper.standard.removeObject(forKey: KeychainKeys.accessToken.rawValue)
+        KeychainWrapper.standard.removeObject(forKey: KeychainKeys.refreshToken.rawValue)
         KeychainWrapper.standard.removeObject(forKey: KeychainKeys.username.rawValue)
-        KeychainWrapper.standard.removeObject(forKey: KeychainKeys.userID.rawValue)
     }
     
-    func store(user: User, token: String) {
+    func store(user: User, accessToken: String, refreshToken: String) {
         KeychainWrapper.standard.set(
-            token,
-            forKey: KeychainKeys.token.rawValue
+            accessToken,
+            forKey: KeychainKeys.accessToken.rawValue
+        )
+        
+        KeychainWrapper.standard.set(
+            refreshToken,
+            forKey: KeychainKeys.refreshToken.rawValue
         )
         
         KeychainWrapper.standard.set(
             user.username,
             forKey: KeychainKeys.username.rawValue
-        )
-        
-        KeychainWrapper.standard.set(
-            user.id,
-            forKey: KeychainKeys.userID.rawValue
         )
     }
 }

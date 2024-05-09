@@ -8,7 +8,7 @@
 import Foundation
 
 struct LoginResponseDTO: Codable {
-    let userID: Int
-    let username: String
-    let token: String
+    let username: String?
+    let refresh: String
+    let access: String
 }
