@@ -8,13 +8,14 @@
 import Foundation
 import APIClient
 
-class AuthProvider: BaseNetworking, AuthProviderProtocol {
+actor AuthProvider: BaseNetworkingProtocol, AuthProviderProtocol {
+    let client: Client
     let authRequests = AuthRequests.self
     let authStore: AuthStoreProtocol
     
     init(authStore: AuthStoreProtocol, client: Client) {
         self.authStore = authStore
-        super.init(client: client)
+        self.client = client
     }
 
     func login(username: String, password: String) async throws -> User {

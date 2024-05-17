@@ -74,7 +74,8 @@ extension DIContainerProtocol {
             lazySingleton: {
                 DeckNetworkRepository(
                     client: $0.forceResolve(),
-                    authStore: $0.forceResolve()
+                    authStore: $0.forceResolve(),
+                    authProvider: $0.forceResolve()
                 )
             }
         )
@@ -84,7 +85,8 @@ extension DIContainerProtocol {
             lazySingleton: {
                 FlashCardNetworkRepository(
                     client: $0.forceResolve(),
-                    authStore: $0.forceResolve()
+                    authStore: $0.forceResolve(),
+                    authProvider: $0.forceResolve()
                 )
             }
         )
@@ -94,7 +96,8 @@ extension DIContainerProtocol {
             lazySingleton: {
                 BookNetworkRepository(
                     client: $0.forceResolve(),
-                    authStore: $0.forceResolve()
+                    authStore: $0.forceResolve(),
+                    authProvider: $0.forceResolve()
                 )
             }
         )
