@@ -55,7 +55,7 @@ class DeckDetailPresenter: ObservableObject {
             viewModel.id = deck.id
             viewModel.isLoading = false
         } catch {
-            viewModel.errorMessage = error.localizedDescription
+            viewModel.error = ViewError(error: error)
         }
     }
     
@@ -65,7 +65,7 @@ class DeckDetailPresenter: ObservableObject {
             _ = try await deckService.update(deck)
             viewModel.isLoading = false
         } catch {
-            viewModel.errorMessage = error.localizedDescription
+            viewModel.error = ViewError(error: error)
         }
     }
     
@@ -76,7 +76,7 @@ class DeckDetailPresenter: ObservableObject {
             do {
                 _ = try await deckService.delete(deck)
             } catch {
-                viewModel.errorMessage = error.localizedDescription
+                viewModel.error = ViewError(error: error)
             }
         }
     }

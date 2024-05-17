@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1601D0432BED0AD400DAE123 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1601D0422BED0AD400DAE123 /* HomePresenter.swift */; };
 		16889D802BDCFDFD00E09A9C /* GenericBasicServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16889D7F2BDCFDFD00E09A9C /* GenericBasicServiceProtocol.swift */; };
 		16889D822BDCFEB600E09A9C /* UserDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16889D812BDCFEB600E09A9C /* UserDTO.swift */; };
 		16889D842BDD028C00E09A9C /* BookCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16889D832BDD028C00E09A9C /* BookCellView.swift */; };
@@ -76,6 +77,9 @@
 		168D57742BD3F0040034AEA2 /* DeckServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168D57732BD3F0040034AEA2 /* DeckServiceProtocol.swift */; };
 		168D57762BD3F00D0034AEA2 /* BookServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168D57752BD3F00D0034AEA2 /* BookServiceProtocol.swift */; };
 		168D57782BD3F0150034AEA2 /* FlashCardServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168D57772BD3F0150034AEA2 /* FlashCardServiceProtocol.swift */; };
+		16A577302BECFCD300C410FD /* CreatedDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16A5772F2BECFCD300C410FD /* CreatedDTO.swift */; };
+		16A577322BECFE4E00C410FD /* VerifyDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16A577312BECFE4E00C410FD /* VerifyDTO.swift */; };
+		16A577342BECFE6800C410FD /* RefreshDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16A577332BECFE6800C410FD /* RefreshDTO.swift */; };
 		16E89E3C2BDD6B2700BFC761 /* FlashCardPracticeDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E89E3B2BDD6B2700BFC761 /* FlashCardPracticeDTO.swift */; };
 		16E89E412BDD713800BFC761 /* FlashCardListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E89E402BDD713800BFC761 /* FlashCardListPresenter.swift */; };
 		16E89E432BDD725200BFC761 /* CardList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E89E422BDD725200BFC761 /* CardList.swift */; };
@@ -112,6 +116,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1601D0422BED0AD400DAE123 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		16889D7F2BDCFDFD00E09A9C /* GenericBasicServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericBasicServiceProtocol.swift; sourceTree = "<group>"; };
 		16889D812BDCFEB600E09A9C /* UserDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDTO.swift; sourceTree = "<group>"; };
 		16889D832BDD028C00E09A9C /* BookCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCellView.swift; sourceTree = "<group>"; };
@@ -181,6 +186,9 @@
 		168D57732BD3F0040034AEA2 /* DeckServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckServiceProtocol.swift; sourceTree = "<group>"; };
 		168D57752BD3F00D0034AEA2 /* BookServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookServiceProtocol.swift; sourceTree = "<group>"; };
 		168D57772BD3F0150034AEA2 /* FlashCardServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashCardServiceProtocol.swift; sourceTree = "<group>"; };
+		16A5772F2BECFCD300C410FD /* CreatedDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatedDTO.swift; sourceTree = "<group>"; };
+		16A577312BECFE4E00C410FD /* VerifyDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyDTO.swift; sourceTree = "<group>"; };
+		16A577332BECFE6800C410FD /* RefreshDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshDTO.swift; sourceTree = "<group>"; };
 		16E89E3B2BDD6B2700BFC761 /* FlashCardPracticeDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashCardPracticeDTO.swift; sourceTree = "<group>"; };
 		16E89E402BDD713800BFC761 /* FlashCardListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashCardListPresenter.swift; sourceTree = "<group>"; };
 		16E89E422BDD725200BFC761 /* CardList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardList.swift; sourceTree = "<group>"; };
@@ -479,6 +487,9 @@
 			isa = PBXGroup;
 			children = (
 				168D57522BD3E04B0034AEA2 /* LoginResponseDTO.swift */,
+				16A5772F2BECFCD300C410FD /* CreatedDTO.swift */,
+				16A577312BECFE4E00C410FD /* VerifyDTO.swift */,
+				16A577332BECFE6800C410FD /* RefreshDTO.swift */,
 				16E89E4D2BE7AB9D00BFC761 /* ListDTO.swift */,
 				16E89E532BE7BABF00BFC761 /* FlashCardResponseDTO.swift */,
 				16E89E512BE7B0A700BFC761 /* PaginationQueryDTO.swift */,
@@ -528,6 +539,7 @@
 				16889DA32BDD203A00E09A9C /* Decks */,
 				16E89E3F2BDD712500BFC761 /* FlashCards */,
 				16F31DEC2BD5BEBD00BCC67B /* ListViewPresenterProtocol.swift */,
+				1601D0422BED0AD400DAE123 /* HomePresenter.swift */,
 				16889DA72BDD218E00E09A9C /* PaginatedListViewPresenterProtocol.swift */,
 			);
 			path = Presenters;
@@ -761,6 +773,7 @@
 				168D57552BD3E2930034AEA2 /* KeychainWrapper.swift in Sources */,
 				168D57222BD3D0E40034AEA2 /* FlashCardPractice.swift in Sources */,
 				16889DB22BDD2C5F00E09A9C /* DeckDetailPresenter.swift in Sources */,
+				16A577342BECFE6800C410FD /* RefreshDTO.swift in Sources */,
 				16E89E452BDD73A800BFC761 /* FlashCardGridCell.swift in Sources */,
 				16889D802BDCFDFD00E09A9C /* GenericBasicServiceProtocol.swift in Sources */,
 				16E89E3C2BDD6B2700BFC761 /* FlashCardPracticeDTO.swift in Sources */,
@@ -773,6 +786,7 @@
 				16889DC42BDD52FB00E09A9C /* BaseViewModel.swift in Sources */,
 				16F31DEF2BD5BEE200BCC67B /* ListView.swift in Sources */,
 				16889D842BDD028C00E09A9C /* BookCellView.swift in Sources */,
+				16A577302BECFCD300C410FD /* CreatedDTO.swift in Sources */,
 				16889DAC2BDD242600E09A9C /* CreateBookDTO.swift in Sources */,
 				16889DAA2BDD22FD00E09A9C /* CreateDeckDTO.swift in Sources */,
 				16889DB42BDD30CB00E09A9C /* DeckDetailScreen.swift in Sources */,
@@ -782,6 +796,7 @@
 				168D57532BD3E04B0034AEA2 /* LoginResponseDTO.swift in Sources */,
 				16889D962BDD141400E09A9C /* RegisterView.swift in Sources */,
 				16F31DF12BD5C4D400BCC67B /* ListViewModel.swift in Sources */,
+				16A577322BECFE4E00C410FD /* VerifyDTO.swift in Sources */,
 				168D571C2BD3CFAF0034AEA2 /* DeckRepositoryProtocol.swift in Sources */,
 				16F31DEB2BD5ADF100BCC67B /* DeckListScreen.swift in Sources */,
 				168D57402BD3D4420034AEA2 /* NetworkConstants.swift in Sources */,
@@ -801,6 +816,7 @@
 				168D57422BD3D5D70034AEA2 /* FlashCardRequests.swift in Sources */,
 				168D57782BD3F0150034AEA2 /* FlashCardServiceProtocol.swift in Sources */,
 				16889D982BDD19EC00E09A9C /* MockAuthenticationService.swift in Sources */,
+				1601D0432BED0AD400DAE123 /* HomePresenter.swift in Sources */,
 				16889DAE2BDD244200E09A9C /* CreateFlashCardDTO.swift in Sources */,
 				168D574E2BD3DFC90034AEA2 /* AuthProvider.swift in Sources */,
 				16F31DE72BD5AD5700BCC67B /* DeckListPresenter.swift in Sources */,
@@ -1150,7 +1166,7 @@
 			repositoryURL = "https://github.com/koshakji/APIClient";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 0.0.4;
+				minimumVersion = 0.0.7;
 			};
 		};
 		168D57342BD3D3140034AEA2 /* XCRemoteSwiftPackageReference "DIContainer" */ = {

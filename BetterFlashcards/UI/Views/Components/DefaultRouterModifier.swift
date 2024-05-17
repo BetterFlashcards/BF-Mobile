@@ -30,6 +30,9 @@ private struct DefaultRouterModifier<V: BaseViewModel>: ViewModifier {
     
     func body(content: Content) -> some View {
         content
+            .alert(isPresented: viewModel.isErrorPresentedBinding, error: viewModel.error) {
+                Button("OK") { }
+            }
             .navigationDestination(for: NavigationDestination.self) { destination in
                 switch destination {
                 case .bookList:

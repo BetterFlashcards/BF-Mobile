@@ -41,7 +41,7 @@ extension ListViewPresenterProtocol {
             viewModel.list.append(contentsOf: items)
             viewModel.currentPage = 0
         } catch {
-            viewModel.errorMessage = error.localizedDescription
+            viewModel.error = ViewError(error: error)
         }
         viewModel.isLoading = false
     }
@@ -51,7 +51,7 @@ extension ListViewPresenterProtocol {
         do {
             _ = try await delete(item)
         } catch {
-            viewModel.errorMessage = error.localizedDescription
+            viewModel.error = ViewError(error: error)
         }
     }
 }

@@ -42,7 +42,7 @@ class AuthenticationPresenter: ObservableObject {
             )
             viewModel.isLoggedIn = true
         } catch {
-            viewModel.errorMessage = error.localizedDescription
+            viewModel.error = ViewError(error: error)
         }
     }
     
@@ -54,7 +54,7 @@ class AuthenticationPresenter: ObservableObject {
             )
             viewModel.isLoggedIn = true
         } catch {
-            viewModel.errorMessage = error.localizedDescription
+            viewModel.error = ViewError(error: error)
         }
     }
     

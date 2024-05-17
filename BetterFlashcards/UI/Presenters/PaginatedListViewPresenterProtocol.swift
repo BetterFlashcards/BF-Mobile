@@ -37,7 +37,7 @@ extension PaginatedListViewPresenterProtocol {
             viewModel.currentPage = result.pagination.page
             viewModel.hasNextPage = result.hasNextPage
         } catch {
-            viewModel.errorMessage = error.localizedDescription
+            viewModel.error = ViewError(error: error)
         }
         viewModel.isLoading = false
     }

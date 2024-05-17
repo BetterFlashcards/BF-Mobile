@@ -13,10 +13,18 @@ enum AuthRequests {
     
     // MARK: Top Level
     static func login() -> Request<UserDTO, LoginResponseDTO> {
-        group.request(path: NetworkConstants.loginPath)
+        group.request(path: NetworkConstants.loginPath, method: .post)
+    }
+    
+    static func refresh() -> Request<RefreshDTO, LoginResponseDTO> {
+        group.request(path: NetworkConstants.refreshPath, method: .post)
+    }
+    
+    static func verify() -> Request<VerifyDTO, Nothing> {
+        group.request(path: NetworkConstants.verifyPath, method: .post)
     }
     
     static func register() -> Request<UserDTO, LoginResponseDTO> {
-        group.request(path: NetworkConstants.loginPath)
+        NetworkConstants.baseGroup.request(path: NetworkConstants.registerPath, method: .post)
     }
 }

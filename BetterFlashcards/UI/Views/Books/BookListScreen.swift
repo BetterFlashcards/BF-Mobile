@@ -18,14 +18,12 @@ struct BookListScreen: View {
     }
     
     var body: some View {
-        NavigationStack {
-            ListView(presenter: presenter) { book in
-                NavigationLink(to: .bookDetails(book)) {
-                    BookCellView(book: book)
-                }
+        ListView(presenter: presenter) { book in
+            NavigationLink(to: .bookDetails(book)) {
+                BookCellView(book: book)
             }
-            .withDefaultRouter(viewModel: presenter.viewModel)
-            .navigationTitle("Books")
         }
+        .withDefaultRouter(viewModel: presenter.viewModel)
+        .navigationTitle("Books")
     }
 }

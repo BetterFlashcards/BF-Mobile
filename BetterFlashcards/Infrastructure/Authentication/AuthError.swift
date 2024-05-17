@@ -9,4 +9,5 @@ import Foundation
 
 enum AuthError: Error {
     case tokenUnavailable
+    case expired
 }

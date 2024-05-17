@@ -13,7 +13,7 @@ struct BetterFlashcardsApp: App {
     var body: some Scene {
         WindowGroup {
             AuthView()
-                .environment(\.di, DIContainer().withMockServices())
+                .environment(\.di, DIContainer().withDefaultDependencyGraph())
         }
     }
 }

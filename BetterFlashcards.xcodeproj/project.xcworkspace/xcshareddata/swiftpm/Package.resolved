@@ -5,8 +5,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/koshakji/APIClient",
       "state" : {
-        "revision" : "57f1e22a5d2ec619543c94452751783f0282a57c",
-        "version" : "0.0.4"
+        "revision" : "e733c0ad0ca1addbc8f27ae262d1f91577a0ec73",
+        "version" : "0.0.7"
       }
     },
     {

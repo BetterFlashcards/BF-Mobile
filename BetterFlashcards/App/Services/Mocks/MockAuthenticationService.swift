@@ -24,17 +24,19 @@ actor MockAuthenticationService: AuthenticationServiceProtocol {
     }
     
     func login(username: String, password: String) async throws -> User {
-        let user = User(id: 1, username: username)
+        let user = User(username: username)
         self.user = user
-        authStore.store(user: user, token: "token")
+        authStore.store(user: user)
+        authStore.store(accessToken: "access", refreshToken: "refresh")
         eventSubject.send(.loggedIn(user))
         return user
     }
     
     func register(username: String, password: String) async throws -> User {
-        let user = User(id: 2, username: username)
+        let user = User(username: username)
         self.user = user
-        authStore.store(user: user, token: "token")
+        authStore.store(user: user)
+        authStore.store(accessToken: "access", refreshToken: "refresh")
         eventSubject.send(.registered(user))
         return user
     }

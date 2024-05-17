@@ -51,7 +51,7 @@ class FlashCardListPresenter: PaginatedListViewPresenterProtocol, ObservableObje
             do {
                 _ = try await delete(flashCard)
             } catch {
-                viewModel.errorMessage = error.localizedDescription
+                viewModel.error = ViewError(error: error)
             }
         }
     }

@@ -6,9 +6,35 @@
 //
 
 import Foundation
+import SwiftUI
+
+struct ViewError: LocalizedError {
+    let underlyingError: Error
+    let id = UUID()
+    
+    var errorDescription: String? { underlyingError.localizedDescription }
+    
+    init(error: Error) {
+        self.underlyingError = error
+    }
+}
 
 @MainActor
 class BaseViewModel: ObservableObject {
-    @Published var sheet: SheetDestination? = nil
-    @Published var fullScreen: SheetDestination? = nil
+    @Published var sheet: SheetDestination?
+    @Published var fullScreen: SheetDestination?
+    @Published var error: ViewError?
+    
+    init(sheet: SheetDestination? = nil, fullScreen: SheetDestination? = nil, error: ViewError? = nil) {
+        self.sheet = sheet
+        self.fullScreen = fullScreen
+        self.error = error
+    }
+    
+    var isErrorPresentedBinding: Binding<Bool> {
+        Binding<Bool>(
+            get: { self.error != nil },
+            set: { if !$0 { self.error = nil }}
+        )
+    }
 }

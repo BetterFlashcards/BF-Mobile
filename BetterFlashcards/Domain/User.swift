@@ -8,8 +8,9 @@
 import Foundation
 
 struct User {
-    let id: Int
     let username: String
 }
 
-extension User: Identifiable { }
+extension User: Identifiable {
+    var id: String { username }
+}

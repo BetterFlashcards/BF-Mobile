@@ -36,7 +36,12 @@ struct ListView<Presenter: ListViewPresenterProtocol, Cell>: View where Cell: Vi
                 }
             }
             if viewModel.isLoading {
-                ProgressView()
+                HStack {
+                    Spacer()
+                    ProgressView()
+                    Spacer()
+                }
+                
             }
         }
         .refreshable { await presenter.refresh() }
