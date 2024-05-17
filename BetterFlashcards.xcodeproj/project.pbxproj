@@ -1166,7 +1166,7 @@
 			repositoryURL = "https://github.com/koshakji/APIClient";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 0.0.4;
+				minimumVersion = 0.0.7;
 			};
 		};
 		168D57342BD3D3140034AEA2 /* XCRemoteSwiftPackageReference "DIContainer" */ = {

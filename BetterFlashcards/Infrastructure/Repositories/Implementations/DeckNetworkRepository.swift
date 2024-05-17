@@ -11,35 +11,29 @@ class DeckNetworkRepository: BaseAuthenticatedNetworking, DeckRepositoryProtocol
     let deckRequests = DeckRequests.self
     
     func fetchAll() async throws -> [Deck] {
-        let result = await client.make(request: deckRequests.list(), headers: try await headers())
-        return try convertResult(result: result).items
+        try await client.make(request: deckRequests.list(), headers: try await headers()).data.items
     }
     
     func fetch(at pagination: Pagination) async throws -> PaginatedList<Deck> {
-        let result = await client.make(request: deckRequests.list(), headers: try await headers(), queries: PaginationQueryDTO(pagination: pagination))
-        let response = try convertResult(result: result)
+        let response = try await client.make(request: deckRequests.list(), headers: try await headers(), queries: PaginationQueryDTO(pagination: pagination)).data
         return .init(items: response.items, count: response.count, pagination: pagination)
     }
     
     func fetch(by deckID: Deck.ID) async throws -> Deck? {
-        let result = await client.make(request: deckRequests.details(for: deckID), headers: try await headers())
-        return try convertResult(result: result)
+        try await client.make(request: deckRequests.details(for: deckID), headers: try await headers()).data
     }
     
     func create(deck: Deck) async throws -> Deck {
         let dto = CreateDeckDTO(name: deck.name, language: deck.language ?? "")
-        let result = await client.make(request: deckRequests.create(), body: dto, headers: try await headers())
-        _ = try convertResult(result: result)
+        _ = try await client.make(request: deckRequests.create(), body: dto, headers: try await headers()).data
         return deck
     }
     
     func update(deck: Deck) async throws -> Deck {
-        let result = await client.make(request: deckRequests.update(at: deck.id), body: deck, headers: try await headers())
-        return try convertResult(result: result)
+        try await client.make(request: deckRequests.update(at: deck.id), body: deck, headers: try await headers()).data
     }
     
     func delete(deck: Deck) async throws {
-        let result = await client.make(request: deckRequests.delete(at: deck.id), headers: try await headers())
-        _ = try convertResult(result: result)
+        _ = try await client.make(request: deckRequests.delete(at: deck.id), headers: try await headers())
     }
 }

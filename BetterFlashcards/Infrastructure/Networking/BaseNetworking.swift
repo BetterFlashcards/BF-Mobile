@@ -11,20 +11,8 @@ import APIClient
 typealias Client = any AsyncClient
 typealias PaginatedAuthRequest<T> = AdvancedRequest<Nothing, BearerHeaders<[String: String]>, PaginationQueryDTO?, ListDTO<T>> where T: Codable
 
-protocol BaseNetworkingProtocol { }
 
-extension BaseNetworkingProtocol {
-    func convertResult<T, E>(result: Result<Response<T>, E>) throws -> T {
-        switch result {
-        case .success(let response):
-            return response.data
-        case .failure(let error):
-            throw error
-        }
-    }
-}
-
-class BaseAuthenticatedNetworking: BaseNetworkingProtocol {
+class BaseAuthenticatedNetworking {
     let client: Client
     let authStore: any AuthStoreProtocol
     let authProvider: any AuthProviderProtocol

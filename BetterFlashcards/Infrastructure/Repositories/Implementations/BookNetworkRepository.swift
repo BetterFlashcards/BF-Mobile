@@ -11,35 +11,29 @@ class BookNetworkRepository: BaseAuthenticatedNetworking, BookRepositoryProtocol
     let bookRequests = BookRequests.self
     
     func fetchAll() async throws -> [Book] {
-        let result = await client.make(request: bookRequests.list(), headers: try await headers())
-        return try convertResult(result: result).items
+        try await client.make(request: bookRequests.list(), headers: try await headers()).data.items
     }
     
     func fetch(at pagination: Pagination) async throws -> PaginatedList<Book> {
-        let result = await client.make(request: bookRequests.list(), headers: try await headers(), queries: PaginationQueryDTO(pagination: pagination))
-        let response = try convertResult(result: result)
-        return .init(items: response.items, count: response.count, pagination: pagination)
+        let result = try await client.make(request: bookRequests.list(), headers: try await headers(), queries: PaginationQueryDTO(pagination: pagination)).data
+        return .init(items: result.items, count: result.count, pagination: pagination)
     }
     
     func fetch(by bookID: Book.ID) async throws -> Book? {
-        let result = await client.make(request: bookRequests.details(for: bookID), headers: try await headers())
-        return try convertResult(result: result)
+        try await client.make(request: bookRequests.details(for: bookID), headers: try await headers()).data
     }
  
     func create(book: Book) async throws -> Book {
         let dto = CreateBookDTO(title: book.title, author: book.author)
-        let result = await client.make(request: bookRequests.create(), body: dto, headers: try await headers())
-        return try convertResult(result: result)
+        return try await client.make(request: bookRequests.create(), body: dto, headers: try await headers()).data
     }
     
     func update(book: Book) async throws -> Book {
-        let result = await client.make(request: bookRequests.update(at: book.id), body: book, headers: try await headers())
-        return try convertResult(result: result)
+        try await client.make(request: bookRequests.update(at: book.id), body: book, headers: try await headers()).data
     }
     
     func delete(book: Book) async throws {
-        let result = await client.make(request: bookRequests.delete(at: book.id), headers: try await headers())
-        _ = try convertResult(result: result)
+        _ = try await client.make(request: bookRequests.delete(at: book.id), headers: try await headers())
     }
 
 }
