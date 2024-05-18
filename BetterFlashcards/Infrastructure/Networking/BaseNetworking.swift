@@ -9,7 +9,7 @@ import Foundation
 import APIClient
 
 typealias Client = any AsyncClient
-typealias PaginatedAuthRequest<T> = AdvancedRequest<Nothing, BearerHeaders<[String: String]>, PaginationQueryDTO?, ListDTO<T>> where T: Codable
+typealias PaginatedAuthRequest<T> = AdvancedRequest<Nothing, BearerHeaders<[String: String]>, PaginationQueryDTO?, ListDTO<T>, ErrorDTO> where T: Codable
 
 
 class BaseAuthenticatedNetworking {

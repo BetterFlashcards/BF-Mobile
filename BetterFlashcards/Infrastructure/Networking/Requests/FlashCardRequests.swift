@@ -24,7 +24,7 @@ enum FlashCardRequests {
     }
     
     // MARK: Top Level
-    static func add(to deckID: Deck.ID) -> AuthenticatedRequest<CreateFlashCardDTO, FlashCard> {
+    static func add(to deckID: Deck.ID) -> AuthenticatedRequest<CreateFlashCardDTO, FlashCard, ErrorDTO> {
         deckGroup(deckID: deckID).request(path: "", method: .post)
     }
     
@@ -40,16 +40,16 @@ enum FlashCardRequests {
     }
     
     // MARK: Details
-    static func update(in deckID: Deck.ID, cardID: FlashCard.ID) -> AuthenticatedRequest<FlashCard, FlashCard> {
+    static func update(in deckID: Deck.ID, cardID: FlashCard.ID) -> AuthenticatedRequest<FlashCard, FlashCard, ErrorDTO> {
         deckDetailsGroup(deckID: deckID, cardID: cardID).request(path: "", method: .put)
     }
     
-    static func delete(from deckID: Deck.ID, cardID: FlashCard.ID)  -> AuthenticatedRequest<Nothing, Nothing?> {
+    static func delete(from deckID: Deck.ID, cardID: FlashCard.ID)  -> AuthenticatedRequest<Nothing, Nothing?, ErrorDTO> {
         deckDetailsGroup(deckID: deckID, cardID: cardID).request(path: "", method: .delete)
     }
     
     // MARK: Practice
-    static func updateReview(for cardID: FlashCard.ID) -> AuthenticatedRequest<FlashCardPracticeDTO, Nothing?> {
+    static func updateReview(for cardID: FlashCard.ID) -> AuthenticatedRequest<FlashCardPracticeDTO, Nothing?, ErrorDTO> {
         group.request(path: NetworkConstants.updateReviewPath, method: .put)
     }
 }
