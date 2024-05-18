@@ -12,7 +12,7 @@ struct ViewError: LocalizedError {
     let underlyingError: Error
     let id = UUID()
     
-    var errorDescription: String? { underlyingError.localizedDescription }
+    var errorDescription: String? { (underlyingError as? LocalizedError)?.errorDescription }
     
     init(error: Error) {
         self.underlyingError = error
