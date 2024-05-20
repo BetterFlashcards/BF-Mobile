@@ -10,10 +10,6 @@ import Foundation
 class FlashCardNetworkRepository: BaseAuthenticatedNetworking, FlashCardRepositoryProtocol {
     let flashCardRequests = FlashCardRequests.self
     
-    func fetchAll(by deckID: Deck.ID) async throws -> [FlashCard] {
-        try await client.make(request: flashCardRequests.list(for: deckID), headers: try await headers()).data.items.map(mapper(_:))
-    }
-    
     func fetch(by deckID: Deck.ID, at pagination: Pagination) async throws -> PaginatedList<FlashCard> {
         let response = try await client.make(request: flashCardRequests.list(for: deckID), headers: try await headers(), queries: .init(pagination: pagination)).data
         
@@ -55,11 +51,6 @@ class FlashCardNetworkRepository: BaseAuthenticatedNetworking, FlashCardReposito
             count: response.count,
             pagination: pagination
         )
-    }
-    
-    func dueCards(for deckID: Deck.ID) async throws -> [FlashCard] {
-        let response = try await client.make(request: flashCardRequests.due(for: deckID), headers: try await headers()).data
-        return response.items.map(self.mapper(_:))
     }
     
     func add(practice: FlashCardPractice) async throws {

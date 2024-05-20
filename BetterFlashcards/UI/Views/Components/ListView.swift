@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ListView<Presenter: ListViewPresenterProtocol, Cell>: View where Cell: View {
+struct ListView<Presenter: PaginatedListViewPresenterProtocol, Cell>: View where Cell: View {
     typealias Item = Presenter.Item
     let presenter: Presenter
     @ObservedObject var viewModel: ListViewModel<Item>
@@ -25,9 +25,7 @@ struct ListView<Presenter: ListViewPresenterProtocol, Cell>: View where Cell: Vi
             ForEach(viewModel.list) { item in
                 cellBuilder(item)
                     .onAppear {
-                        if let paginated = presenter as? any PaginatedListViewPresenterProtocol<Item> {
-                             paginated.didDisplay(item)
-                        }
+                        presenter.didDisplay(item)
                     }
             }.onDelete { indexSet in
                 guard let index = indexSet.first else { return }

@@ -27,10 +27,6 @@ class BookListPresenter: PaginatedListViewPresenterProtocol, ObservableObject {
                 self?.handle(event)
             }.store(in: &cancelSet)
     }
-    
-    func getFullList() async throws -> [Book] {
-        try await bookService.getList()
-    }
 
     func getPaginatedList(at pagination: Pagination) async throws -> PaginatedList<Book> {
         try await bookService.getList(at: pagination)

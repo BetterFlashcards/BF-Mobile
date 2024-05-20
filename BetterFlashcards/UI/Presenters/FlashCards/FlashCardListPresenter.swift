@@ -34,10 +34,6 @@ class FlashCardListPresenter: PaginatedListViewPresenterProtocol, ObservableObje
         viewModel.sheet = .cardCreation
     }
     
-    func getFullList() async throws -> [FlashCard] {
-        try await flashCardService.getList(for: deckID)
-    }
-    
     func getPaginatedList(at pagination: Pagination) async throws -> PaginatedList<FlashCard> {
         try await flashCardService.getList(for: deckID, at: pagination)
     }

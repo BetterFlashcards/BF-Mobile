@@ -20,10 +20,6 @@ class BookService: BookServiceProtocol {
         self.bookRepo = bookRepo
     }
     
-    func getList() async throws -> [Book] {
-        try await bookRepo.fetchAll()
-    }
-    
     func getList(at pagination: Pagination) async throws -> PaginatedList<Book> {
         try await bookRepo.fetch(at: pagination)
     }

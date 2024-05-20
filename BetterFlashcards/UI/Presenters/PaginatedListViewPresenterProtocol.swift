@@ -8,8 +8,16 @@
 import Foundation
 
 @MainActor
-protocol PaginatedListViewPresenterProtocol<Item>: ListViewPresenterProtocol {
+protocol PaginatedListViewPresenterProtocol<Item> {
+    associatedtype Item: Identifiable
     var pageSize: Int { get }
+    
+    var viewModel: ListViewModel<Item> { get }
+    
+    func setup()
+    func firstLoad() async
+    func delete(_: Item) async throws -> Item
+    
     func getPaginatedList(at: Pagination) async throws -> PaginatedList<Item>
     func didDisplay(_ item: Item)
 }
@@ -40,5 +48,22 @@ extension PaginatedListViewPresenterProtocol {
             viewModel.error = ViewError(error: error)
         }
         viewModel.isLoading = false
+    }
+    
+    func refresh() async {
+        viewModel.list = []
+        viewModel.currentPage = 0
+        viewModel.hasNextPage = true
+        await firstLoad()
+    }
+    
+    
+    func delete(at index: Int) async {
+        let item = viewModel.list[index]
+        do {
+            _ = try await delete(item)
+        } catch {
+            viewModel.error = ViewError(error: error)
+        }
     }
 }

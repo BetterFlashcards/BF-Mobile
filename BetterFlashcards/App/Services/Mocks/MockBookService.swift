@@ -19,10 +19,6 @@ actor MockBookService: BookServiceProtocol {
         eventSubject.eraseToAnyPublisher()
     }
     
-    func getList() async throws -> [Book] {
-        return bookList
-    }
-    
     func getList(at pagination: Pagination) async throws -> PaginatedList<Book> {
         let start = pagination.page * pagination.size
         let end = min(start + pagination.size, bookList.count)
