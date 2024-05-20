@@ -14,6 +14,9 @@ class FlashCardViewModel: BaseViewModel {
     @Published var backText: String
     @Published var isDraft: Bool
     @Published var relatedBookID: Book.ID?
+    
+    var canSave: Bool { !frontText.isEmpty && !backText.isEmpty }
+    var canSaveDraft: Bool { !frontText.isEmpty }
 
     @Published var isLoading: Bool
 

@@ -59,11 +59,13 @@ struct FlashCardDetailScreen: View {
                     }
                 }
 
-                Button("Save") { presenter.save() }
+                Button("Save") { presenter.save(isDraft: false) }
                     .buttonStyle(.borderedProminent)
+                    .disabled(!viewModel.canSave)
                 
-                Button("Save as Draft") { presenter.saveDraft() }
+                Button("Save as Draft") { presenter.save(isDraft: true) }
                     .buttonStyle(.borderedProminent)
+                    .disabled(!viewModel.canSaveDraft)
                 
                 Button("Delete") { presenter.delete() }
                     .buttonStyle(.borderedProminent)

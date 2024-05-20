@@ -41,12 +41,8 @@ class FlashCardDetailPresenter: ObservableObject {
             }.store(in: &cancelSet)
     }
     
-    func saveDraft() {
-        viewModel.isDraft = true
-        self.save()
-    }
-    
-    func save() {
+    func save(isDraft: Bool) {
+        viewModel.isDraft = isDraft
         let card = viewModel.toCard()
         let id = viewModel.id
         Task {
