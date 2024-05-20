@@ -23,6 +23,10 @@ enum FlashCardRequests {
         deckGroup(deckID: deckID).subgroup(path: "/\(cardID)")
     }
     
+    static func cardDetailsGroup(cardID: FlashCard.ID) -> any GroupProtocol {
+        group.subgroup(path: "/\(cardID)")
+    }
+    
     // MARK: Top Level
     static func add(to deckID: Deck.ID) -> AuthenticatedRequest<FlashCardDTO, FlashCardDTO, ErrorDTO> {
         deckGroup(deckID: deckID).request(path: "", method: .post)
@@ -50,7 +54,7 @@ enum FlashCardRequests {
     
     // MARK: Practice
     static func updateReview(for cardID: FlashCard.ID) -> AuthenticatedRequest<FlashCardPracticeDTO, Nothing?, ErrorDTO> {
-        group.request(path: NetworkConstants.updateReviewPath, method: .put)
+        cardDetailsGroup(cardID: cardID).request(path: NetworkConstants.updateReviewPath, method: .patch)
     }
 }
 
