@@ -31,7 +31,7 @@ class FlashCardListPresenter: PaginatedListViewPresenterProtocol, ObservableObje
     }
     
     func addTapped() {
-        viewModel.sheet = .cardCreation
+        viewModel.sheet = .cardCreation(in: deckID)
     }
     
     func getPaginatedList(at pagination: Pagination) async throws -> PaginatedList<FlashCard> {

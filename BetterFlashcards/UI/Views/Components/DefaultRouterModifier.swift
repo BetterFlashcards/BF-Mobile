@@ -19,8 +19,9 @@ enum SheetDestination: Hashable, Identifiable {
     case homeScreen
     case bookCreation
     case deckCreation
-    case cardCreation
+    case cardCreation(in: Deck.ID)
     case cardList(for: Deck.ID)
+    case practice(for: Deck.ID)
     
     var id: Int { self.hashValue }
 }
@@ -44,8 +45,7 @@ private struct DefaultRouterModifier<V: BaseViewModel>: ViewModifier {
                 case .deckDetails(let deck):
                     DeckDetailScreen(deck: deck)
                 case .cardDetails(let card):
-                    FlashCardGridCell(flashCard: card)
-                        .frame(width: 300, height: 300)
+                    FlashCardDetailScreen(card: card)
                 }
             }
             .sheet(item: $viewModel.sheet, content: view(for:))
@@ -61,9 +61,9 @@ private struct DefaultRouterModifier<V: BaseViewModel>: ViewModifier {
             Text("Book creation")
         case .deckCreation:
             DeckDetailScreen()
-        case .cardCreation:
-            Text("Card Creation")
-        case .cardList(let deckID):
+        case .cardCreation(let deckID):
+            FlashCardDetailScreen(in: deckID)
+        case .cardList(let deckID), .practice(let deckID):
             CardList(for: deckID)
                 .presentationDetents([.medium, .large])
                 .presentationDragIndicator(.visible)
