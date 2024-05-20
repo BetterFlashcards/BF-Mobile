@@ -54,12 +54,12 @@ class FlashCardListPresenter: PaginatedListViewPresenterProtocol, ObservableObje
    
     private func handle(_ event: FlashCardServiceEvent) {
         switch event {
-        case .added(let deck):
-            viewModel.list.append(deck)
-        case .updated(let deck):
-            viewModel.list[deck.id] = deck
-        case .deleted(let deck):
-            viewModel.list.remove(id: deck.id)
+        case .added(let card):
+            viewModel.list.append(card)
+        case .updated(let card):
+            viewModel.list[id: card.id] = card
+        case .deleted(let card):
+            viewModel.list.remove(id: card.id)
         }
     }
 }
