@@ -63,10 +63,13 @@ private struct DefaultRouterModifier<V: BaseViewModel>: ViewModifier {
             DeckDetailScreen()
         case .cardCreation(let deckID):
             FlashCardDetailScreen(in: deckID)
-        case .cardList(let deckID), .practice(let deckID):
+        case .cardList(let deckID):
             CardList(for: deckID)
                 .presentationDetents([.medium, .large])
                 .presentationDragIndicator(.visible)
+        case .practice(let deckID):
+            PracticeScreen(for: deckID)
+                .presentationDetents([.fraction(1)])
         }
     }
 }

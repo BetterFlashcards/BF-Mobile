@@ -20,6 +20,10 @@
 		16810E972BFB72490082F746 /* FlashCardDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16810E962BFB72490082F746 /* FlashCardDetailPresenter.swift */; };
 		16810E992BFB726D0082F746 /* FlashCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16810E982BFB726D0082F746 /* FlashCardViewModel.swift */; };
 		16810E9B2BFB7B0A0082F746 /* ListViewModel+Flashcard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16810E9A2BFB7B0A0082F746 /* ListViewModel+Flashcard.swift */; };
+		16810E9D2BFB7D2C0082F746 /* PracticeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16810E9C2BFB7D2C0082F746 /* PracticeScreen.swift */; };
+		16810E9F2BFB7E770082F746 /* FlashCardPracticePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16810E9E2BFB7E770082F746 /* FlashCardPracticePresenter.swift */; };
+		16810EA12BFB7F700082F746 /* PracticeListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16810EA02BFB7F700082F746 /* PracticeListViewModel.swift */; };
+		16810EA52BFBAE790082F746 /* StackPushModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16810EA42BFBAE790082F746 /* StackPushModifiers.swift */; };
 		16889D802BDCFDFD00E09A9C /* GenericBasicServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16889D7F2BDCFDFD00E09A9C /* GenericBasicServiceProtocol.swift */; };
 		16889D822BDCFEB600E09A9C /* UserDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16889D812BDCFEB600E09A9C /* UserDTO.swift */; };
 		16889D842BDD028C00E09A9C /* BookCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16889D832BDD028C00E09A9C /* BookCellView.swift */; };
@@ -139,6 +143,10 @@
 		16810E962BFB72490082F746 /* FlashCardDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashCardDetailPresenter.swift; sourceTree = "<group>"; };
 		16810E982BFB726D0082F746 /* FlashCardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashCardViewModel.swift; sourceTree = "<group>"; };
 		16810E9A2BFB7B0A0082F746 /* ListViewModel+Flashcard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ListViewModel+Flashcard.swift"; sourceTree = "<group>"; };
+		16810E9C2BFB7D2C0082F746 /* PracticeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeScreen.swift; sourceTree = "<group>"; };
+		16810E9E2BFB7E770082F746 /* FlashCardPracticePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashCardPracticePresenter.swift; sourceTree = "<group>"; };
+		16810EA02BFB7F700082F746 /* PracticeListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeListViewModel.swift; sourceTree = "<group>"; };
+		16810EA42BFBAE790082F746 /* StackPushModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackPushModifiers.swift; sourceTree = "<group>"; };
 		16889D7F2BDCFDFD00E09A9C /* GenericBasicServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericBasicServiceProtocol.swift; sourceTree = "<group>"; };
 		16889D812BDCFEB600E09A9C /* UserDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDTO.swift; sourceTree = "<group>"; };
 		16889D832BDD028C00E09A9C /* BookCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCellView.swift; sourceTree = "<group>"; };
@@ -261,6 +269,7 @@
 			children = (
 				16F31DEE2BD5BEE200BCC67B /* ListView.swift */,
 				16889D9A2BDD1E0A00E09A9C /* FormLabelledField.swift */,
+				16810EA42BFBAE790082F746 /* StackPushModifiers.swift */,
 				16889DC12BDD509900E09A9C /* DefaultRouterModifier.swift */,
 			);
 			path = Components;
@@ -299,6 +308,7 @@
 			isa = PBXGroup;
 			children = (
 				16E89E422BDD725200BFC761 /* CardList.swift */,
+				16810E9C2BFB7D2C0082F746 /* PracticeScreen.swift */,
 				16810E942BFB721F0082F746 /* FlashCardDetailScreen.swift */,
 				16E89E442BDD73A800BFC761 /* FlashCardGridCell.swift */,
 			);
@@ -623,6 +633,7 @@
 			isa = PBXGroup;
 			children = (
 				16E89E402BDD713800BFC761 /* FlashCardListPresenter.swift */,
+				16810E9E2BFB7E770082F746 /* FlashCardPracticePresenter.swift */,
 				16810E962BFB72490082F746 /* FlashCardDetailPresenter.swift */,
 			);
 			path = FlashCards;
@@ -634,6 +645,7 @@
 				16889DA62BDD206900E09A9C /* Auth */,
 				16F31DF02BD5C4D400BCC67B /* ListViewModel.swift */,
 				16810E9A2BFB7B0A0082F746 /* ListViewModel+Flashcard.swift */,
+				16810EA02BFB7F700082F746 /* PracticeListViewModel.swift */,
 				16889DC32BDD52FB00E09A9C /* BaseViewModel.swift */,
 				16889DAF2BDD2C1100E09A9C /* DeckViewModel.swift */,
 				16810E982BFB726D0082F746 /* FlashCardViewModel.swift */,
@@ -803,6 +815,7 @@
 				168D56E62BD3CDFE0034AEA2 /* HomeScreen.swift in Sources */,
 				16889D9B2BDD1E0A00E09A9C /* FormLabelledField.swift in Sources */,
 				168D57552BD3E2930034AEA2 /* KeychainWrapper.swift in Sources */,
+				16810E9F2BFB7E770082F746 /* FlashCardPracticePresenter.swift in Sources */,
 				168D57222BD3D0E40034AEA2 /* FlashCardPractice.swift in Sources */,
 				16889DB22BDD2C5F00E09A9C /* DeckDetailPresenter.swift in Sources */,
 				16A577342BECFE6800C410FD /* RefreshDTO.swift in Sources */,
@@ -812,6 +825,7 @@
 				16810E912BFB625F0082F746 /* LanguageService.swift in Sources */,
 				16889D942BDD109F00E09A9C /* AuthenticationServiceProtocol.swift in Sources */,
 				16810E832BFB5DF30082F746 /* Language.swift in Sources */,
+				16810EA12BFB7F700082F746 /* PracticeListViewModel.swift in Sources */,
 				168D575E2BD3E4880034AEA2 /* AuthError.swift in Sources */,
 				168D572E2BD3D1E10034AEA2 /* FlashCardService.swift in Sources */,
 				16E89E4C2BE79EFB00BFC761 /* AuthStore.swift in Sources */,
@@ -838,11 +852,13 @@
 				168D57402BD3D4420034AEA2 /* NetworkConstants.swift in Sources */,
 				168D576A2BD3EBB50034AEA2 /* BookListScreen.swift in Sources */,
 				168D572A2BD3D1D00034AEA2 /* DeckService.swift in Sources */,
+				16810EA52BFBAE790082F746 /* StackPushModifiers.swift in Sources */,
 				168D572C2BD3D1D70034AEA2 /* BookService.swift in Sources */,
 				168D56E42BD3CDFE0034AEA2 /* BetterFlashcardsApp.swift in Sources */,
 				16889D822BDCFEB600E09A9C /* UserDTO.swift in Sources */,
 				168D57462BD3DB5C0034AEA2 /* DeckNetworkRepository.swift in Sources */,
 				168D571E2BD3CFB90034AEA2 /* BookRepositoryProtocol.swift in Sources */,
+				16810E9D2BFB7D2C0082F746 /* PracticeScreen.swift in Sources */,
 				16E89E412BDD713800BFC761 /* FlashCardListPresenter.swift in Sources */,
 				168D57442BD3D9870034AEA2 /* BookRequests.swift in Sources */,
 				16889D862BDD02C200E09A9C /* DeckCellView.swift in Sources */,
