@@ -7,16 +7,20 @@
 
 import Foundation
 
-struct FlashCardResponseDTO: Codable {
+struct FlashCardDTO: Codable {
     let id: FlashCard.ID
     let frontText: String
     let backText: String
-    let deck: Deck
+    let deckID: Deck.ID
+    let isDraft: Bool
+    let relatedBookID: Book.ID?
     
     enum CodingKeys: String, CodingKey {
         case id
         case frontText = "front_text"
         case backText = "back_text"
-        case deck
+        case deckID = "deck_id"
+        case isDraft = "draft"
+        case relatedBookID = "related_book"
     }
 }

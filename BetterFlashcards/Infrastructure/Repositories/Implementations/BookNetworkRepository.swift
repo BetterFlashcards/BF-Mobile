@@ -10,10 +10,6 @@ import Foundation
 class BookNetworkRepository: BaseAuthenticatedNetworking, BookRepositoryProtocol {
     let bookRequests = BookRequests.self
     
-    func fetchAll() async throws -> [Book] {
-        try await client.make(request: bookRequests.list(), headers: try await headers()).data.items
-    }
-    
     func fetch(at pagination: Pagination) async throws -> PaginatedList<Book> {
         let result = try await client.make(request: bookRequests.list(), headers: try await headers(), queries: PaginationQueryDTO(pagination: pagination)).data
         return .init(items: result.items, count: result.count, pagination: pagination)

@@ -21,7 +21,11 @@ struct CardList: View {
         NavigationStack {
             CardGrid(presenter: presenter)
                 .navigationTitle("Cards")
-                .withDefaultRouter(viewModel: presenter.viewModel)
+                .toolbar {
+                    ToolbarItemGroup(placement: .navigationBarTrailing) {
+                        Button("Add") { presenter.addTapped() }
+                    }
+                }.withDefaultRouter(viewModel: presenter.viewModel)
         }
     }
     
@@ -37,12 +41,31 @@ struct CardList: View {
         var body: some View {
             ScrollView {
                 LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 10) {
-                    ForEach(viewModel.list) { card in
-                        cell(for: card)
-                            .onAppear { presenter.didDisplay(card) }
+                    if viewModel.hasCards {
+                        Section("Cards") {
+                            ForEach(viewModel.list.filter { !$0.isDraft }) { card in
+                                cell(for: card)
+                                    .onAppear { presenter.didDisplay(card) }
+                            }
+                        }
                     }
+                    if viewModel.hasDrafts {
+                        Section("Drafts") {
+                            ForEach(viewModel.list.filter { $0.isDraft }) { card in
+                                cell(for: card)
+                                    .onAppear { presenter.didDisplay(card) }
+                            }
+                        }
+                    }
+                    
                     if viewModel.isLoading {
-                        ProgressView()
+                        HStack {
+                            Spacer()
+                            ProgressView()
+                            Spacer()
+                        }
+                    } else if viewModel.list.isEmpty {
+                        Text("No cards")
                     }
                 }
             }.task { await presenter.firstLoad() }

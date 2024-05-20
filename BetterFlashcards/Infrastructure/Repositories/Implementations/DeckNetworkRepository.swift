@@ -10,10 +10,6 @@ import Foundation
 class DeckNetworkRepository: BaseAuthenticatedNetworking, DeckRepositoryProtocol {
     let deckRequests = DeckRequests.self
     
-    func fetchAll() async throws -> [Deck] {
-        try await client.make(request: deckRequests.list(), headers: try await headers()).data.items
-    }
-    
     func fetch(at pagination: Pagination) async throws -> PaginatedList<Deck> {
         let response = try await client.make(request: deckRequests.list(), headers: try await headers(), queries: PaginationQueryDTO(pagination: pagination)).data
         return .init(items: response.items, count: response.count, pagination: pagination)

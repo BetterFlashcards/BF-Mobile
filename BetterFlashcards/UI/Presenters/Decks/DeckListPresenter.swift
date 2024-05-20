@@ -31,9 +31,6 @@ class DeckListPresenter: PaginatedListViewPresenterProtocol, ObservableObject {
         viewModel.sheet = .deckCreation
     }
     
-    func getFullList() async throws -> [Deck] {
-        try await deckService.getList()
-    }
     
     func getPaginatedList(at pagination: Pagination) async throws -> PaginatedList<Deck> {
         try await deckService.getList(at: pagination)

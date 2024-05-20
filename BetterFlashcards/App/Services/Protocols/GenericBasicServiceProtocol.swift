@@ -11,7 +11,6 @@ import Combine
 protocol GenericBasicServiceProtocol<Item> {
     associatedtype Item
     var eventPublisher: AnyPublisher<BasicServiceEvent<Item>, Never> { get }
-    func getList() async throws -> [Item]
     func getList(at: Pagination) async throws -> PaginatedList<Item>
     func create(_: Item) async throws -> Item
     func update(_: Item) async throws -> Item

@@ -14,29 +14,41 @@ class DeckDetailPresenter: ObservableObject {
     @Published var viewModel: DeckViewModel
 
     private let deckService: any DeckServiceProtocol
+    private let flashCardService: any FlashCardServiceProtocol
     private let dismiss: DismissAction
     private var cancelSet: Set<AnyCancellable> = []
     
     init(
         deck: Deck? = nil,
         deckService: any DeckServiceProtocol,
+        flashCardService: any FlashCardServiceProtocol,
         dismiss: DismissAction
     ) {
         self.viewModel = DeckViewModel(id: deck?.id, name: deck?.name ?? "", language: deck?.language ?? "")
         self.deckService = deckService
+        self.flashCardService = flashCardService
         self.dismiss = dismiss
     }
     
-    func setup()  {
+    func setup() async {
         deckService.eventPublisher
             .receive(on: DispatchQueue.main)
             .sink { [weak self] event in
                 self?.handle(event)
             }.store(in: &cancelSet)
+        await self.load()
+    }
+    
+    func load() async {
+        guard let deckID = viewModel.id else { return }
+        viewModel.isLoading = true
+        let cards = try? await flashCardService.getList(for: deckID, at: Pagination(page: 0, size: 1))
+        viewModel.isLoading = false
+        viewModel.cardCount = cards?.count ?? 0
     }
     
     func save() {
-        let deck = Deck(id: viewModel.id ?? -1, name: viewModel.name, language: viewModel.language)
+        let deck = viewModel.toDeck()
         let id = viewModel.id
         Task {
             if id != nil {
@@ -46,6 +58,11 @@ class DeckDetailPresenter: ObservableObject {
                 dismiss()
             }
         }
+    }
+    
+    func practice() {
+        guard let deckID = viewModel.id else { return }
+        viewModel.sheet = .practice(for: deckID)
     }
     
     func create(deck: Deck) async {
@@ -70,9 +87,10 @@ class DeckDetailPresenter: ObservableObject {
     }
     
     func delete() {
-        guard let id = viewModel.id else { return }
+        guard viewModel.id != nil else { return }
+        let deck = viewModel.toDeck()
         Task {
-            let deck = Deck(id: id, name: viewModel.name, language: viewModel.language)
+            
             do {
                 _ = try await deckService.delete(deck)
             } catch {

@@ -32,10 +32,6 @@ actor MockFlashCardService: FlashCardServiceProtocol {
         self.eventSubject.eraseToAnyPublisher()
     }
     
-    func getList(for deckID: Deck.ID) async throws -> [FlashCard] {
-        return deckCards[deckID] ?? []
-    }
-    
     func getList(for deckID: Deck.ID, at pagination: Pagination) async throws -> PaginatedList<FlashCard> {
         let cards = deckCards[deckID] ?? []
         let start = pagination.page * pagination.size
@@ -70,10 +66,6 @@ actor MockFlashCardService: FlashCardServiceProtocol {
         deckCards[card.deckID]?.remove(at: idx)
         eventSubject.send(.deleted(card))
         return card
-    }
-        
-    func dueList(for deckID: Deck.ID) async throws -> [FlashCard] {
-        try await getList(for: deckID)
     }
     
     func dueList(for deckID: Deck.ID, at pagination: Pagination) async throws -> PaginatedList<FlashCard> {

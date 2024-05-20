@@ -20,10 +20,6 @@ class DeckService: DeckServiceProtocol {
         self.deckRepo = deckRepo
     }
     
-    func getList() async throws -> [Deck] {
-        try await deckRepo.fetchAll()
-    }
-    
     func getList(at pagination: Pagination) async throws -> PaginatedList<Deck> {
         try await deckRepo.fetch(at: pagination)
     }

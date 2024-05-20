@@ -19,10 +19,6 @@ actor MockDeckService: DeckServiceProtocol {
         self.eventSubject.eraseToAnyPublisher()
     }
     
-    func getList() async throws -> [Deck] {
-        return deckList
-    }
-    
     func getList(at pagination: Pagination) async throws -> PaginatedList<Deck> {
         let start = pagination.page * pagination.size
         let end = min(start + pagination.size, deckList.count)

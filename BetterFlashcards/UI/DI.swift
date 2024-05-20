@@ -35,6 +35,11 @@ extension DIContainerProtocol {
         )
         
         register(
+            type: LanguageServiceProtocol.self,
+            eagerSingleton: MockLanguageService()
+        )
+        
+        register(
             type: AuthenticationServiceProtocol.self,
             lazySingleton: { MockAuthenticationService(authStore: AuthStore()) }
         )
@@ -102,6 +107,17 @@ extension DIContainerProtocol {
             }
         )
         
+        register(
+            type: LanguageRepositoryProtocol.self,
+            lazySingleton: {
+                LanguageNetworkRepository(
+                    client: $0.forceResolve(),
+                    authStore: $0.forceResolve(),
+                    authProvider: $0.forceResolve()
+                )
+            }
+        )
+        
         return self
     }
     
@@ -124,6 +140,13 @@ extension DIContainerProtocol {
             type: (any BookServiceProtocol).self,
             lazySingleton: {
                 BookService(bookRepo: $0.forceResolve())
+            }
+        )
+        
+        register(
+            type: LanguageServiceProtocol.self,
+            lazySingleton: {
+                LanguageService(languageRepo: $0.forceResolve())
             }
         )
         

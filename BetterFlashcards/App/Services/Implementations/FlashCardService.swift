@@ -20,10 +20,6 @@ class FlashCardService: FlashCardServiceProtocol {
         self.flashCardRepo = flashCardRepo
     }
     
-    func getList(for deckID: Deck.ID) async throws -> [FlashCard] {
-        try await flashCardRepo.fetchAll(by: deckID)
-    }
-    
     func getList(for deckID: Deck.ID, at pagination: Pagination) async throws -> PaginatedList<FlashCard> {
         try await flashCardRepo.fetch(by: deckID, at: pagination)
     }
@@ -45,10 +41,6 @@ class FlashCardService: FlashCardServiceProtocol {
         try await flashCardRepo.delete(flashCard: card)
         eventSubject.send(.deleted(card))
         return card
-    }
-    
-    func dueList(for deckID: Deck.ID) async throws -> [FlashCard] {
-        try await flashCardRepo.dueCards(for: deckID)
     }
     
     func dueList(for deckID: Deck.ID, at pagination: Pagination) async throws -> PaginatedList<FlashCard> {

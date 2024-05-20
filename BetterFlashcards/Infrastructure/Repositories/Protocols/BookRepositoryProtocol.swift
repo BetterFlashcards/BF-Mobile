@@ -8,7 +8,6 @@
 import Foundation
 
 protocol BookRepositoryProtocol {
-    func fetchAll() async throws -> [Book]
     func fetch(at pagination: Pagination) async throws -> PaginatedList<Book>
     func fetch(by bookID: Book.ID) async throws -> Book?
     func create(book: Book) async throws -> Book
