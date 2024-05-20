@@ -16,6 +16,7 @@ struct DeckDetailScreen: View {
             DeckDetailPresenter(
                 deck: deck,
                 deckService: env.deckService,
+                flashCardService: env.flashcardService,
                 dismiss: env.dismiss
             )
         }
@@ -23,7 +24,7 @@ struct DeckDetailScreen: View {
     
     var body: some View {
         MainView(presenter: presenter)
-            .task { presenter.setup() }
+            .task { await presenter.setup() }
     }
     
     private struct MainView: View {
@@ -51,6 +52,11 @@ struct DeckDetailScreen: View {
                             presenter.viewCardsTapped()
                         }
                     }
+                }
+                
+                if viewModel.hasCards {
+                    Button("Practice") { presenter.practice() }
+                        .buttonStyle(.borderedProminent)
                 }
 
                 Button("Save") { presenter.save() }
