@@ -21,20 +21,20 @@ enum BookRequests {
         group.request(path: "")
     }
     
-    static func create() -> AuthenticatedRequest<CreateBookDTO, Book> {
+    static func create() -> AuthenticatedRequest<CreateBookDTO, Book, ErrorDTO> {
         group.request(path: "", method: .post)
     }
     
     // MARK: Details
-    static func details(for bookID: Book.ID) -> AuthenticatedRequest<Nothing, Book> {
+    static func details(for bookID: Book.ID) -> AuthenticatedRequest<Nothing, Book, ErrorDTO> {
         detailsGroup(for: bookID).request(path: "")
     }
 
-    static func update(at bookID: Book.ID) -> AuthenticatedRequest<Book, Book> {
+    static func update(at bookID: Book.ID) -> AuthenticatedRequest<Book, Book, ErrorDTO> {
         detailsGroup(for: bookID).request(path: "", method: .put)
     }
     
-    static func delete(at bookID: Book.ID) -> AuthenticatedRequest<Nothing, Nothing?> {
+    static func delete(at bookID: Book.ID) -> AuthenticatedRequest<Nothing, Nothing?, ErrorDTO> {
         detailsGroup(for: bookID).request(path: "", method: .delete)
     }
 }

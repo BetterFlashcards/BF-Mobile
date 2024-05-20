@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1601D0432BED0AD400DAE123 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1601D0422BED0AD400DAE123 /* HomePresenter.swift */; };
+		1601D0452BF8BB6E00DAE123 /* ErrorDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1601D0442BF8BB6E00DAE123 /* ErrorDTO.swift */; };
 		16889D802BDCFDFD00E09A9C /* GenericBasicServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16889D7F2BDCFDFD00E09A9C /* GenericBasicServiceProtocol.swift */; };
 		16889D822BDCFEB600E09A9C /* UserDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16889D812BDCFEB600E09A9C /* UserDTO.swift */; };
 		16889D842BDD028C00E09A9C /* BookCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16889D832BDD028C00E09A9C /* BookCellView.swift */; };
@@ -117,6 +118,7 @@
 
 /* Begin PBXFileReference section */
 		1601D0422BED0AD400DAE123 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		1601D0442BF8BB6E00DAE123 /* ErrorDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorDTO.swift; sourceTree = "<group>"; };
 		16889D7F2BDCFDFD00E09A9C /* GenericBasicServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericBasicServiceProtocol.swift; sourceTree = "<group>"; };
 		16889D812BDCFEB600E09A9C /* UserDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDTO.swift; sourceTree = "<group>"; };
 		16889D832BDD028C00E09A9C /* BookCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCellView.swift; sourceTree = "<group>"; };
@@ -487,6 +489,7 @@
 			isa = PBXGroup;
 			children = (
 				168D57522BD3E04B0034AEA2 /* LoginResponseDTO.swift */,
+				1601D0442BF8BB6E00DAE123 /* ErrorDTO.swift */,
 				16A5772F2BECFCD300C410FD /* CreatedDTO.swift */,
 				16A577312BECFE4E00C410FD /* VerifyDTO.swift */,
 				16A577332BECFE6800C410FD /* RefreshDTO.swift */,
@@ -811,6 +814,7 @@
 				168D57442BD3D9870034AEA2 /* BookRequests.swift in Sources */,
 				16889D862BDD02C200E09A9C /* DeckCellView.swift in Sources */,
 				168D57502BD3DFEC0034AEA2 /* AuthRequests.swift in Sources */,
+				1601D0452BF8BB6E00DAE123 /* ErrorDTO.swift in Sources */,
 				168D576D2BD3EFC30034AEA2 /* MockDeckService.swift in Sources */,
 				16889D882BDD0AC200E09A9C /* AuthenticationViewModel.swift in Sources */,
 				168D57422BD3D5D70034AEA2 /* FlashCardRequests.swift in Sources */,
@@ -1166,7 +1170,7 @@
 			repositoryURL = "https://github.com/koshakji/APIClient";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 0.0.7;
+				minimumVersion = 0.0.8;
 			};
 		};
 		168D57342BD3D3140034AEA2 /* XCRemoteSwiftPackageReference "DIContainer" */ = {

@@ -21,20 +21,20 @@ enum DeckRequests {
         group.request(path: "")
     }
     
-    static func create() -> AuthenticatedRequest<CreateDeckDTO, CreatedDTO> {
+    static func create() -> AuthenticatedRequest<CreateDeckDTO, CreatedDTO, ErrorDTO> {
         group.request(path: "", method: .post)
     }
     
     // MARK: Details
-    static func details(for deckID: Deck.ID) -> AuthenticatedRequest<Nothing, Deck> {
+    static func details(for deckID: Deck.ID) -> AuthenticatedRequest<Nothing, Deck, ErrorDTO> {
         detailsGroup(for: deckID).request(path: "")
     }
 
-    static func update(at deckID: Deck.ID) -> AuthenticatedRequest<Deck, Deck> {
+    static func update(at deckID: Deck.ID) -> AuthenticatedRequest<Deck, Deck, ErrorDTO> {
         detailsGroup(for: deckID).request(path: "", method: .put)
     }
     
-    static func delete(at deckID: Deck.ID) -> AuthenticatedRequest<Nothing, Nothing?> {
+    static func delete(at deckID: Deck.ID) -> AuthenticatedRequest<Nothing, Nothing?, ErrorDTO> {
         detailsGroup(for: deckID).request(path: "", method: .delete)
     }
 }
