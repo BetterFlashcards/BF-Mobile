@@ -22,6 +22,7 @@ enum NetworkConstants {
     static let deckCardsDuePath = "/due-cards"
     static let updateReviewPath = "/update_review_data"
     static let bookPath = "/api/books"
+    static let languagesPath = "/api/languages"
 }
 
 extension NetworkConstants {
