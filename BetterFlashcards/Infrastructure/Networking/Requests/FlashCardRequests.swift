@@ -24,15 +24,15 @@ enum FlashCardRequests {
     }
     
     // MARK: Top Level
-    static func add(to deckID: Deck.ID) -> AuthenticatedRequest<CreateFlashCardDTO, FlashCard, ErrorDTO> {
+    static func add(to deckID: Deck.ID) -> AuthenticatedRequest<FlashCardDTO, FlashCardDTO, ErrorDTO> {
         deckGroup(deckID: deckID).request(path: "", method: .post)
     }
     
-    static func list(for deckID: Deck.ID) -> PaginatedAuthRequest<FlashCardResponseDTO> {
+    static func list(for deckID: Deck.ID) -> PaginatedAuthRequest<FlashCardDTO> {
         deckGroup(deckID: deckID).request(path: "")
     }
     
-    static func due(for deckID: Deck.ID) -> PaginatedAuthRequest<FlashCardResponseDTO> {
+    static func due(for deckID: Deck.ID) -> PaginatedAuthRequest<FlashCardDTO> {
         DeckRequests
             .detailsGroup(for: deckID)
             .subgroup(path: NetworkConstants.deckCardsDuePath)
@@ -40,7 +40,7 @@ enum FlashCardRequests {
     }
     
     // MARK: Details
-    static func update(in deckID: Deck.ID, cardID: FlashCard.ID) -> AuthenticatedRequest<FlashCard, FlashCard, ErrorDTO> {
+    static func update(in deckID: Deck.ID, cardID: FlashCard.ID) -> AuthenticatedRequest<FlashCardDTO, FlashCardDTO, ErrorDTO> {
         deckDetailsGroup(deckID: deckID, cardID: cardID).request(path: "", method: .put)
     }
     

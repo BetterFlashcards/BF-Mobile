@@ -14,7 +14,7 @@ class FlashCardNetworkRepository: BaseAuthenticatedNetworking, FlashCardReposito
         let response = try await client.make(request: flashCardRequests.list(for: deckID), headers: try await headers(), queries: .init(pagination: pagination)).data
         
         return .init(
-            items: response.items.map(self.mapper(_:)),
+            items: response.items.map(self.toModel(_:)),
             count: response.count,
             pagination: pagination
         )
@@ -25,17 +25,13 @@ class FlashCardNetworkRepository: BaseAuthenticatedNetworking, FlashCardReposito
     }
     
     func create(flashCard: FlashCard) async throws -> FlashCard {
-        let dto = CreateFlashCardDTO(
-            frontWord: flashCard.frontWord,
-            backWord: flashCard.backWord,
-            isDraft: flashCard.isDraft,
-            deckID: flashCard.deckID
-        )
-        return try await client.make(request: flashCardRequests.add(to: flashCard.deckID), body: dto, headers: try await headers()).data
+        let responseDTO = try await client.make(request: flashCardRequests.add(to: flashCard.deckID), body: toDTO(flashCard), headers: try await headers()).data
+        return toModel(responseDTO)
     }
     
     func update(flashCard: FlashCard) async throws -> FlashCard {
-        try await client.make(request: flashCardRequests.update(in: flashCard.deckID, cardID: flashCard.id), body: flashCard, headers: try await headers()).data
+        let dto = try await client.make(request: flashCardRequests.update(in: flashCard.deckID, cardID: flashCard.id), body: toDTO(flashCard), headers: try await headers()).data
+        return toModel(dto)
     }
     
     func delete(flashCard: FlashCard) async throws {
@@ -47,7 +43,7 @@ class FlashCardNetworkRepository: BaseAuthenticatedNetworking, FlashCardReposito
         let response = try await client.make(request: flashCardRequests.due(for: deckID), headers: try await headers(), queries: .init(pagination: pagination)).data
         
         return .init(
-            items: response.items.map(self.mapper(_:)),
+            items: response.items.map(self.toModel(_:)),
             count: response.count,
             pagination: pagination
         )
@@ -58,13 +54,25 @@ class FlashCardNetworkRepository: BaseAuthenticatedNetworking, FlashCardReposito
         _ = try await client.make(request: flashCardRequests.updateReview(for: practice.flashCardID), body: dto, headers: try await headers())
     }
     
-    private func mapper(_ dto: FlashCardResponseDTO) -> FlashCard {
+    private func toModel(_ dto: FlashCardDTO) -> FlashCard {
         return FlashCard(
             id: dto.id,
             frontWord: dto.frontText,
             backWord: dto.backText,
-            deckID: dto.deck.id,
-            isDraft: false
+            deckID: dto.deckID,
+            isDraft: dto.isDraft,
+            relatedBookID: dto.relatedBookID
+        )
+    }
+    
+    private func toDTO(_ flashcard: FlashCard) -> FlashCardDTO {
+        FlashCardDTO(
+            id: flashcard.id,
+            frontText: flashcard.frontWord,
+            backText: flashcard.backWord,
+            deckID: flashcard.deckID,
+            isDraft: flashcard.isDraft,
+            relatedBookID: flashcard.relatedBookID
         )
     }
 }
