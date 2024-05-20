@@ -21,7 +21,11 @@ struct CardList: View {
         NavigationStack {
             CardGrid(presenter: presenter)
                 .navigationTitle("Cards")
-                .withDefaultRouter(viewModel: presenter.viewModel)
+                .toolbar {
+                    ToolbarItemGroup(placement: .navigationBarTrailing) {
+                        Button("Add") { presenter.addTapped() }
+                    }
+                }.withDefaultRouter(viewModel: presenter.viewModel)
         }
     }
     
