@@ -54,8 +54,8 @@ class FlashCardListPresenter: PaginatedListViewPresenterProtocol, ObservableObje
    
     private func handle(_ event: FlashCardServiceEvent) {
         switch event {
-        case .added(let card):
-            viewModel.list.append(card)
+        case .added(_):
+            Task { await self.refresh() }
         case .updated(let card):
             viewModel.list[id: card.id] = card
         case .deleted(let card):
