@@ -42,10 +42,10 @@ class DeckListPresenter: PaginatedListViewPresenterProtocol, ObservableObject {
    
     private func handle(_ event: DeckServiceEvent) {
         switch event {
-        case .added(let deck):
-            viewModel.list.append(deck)
+        case .added(_):
+            Task { await self.refresh() }
         case .updated(let deck):
-            viewModel.list[deck.id] = deck
+            viewModel.list[id: deck.id] = deck
         case .deleted(let deck):
             viewModel.list.remove(id: deck.id)
         }

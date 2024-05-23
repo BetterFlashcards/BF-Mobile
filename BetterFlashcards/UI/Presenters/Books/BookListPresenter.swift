@@ -38,10 +38,10 @@ class BookListPresenter: PaginatedListViewPresenterProtocol, ObservableObject {
     
     private func handle(_ event: BookServiceEvent) {
         switch event {
-        case .added(let book):
-            viewModel.list.append(book)
+        case .added(_):
+            Task { await self.refresh() }
         case .updated(let book):
-            viewModel.list[book.id] = book
+            viewModel.list[id: book.id] = book
         case .deleted(let book):
             viewModel.list.remove(id: book.id)
         }
