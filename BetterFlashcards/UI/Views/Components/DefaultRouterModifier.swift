@@ -39,7 +39,7 @@ private struct DefaultRouterModifier<V: BaseViewModel>: ViewModifier {
                 case .bookList:
                     BookListScreen()
                 case .bookDetails(let book):
-                    Text("Book details for \(book.title)")
+                    BookDetailScreen(book: book)
                 case .deckList:
                     DeckListScreen()
                 case .deckDetails(let deck):
@@ -58,7 +58,7 @@ private struct DefaultRouterModifier<V: BaseViewModel>: ViewModifier {
         case .homeScreen:
             HomeScreen()
         case .bookCreation:
-            Text("Book creation")
+            BookDetailScreen()
         case .deckCreation:
             DeckDetailScreen()
         case .cardCreation(let deckID):
