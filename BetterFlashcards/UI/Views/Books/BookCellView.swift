@@ -10,9 +10,10 @@ import SwiftUI
 struct BookCellView: View {
     let book: Book
     var body: some View {
-        VStack {
+        VStack(alignment: .leading) {
             Text(book.title)
             Text(book.author)
+                .font(.caption)
         }
     }
 }
