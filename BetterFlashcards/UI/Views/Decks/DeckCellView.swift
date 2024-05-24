@@ -14,6 +14,7 @@ struct DeckCellView: View {
             Text(deck.name)
             if let language = deck.language, !language.isEmpty {
                 Text(language)
+                    .font(.caption)
             }
         }
     }
