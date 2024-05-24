@@ -23,13 +23,12 @@ struct LanguagePicker: View {
     
     var body: some View {
         ListView(presenter: presenter) { language in
-            VStack(alignment: .leading) {
-                Text(language.name)
-                Text(language.isocode)
-                    .font(.caption)
-            }.onTapGesture {
-                presenter.select(language: language)
-            }
+            Text(language.name)
+                .multilineTextAlignment(.leading)
+                .onTapGesture {
+                    presenter.select(language: language)
+                }
         }.task { await presenter.firstLoad() }
+        .navigationBarTitle("Language")
     }
 }
