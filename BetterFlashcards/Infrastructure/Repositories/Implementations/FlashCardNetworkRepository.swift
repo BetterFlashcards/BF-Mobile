@@ -35,7 +35,7 @@ class FlashCardNetworkRepository: BaseAuthenticatedNetworking, FlashCardReposito
     }
     
     func delete(flashCard: FlashCard) async throws {
-        _ = try await client.make(request: flashCardRequests.delete(from: flashCard.deckID, cardID: flashCard.id), headers: try await headers())
+        _ = try await client.make(request: flashCardRequests.delete(cardID: flashCard.id), headers: try await headers())
     }
     
     

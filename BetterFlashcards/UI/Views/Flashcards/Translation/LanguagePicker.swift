@@ -25,6 +25,8 @@ struct LanguagePicker: View {
         ListView(presenter: presenter) { language in
             Text(language.name)
                 .multilineTextAlignment(.leading)
+                .pushLeading()
+                .contentShape(Rectangle())
                 .onTapGesture {
                     presenter.select(language: language)
                 }

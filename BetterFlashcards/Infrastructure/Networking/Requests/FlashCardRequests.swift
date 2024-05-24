@@ -39,8 +39,7 @@ enum FlashCardRequests {
     static func due(for deckID: Deck.ID) -> PaginatedAuthRequest<FlashCardDTO> {
         DeckRequests
             .detailsGroup(for: deckID)
-            .subgroup(path: NetworkConstants.deckCardsDuePath)
-            .request(path: "")
+            .request(path: NetworkConstants.deckCardsDuePath)
     }
     
     // MARK: Details
@@ -48,8 +47,8 @@ enum FlashCardRequests {
         deckDetailsGroup(deckID: deckID, cardID: cardID).request(path: "", method: .put)
     }
     
-    static func delete(from deckID: Deck.ID, cardID: FlashCard.ID)  -> AuthenticatedRequest<Nothing, Nothing?, ErrorDTO> {
-        deckDetailsGroup(deckID: deckID, cardID: cardID).request(path: "", method: .delete)
+    static func delete(cardID: FlashCard.ID)  -> AuthenticatedRequest<Nothing, Nothing?, ErrorDTO> {
+        cardDetailsGroup(cardID: cardID).request(path: "", method: .delete)
     }
     
     // MARK: Practice
