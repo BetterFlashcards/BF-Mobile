@@ -36,6 +36,10 @@ class BookListPresenter: PaginatedListViewPresenterProtocol, ObservableObject {
         try await bookService.delete(book)
     }
     
+    func addTapped() {
+        viewModel.sheet = .bookCreation
+    }
+    
     private func handle(_ event: BookServiceEvent) {
         switch event {
         case .added(_):
