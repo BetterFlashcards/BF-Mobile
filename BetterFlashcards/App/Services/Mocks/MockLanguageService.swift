@@ -9,9 +9,9 @@ import Foundation
 
 actor MockLanguageService: LanguageServiceProtocol {
     private var languageList = [
-        Language(id: 1, name: "English", nameLocal: "English", isocode: "en", sorting: 0),
-        Language(id: 2, name: "Arabic", nameLocal: "Arabic", isocode: "ar", sorting: 1),
-        Language(id: 3, name: "French", nameLocal: "French", isocode: "fr", sorting: 2)
+        Language(id: 1, name: "English", isocode: "en", sorting: 0),
+        Language(id: 2, name: "Arabic", isocode: "ar", sorting: 1),
+        Language(id: 3, name: "French", isocode: "fr", sorting: 2)
     ]
     
     
