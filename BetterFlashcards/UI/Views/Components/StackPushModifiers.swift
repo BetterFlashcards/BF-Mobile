@@ -30,5 +30,12 @@ extension View {
             self
         }
     }
+    
+    func pushLeading() -> some View {
+        HStack {
+            self
+            Spacer()
+        }
+    }
 }
 

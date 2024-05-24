@@ -64,6 +64,7 @@ struct TranslationScreen: View {
                         Section(header: Text("Translations")) {
                             ForEach(translations) { translation in
                                 Text(translation.translation)
+                                    .contentShape(Rectangle())
                                     .onTapGesture {
                                         presenter.select(translation: translation)
                                     }
