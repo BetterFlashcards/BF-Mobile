@@ -36,6 +36,7 @@ struct FlashCardDetailScreen: View {
     var body: some View {
         MainView(presenter: presenter)
             .task { await presenter.setup() }
+            .navigationBarTitle("Card")
     }
     
     private struct MainView: View {
