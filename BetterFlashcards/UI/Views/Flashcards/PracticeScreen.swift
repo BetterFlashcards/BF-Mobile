@@ -77,7 +77,13 @@ extension PracticeScreen {
                     if viewModel.flipped {
                         HStack {
                             Button(
-                                action: { withAnimation { self.onForgotten(viewModel) } },
+                                action: {
+                                    guard drag == nil else { return }
+                                    withAnimation {
+                                        self.onForgotten(viewModel)
+                                        self.drag = nil
+                                    }
+                                },
                                 label: { Label("Forgotten", systemImage: "xmark.circle") }
                             ).tint(Color.red)
                             .pushBottom()
@@ -95,7 +101,13 @@ extension PracticeScreen {
                             Color.primary.opacity(0.0)
                             
                             Button(
-                                action: { withAnimation { self.onRemembered(viewModel) } },
+                                action: {
+                                    guard drag == nil else { return }
+                                    withAnimation {
+                                        self.onRemembered(viewModel)
+                                        self.drag = nil
+                                    }
+                                },
                                 label: { Label("Remembered", systemImage: "checkmark.circle") }
                             ).tint(Color.green)
                             .pushBottom()
