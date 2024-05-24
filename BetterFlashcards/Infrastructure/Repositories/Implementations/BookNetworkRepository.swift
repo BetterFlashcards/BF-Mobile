@@ -21,7 +21,8 @@ class BookNetworkRepository: BaseAuthenticatedNetworking, BookRepositoryProtocol
  
     func create(book: Book) async throws -> Book {
         let dto = CreateBookDTO(title: book.title, author: book.author)
-        return try await client.make(request: bookRequests.create(), body: dto, headers: try await headers()).data
+        let created = try await client.make(request: bookRequests.create(), body: dto, headers: try await headers()).data
+        return Book(id: created.id, title: book.title, author: book.author)
     }
     
     func update(book: Book) async throws -> Book {

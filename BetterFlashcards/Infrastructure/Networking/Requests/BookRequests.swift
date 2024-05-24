@@ -21,7 +21,7 @@ enum BookRequests {
         group.request(path: "")
     }
     
-    static func create() -> AuthenticatedRequest<CreateBookDTO, Book, ErrorDTO> {
+    static func create() -> AuthenticatedRequest<CreateBookDTO, CreatedDTO, ErrorDTO> {
         group.request(path: "", method: .post)
     }
     
