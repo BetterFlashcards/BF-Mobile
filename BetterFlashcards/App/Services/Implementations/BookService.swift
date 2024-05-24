@@ -10,6 +10,7 @@ import Combine
 
 class BookService: BookServiceProtocol {
     private let bookRepo: any BookRepositoryProtocol
+    private let fileManager: FileManager = .default
     private let eventSubject = PassthroughSubject<BookServiceEvent, Never>()
     
     var eventPublisher: AnyPublisher<BookServiceEvent, Never> {
@@ -40,5 +41,30 @@ class BookService: BookServiceProtocol {
         try await bookRepo.delete(book: book)
         eventSubject.send(.deleted(book))
         return book
+    }
+    
+    func expectedURL(for book: Book) throws -> URL {
+        guard let documentsDirectory = fileManager.urls(for: .documentDirectory, in: .userDomainMask).first else {
+            throw ErrorDTO(detail: "Unable to import file", message: "Documents directory not found")
+        }
+        let destinationURL = documentsDirectory
+            .appending(path: "\(book.id)-\(book.author)-\(book.title)")
+            .appendingPathExtension(for: .pdf)
+        return destinationURL
+    }
+    
+    func existingURL(for book: Book) -> URL? {
+        guard let expectedURL = try? expectedURL(for: book) else { return nil }
+        if fileManager.fileExists(atPath: expectedURL.path) {
+            return expectedURL
+        } else {
+            return nil
+        }
+    }
+    
+    func importFile(at url: URL, for book: Book) throws -> URL {
+        let destinationURL = try expectedURL(for: book)
+        try fileManager.copyItem(at: url, to: destinationURL)
+        return destinationURL
     }
 }

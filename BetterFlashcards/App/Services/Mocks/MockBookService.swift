@@ -52,4 +52,11 @@ actor MockBookService: BookServiceProtocol {
         return book
     }
     
+    nonisolated func existingURL(for book: Book) -> URL? {
+        nil
+    }
+    
+    func importFile(at url: URL, for book: Book) async throws -> URL {
+        url
+    }
 }
