@@ -12,6 +12,7 @@
 		160BB3B02C0099F600CD6794 /* BookViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160BB3AF2C0099F600CD6794 /* BookViewModel.swift */; };
 		160BB3B22C009A8100CD6794 /* BookDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160BB3B12C009A8100CD6794 /* BookDetailPresenter.swift */; };
 		160BB3B42C009B8B00CD6794 /* BookDetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160BB3B32C009B8B00CD6794 /* BookDetailScreen.swift */; };
+		160BB3BC2C00EA3F00CD6794 /* Translation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160BB3BB2C00EA3F00CD6794 /* Translation.swift */; };
 		16810E832BFB5DF30082F746 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16810E822BFB5DF30082F746 /* Language.swift */; };
 		16810E852BFB61070082F746 /* LanguageRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16810E842BFB61070082F746 /* LanguageRequests.swift */; };
 		16810E872BFB61530082F746 /* LanguageRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16810E862BFB61530082F746 /* LanguageRepositoryProtocol.swift */; };
@@ -138,6 +139,7 @@
 		160BB3AF2C0099F600CD6794 /* BookViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookViewModel.swift; sourceTree = "<group>"; };
 		160BB3B12C009A8100CD6794 /* BookDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailPresenter.swift; sourceTree = "<group>"; };
 		160BB3B32C009B8B00CD6794 /* BookDetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailScreen.swift; sourceTree = "<group>"; };
+		160BB3BB2C00EA3F00CD6794 /* Translation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Translation.swift; sourceTree = "<group>"; };
 		16810E822BFB5DF30082F746 /* Language.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
 		16810E842BFB61070082F746 /* LanguageRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageRequests.swift; sourceTree = "<group>"; };
 		16810E862BFB61530082F746 /* LanguageRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageRepositoryProtocol.swift; sourceTree = "<group>"; };
@@ -442,6 +444,7 @@
 				168D57212BD3D0E40034AEA2 /* FlashCardPractice.swift */,
 				168D57152BD3CF1D0034AEA2 /* Book.swift */,
 				16889D8B2BDD0D1600E09A9C /* User.swift */,
+				160BB3BB2C00EA3F00CD6794 /* Translation.swift */,
 				16810E822BFB5DF30082F746 /* Language.swift */,
 				168D57132BD3CEC00034AEA2 /* Deck.swift */,
 				16E89E4F2BE7AD8500BFC761 /* PaginatedList.swift */,
@@ -885,6 +888,7 @@
 				16810E892BFB61750082F746 /* LanguageNetworkRespository.swift in Sources */,
 				16810E8B2BFB61FE0082F746 /* LanguageServiceProtocol.swift in Sources */,
 				168D574E2BD3DFC90034AEA2 /* AuthProvider.swift in Sources */,
+				160BB3BC2C00EA3F00CD6794 /* Translation.swift in Sources */,
 				16810E952BFB721F0082F746 /* FlashCardDetailScreen.swift in Sources */,
 				16F31DE72BD5AD5700BCC67B /* DeckListPresenter.swift in Sources */,
 				168D57712BD3EFD90034AEA2 /* MockFlashCardService.swift in Sources */,
