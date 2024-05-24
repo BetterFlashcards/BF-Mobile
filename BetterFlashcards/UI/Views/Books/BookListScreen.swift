@@ -22,6 +22,10 @@ struct BookListScreen: View {
             NavigationLink(to: .bookDetails(book)) {
                 BookCellView(book: book)
             }
+        }.toolbar {
+            ToolbarItemGroup(placement: .navigationBarTrailing) {
+                Button("Add") { presenter.addTapped() }
+            }
         }
         .withDefaultRouter(viewModel: presenter.viewModel)
         .navigationTitle("Books")
