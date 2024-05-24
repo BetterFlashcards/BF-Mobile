@@ -18,6 +18,7 @@
 		160BB3C22C00EDCB00CD6794 /* TranslationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160BB3C12C00EDCB00CD6794 /* TranslationViewModel.swift */; };
 		160BB3C52C0113E800CD6794 /* LanguagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160BB3C42C0113E800CD6794 /* LanguagePicker.swift */; };
 		160BB3C72C01166A00CD6794 /* TranslationScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160BB3C62C01166A00CD6794 /* TranslationScreen.swift */; };
+		160BB3C92C01279900CD6794 /* AddButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160BB3C82C01279900CD6794 /* AddButton.swift */; };
 		16810E832BFB5DF30082F746 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16810E822BFB5DF30082F746 /* Language.swift */; };
 		16810E852BFB61070082F746 /* LanguageRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16810E842BFB61070082F746 /* LanguageRequests.swift */; };
 		16810E872BFB61530082F746 /* LanguageRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16810E862BFB61530082F746 /* LanguageRepositoryProtocol.swift */; };
@@ -150,6 +151,7 @@
 		160BB3C12C00EDCB00CD6794 /* TranslationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationViewModel.swift; sourceTree = "<group>"; };
 		160BB3C42C0113E800CD6794 /* LanguagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguagePicker.swift; sourceTree = "<group>"; };
 		160BB3C62C01166A00CD6794 /* TranslationScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationScreen.swift; sourceTree = "<group>"; };
+		160BB3C82C01279900CD6794 /* AddButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddButton.swift; sourceTree = "<group>"; };
 		16810E822BFB5DF30082F746 /* Language.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
 		16810E842BFB61070082F746 /* LanguageRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageRequests.swift; sourceTree = "<group>"; };
 		16810E862BFB61530082F746 /* LanguageRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageRepositoryProtocol.swift; sourceTree = "<group>"; };
@@ -295,6 +297,7 @@
 			isa = PBXGroup;
 			children = (
 				16F31DEE2BD5BEE200BCC67B /* ListView.swift */,
+				160BB3C82C01279900CD6794 /* AddButton.swift */,
 				16889D9A2BDD1E0A00E09A9C /* FormLabelledField.swift */,
 				16810EA42BFBAE790082F746 /* StackPushModifiers.swift */,
 				16889DC12BDD509900E09A9C /* DefaultRouterModifier.swift */,
@@ -893,6 +896,7 @@
 				160BB3C22C00EDCB00CD6794 /* TranslationViewModel.swift in Sources */,
 				168D572C2BD3D1D70034AEA2 /* BookService.swift in Sources */,
 				168D56E42BD3CDFE0034AEA2 /* BetterFlashcardsApp.swift in Sources */,
+				160BB3C92C01279900CD6794 /* AddButton.swift in Sources */,
 				16889D822BDCFEB600E09A9C /* UserDTO.swift in Sources */,
 				168D57462BD3DB5C0034AEA2 /* DeckNetworkRepository.swift in Sources */,
 				168D571E2BD3CFB90034AEA2 /* BookRepositoryProtocol.swift in Sources */,
