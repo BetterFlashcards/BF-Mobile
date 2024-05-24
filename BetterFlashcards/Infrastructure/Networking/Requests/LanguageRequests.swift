@@ -18,6 +18,6 @@ enum LanguageRequests {
     static func translate(word: String) ->  TranslationRequest{
         NetworkConstants.baseGroup
             .subgroup(path: NetworkConstants.translationPath)
-            .request(path: "\(word)")
+            .request(path: "/\(word)")
     }
 }

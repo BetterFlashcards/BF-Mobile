@@ -17,12 +17,12 @@ enum NetworkConstants {
     static let refreshPath = "/refresh"
     static let verifyPath = "/verify"
     static let deckPath = "/decks"
-    static let flashCardPath = "/api/cards"
+    static let flashCardPath = "/cards"
     static let deckCardsPath = "/cards"
     static let deckCardsDuePath = "/due-cards"
     static let updateReviewPath = "/set-state"
     static let bookPath = "/books"
-    static let languagesPath = "/languages"
+    static let languagesPath = "/languages/"
     static let translationPath = "/translate"
 }
 
