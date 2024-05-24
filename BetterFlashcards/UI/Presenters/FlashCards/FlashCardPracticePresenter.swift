@@ -52,10 +52,12 @@ class FlashCardPracticePresenter: ObservableObject {
     }
     
     func onRemembered(item: PracticeItemViewModel) {
+        guard item.flipped else { return }
         log(FlashCardPractice(flashCardID: item.card.id, result: .memorized))
     }
     
     func onForgotten(item: PracticeItemViewModel) {
+        guard item.flipped else { return }
         log(FlashCardPractice(flashCardID: item.card.id, result: .forgotten))
     }
     
