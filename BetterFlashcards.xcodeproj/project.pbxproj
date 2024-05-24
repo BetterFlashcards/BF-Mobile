@@ -13,6 +13,7 @@
 		160BB3B22C009A8100CD6794 /* BookDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160BB3B12C009A8100CD6794 /* BookDetailPresenter.swift */; };
 		160BB3B42C009B8B00CD6794 /* BookDetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160BB3B32C009B8B00CD6794 /* BookDetailScreen.swift */; };
 		160BB3BC2C00EA3F00CD6794 /* Translation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160BB3BB2C00EA3F00CD6794 /* Translation.swift */; };
+		160BB3BE2C00EB1B00CD6794 /* TranslationLanguageQueries.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160BB3BD2C00EB1B00CD6794 /* TranslationLanguageQueries.swift */; };
 		16810E832BFB5DF30082F746 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16810E822BFB5DF30082F746 /* Language.swift */; };
 		16810E852BFB61070082F746 /* LanguageRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16810E842BFB61070082F746 /* LanguageRequests.swift */; };
 		16810E872BFB61530082F746 /* LanguageRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16810E862BFB61530082F746 /* LanguageRepositoryProtocol.swift */; };
@@ -140,6 +141,7 @@
 		160BB3B12C009A8100CD6794 /* BookDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailPresenter.swift; sourceTree = "<group>"; };
 		160BB3B32C009B8B00CD6794 /* BookDetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailScreen.swift; sourceTree = "<group>"; };
 		160BB3BB2C00EA3F00CD6794 /* Translation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Translation.swift; sourceTree = "<group>"; };
+		160BB3BD2C00EB1B00CD6794 /* TranslationLanguageQueries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationLanguageQueries.swift; sourceTree = "<group>"; };
 		16810E822BFB5DF30082F746 /* Language.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
 		16810E842BFB61070082F746 /* LanguageRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageRequests.swift; sourceTree = "<group>"; };
 		16810E862BFB61530082F746 /* LanguageRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageRepositoryProtocol.swift; sourceTree = "<group>"; };
@@ -533,6 +535,7 @@
 			isa = PBXGroup;
 			children = (
 				168D57522BD3E04B0034AEA2 /* LoginResponseDTO.swift */,
+				160BB3BD2C00EB1B00CD6794 /* TranslationLanguageQueries.swift */,
 				1601D0442BF8BB6E00DAE123 /* ErrorDTO.swift */,
 				16A5772F2BECFCD300C410FD /* CreatedDTO.swift */,
 				16A577312BECFE4E00C410FD /* VerifyDTO.swift */,
@@ -865,6 +868,7 @@
 				168D576A2BD3EBB50034AEA2 /* BookListScreen.swift in Sources */,
 				168D572A2BD3D1D00034AEA2 /* DeckService.swift in Sources */,
 				16810EA52BFBAE790082F746 /* StackPushModifiers.swift in Sources */,
+				160BB3BE2C00EB1B00CD6794 /* TranslationLanguageQueries.swift in Sources */,
 				168D572C2BD3D1D70034AEA2 /* BookService.swift in Sources */,
 				168D56E42BD3CDFE0034AEA2 /* BetterFlashcardsApp.swift in Sources */,
 				16889D822BDCFEB600E09A9C /* UserDTO.swift in Sources */,
