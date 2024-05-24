@@ -9,4 +9,5 @@ import Foundation
 
 protocol LanguageRepositoryProtocol {
     func fetch(at pagination: Pagination) async throws -> PaginatedList<Language>
+    func translate(word: String, from: Language, to: Language) async throws -> [Translation]
 }

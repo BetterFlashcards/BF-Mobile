@@ -17,4 +17,8 @@ class LanguageService: LanguageServiceProtocol {
     func getList(at pagination: Pagination) async throws -> PaginatedList<Language> {
         try await languageRepo.fetch(at: pagination)
     }
+
+    func translate(word: String, from source: Language, to target: Language) async throws -> [Translation] {
+        try await languageRepo.translate(word: word, from: source, to: target)
+    }
 }

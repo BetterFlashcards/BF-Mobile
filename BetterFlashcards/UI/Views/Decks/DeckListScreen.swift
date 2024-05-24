@@ -24,7 +24,7 @@ struct DeckListScreen: View {
             }
         }.toolbar {
             ToolbarItemGroup(placement: .navigationBarTrailing) {
-                Button("Add") { presenter.addTapped() }
+                AddButton { presenter.addTapped() }
             }
         }.withDefaultRouter(viewModel: presenter.viewModel)
         .navigationTitle("Decks")

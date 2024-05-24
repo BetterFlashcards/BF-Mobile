@@ -55,9 +55,8 @@ class FlashCardDetailPresenter: ObservableObject {
         }
     }
     
-    func practice() {
-        guard let deckID = viewModel.id else { return }
-        viewModel.sheet = .practice(for: deckID)
+    func accept(translation: Translation) {
+        viewModel.backText = translation.translation
     }
     
     func create(card: FlashCard) async {

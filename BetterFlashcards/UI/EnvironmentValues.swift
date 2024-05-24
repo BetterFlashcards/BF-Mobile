@@ -30,6 +30,10 @@ extension EnvironmentValues {
         self.di.forceResolve()
     }
     
+    var languageService: any LanguageServiceProtocol {
+        self.di.forceResolve()
+    }
+    
     var auth: AuthenticationServiceProtocol {
         self.di.forceResolve()
     }

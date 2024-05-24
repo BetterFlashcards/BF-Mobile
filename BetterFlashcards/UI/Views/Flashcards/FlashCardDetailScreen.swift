@@ -36,6 +36,7 @@ struct FlashCardDetailScreen: View {
     var body: some View {
         MainView(presenter: presenter)
             .task { await presenter.setup() }
+            .navigationBarTitle("Card")
     }
     
     private struct MainView: View {
@@ -56,6 +57,13 @@ struct FlashCardDetailScreen: View {
                     
                     FormLabelledField(label: "Back") {
                         TextField("Back", text: $viewModel.backText)
+                    }
+                    
+                    if !viewModel.frontText.isEmpty {
+                        NavigationLink(to: .translation(viewModel.frontText, onSelect: { presenter.accept(translation: $0)})) {
+                            Text("Translate")
+                                .foregroundColor(.blue)
+                        }
                     }
                 }
 

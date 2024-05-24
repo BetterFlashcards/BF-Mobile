@@ -16,7 +16,7 @@ class AuthenticationViewModel: BaseViewModel {
     init(username: String = "", password: String = "") {
         self.username = username
         self.password = password
-        self.type = .register
+        self.type = .login
         self.isLoggedIn = false
     }
     

@@ -9,10 +9,15 @@ import Foundation
 import APIClient
 
 enum LanguageRequests {
-    static let group = NetworkConstants.baseGroup.subgroup(path: NetworkConstants.languagesPath)
-    
-    // MARK: Subgroups
     static func list() -> PaginatedAuthRequest<Language> {
-        group.request(path: "")
+        NetworkConstants.baseGroup.request(path: NetworkConstants.languagesPath)
+    }
+    
+    typealias TranslationRequest = AdvancedRequest<Nothing, BearerHeaders<[String: String]>, TranslationLanguageQueries, [Translation], ErrorDTO>
+
+    static func translate(word: String) ->  TranslationRequest{
+        NetworkConstants.baseGroup
+            .subgroup(path: NetworkConstants.translationPath)
+            .request(path: "/\(word)")
     }
 }

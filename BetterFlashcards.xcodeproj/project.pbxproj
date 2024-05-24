@@ -12,6 +12,13 @@
 		160BB3B02C0099F600CD6794 /* BookViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160BB3AF2C0099F600CD6794 /* BookViewModel.swift */; };
 		160BB3B22C009A8100CD6794 /* BookDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160BB3B12C009A8100CD6794 /* BookDetailPresenter.swift */; };
 		160BB3B42C009B8B00CD6794 /* BookDetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160BB3B32C009B8B00CD6794 /* BookDetailScreen.swift */; };
+		160BB3BC2C00EA3F00CD6794 /* Translation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160BB3BB2C00EA3F00CD6794 /* Translation.swift */; };
+		160BB3BE2C00EB1B00CD6794 /* TranslationLanguageQueries.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160BB3BD2C00EB1B00CD6794 /* TranslationLanguageQueries.swift */; };
+		160BB3C02C00EDAE00CD6794 /* TranslationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160BB3BF2C00EDAE00CD6794 /* TranslationPresenter.swift */; };
+		160BB3C22C00EDCB00CD6794 /* TranslationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160BB3C12C00EDCB00CD6794 /* TranslationViewModel.swift */; };
+		160BB3C52C0113E800CD6794 /* LanguagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160BB3C42C0113E800CD6794 /* LanguagePicker.swift */; };
+		160BB3C72C01166A00CD6794 /* TranslationScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160BB3C62C01166A00CD6794 /* TranslationScreen.swift */; };
+		160BB3C92C01279900CD6794 /* AddButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160BB3C82C01279900CD6794 /* AddButton.swift */; };
 		16810E832BFB5DF30082F746 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16810E822BFB5DF30082F746 /* Language.swift */; };
 		16810E852BFB61070082F746 /* LanguageRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16810E842BFB61070082F746 /* LanguageRequests.swift */; };
 		16810E872BFB61530082F746 /* LanguageRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16810E862BFB61530082F746 /* LanguageRepositoryProtocol.swift */; };
@@ -138,6 +145,13 @@
 		160BB3AF2C0099F600CD6794 /* BookViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookViewModel.swift; sourceTree = "<group>"; };
 		160BB3B12C009A8100CD6794 /* BookDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailPresenter.swift; sourceTree = "<group>"; };
 		160BB3B32C009B8B00CD6794 /* BookDetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailScreen.swift; sourceTree = "<group>"; };
+		160BB3BB2C00EA3F00CD6794 /* Translation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Translation.swift; sourceTree = "<group>"; };
+		160BB3BD2C00EB1B00CD6794 /* TranslationLanguageQueries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationLanguageQueries.swift; sourceTree = "<group>"; };
+		160BB3BF2C00EDAE00CD6794 /* TranslationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationPresenter.swift; sourceTree = "<group>"; };
+		160BB3C12C00EDCB00CD6794 /* TranslationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationViewModel.swift; sourceTree = "<group>"; };
+		160BB3C42C0113E800CD6794 /* LanguagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguagePicker.swift; sourceTree = "<group>"; };
+		160BB3C62C01166A00CD6794 /* TranslationScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationScreen.swift; sourceTree = "<group>"; };
+		160BB3C82C01279900CD6794 /* AddButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddButton.swift; sourceTree = "<group>"; };
 		16810E822BFB5DF30082F746 /* Language.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
 		16810E842BFB61070082F746 /* LanguageRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageRequests.swift; sourceTree = "<group>"; };
 		16810E862BFB61530082F746 /* LanguageRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageRepositoryProtocol.swift; sourceTree = "<group>"; };
@@ -270,10 +284,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		160BB3C32C0113DE00CD6794 /* Translation */ = {
+			isa = PBXGroup;
+			children = (
+				160BB3C42C0113E800CD6794 /* LanguagePicker.swift */,
+				160BB3C62C01166A00CD6794 /* TranslationScreen.swift */,
+			);
+			path = Translation;
+			sourceTree = "<group>";
+		};
 		16889D992BDD1E0000E09A9C /* Components */ = {
 			isa = PBXGroup;
 			children = (
 				16F31DEE2BD5BEE200BCC67B /* ListView.swift */,
+				160BB3C82C01279900CD6794 /* AddButton.swift */,
 				16889D9A2BDD1E0A00E09A9C /* FormLabelledField.swift */,
 				16810EA42BFBAE790082F746 /* StackPushModifiers.swift */,
 				16889DC12BDD509900E09A9C /* DefaultRouterModifier.swift */,
@@ -314,6 +338,7 @@
 		16889DA22BDD201200E09A9C /* Flashcards */ = {
 			isa = PBXGroup;
 			children = (
+				160BB3C32C0113DE00CD6794 /* Translation */,
 				16E89E422BDD725200BFC761 /* CardList.swift */,
 				16810E9C2BFB7D2C0082F746 /* PracticeScreen.swift */,
 				16810E942BFB721F0082F746 /* FlashCardDetailScreen.swift */,
@@ -442,6 +467,7 @@
 				168D57212BD3D0E40034AEA2 /* FlashCardPractice.swift */,
 				168D57152BD3CF1D0034AEA2 /* Book.swift */,
 				16889D8B2BDD0D1600E09A9C /* User.swift */,
+				160BB3BB2C00EA3F00CD6794 /* Translation.swift */,
 				16810E822BFB5DF30082F746 /* Language.swift */,
 				168D57132BD3CEC00034AEA2 /* Deck.swift */,
 				16E89E4F2BE7AD8500BFC761 /* PaginatedList.swift */,
@@ -530,6 +556,7 @@
 			isa = PBXGroup;
 			children = (
 				168D57522BD3E04B0034AEA2 /* LoginResponseDTO.swift */,
+				160BB3BD2C00EB1B00CD6794 /* TranslationLanguageQueries.swift */,
 				1601D0442BF8BB6E00DAE123 /* ErrorDTO.swift */,
 				16A5772F2BECFCD300C410FD /* CreatedDTO.swift */,
 				16A577312BECFE4E00C410FD /* VerifyDTO.swift */,
@@ -642,6 +669,7 @@
 			children = (
 				16E89E402BDD713800BFC761 /* FlashCardListPresenter.swift */,
 				16810E9E2BFB7E770082F746 /* FlashCardPracticePresenter.swift */,
+				160BB3BF2C00EDAE00CD6794 /* TranslationPresenter.swift */,
 				16810E962BFB72490082F746 /* FlashCardDetailPresenter.swift */,
 			);
 			path = FlashCards;
@@ -652,6 +680,7 @@
 			children = (
 				16889DA62BDD206900E09A9C /* Auth */,
 				16F31DF02BD5C4D400BCC67B /* ListViewModel.swift */,
+				160BB3C12C00EDCB00CD6794 /* TranslationViewModel.swift */,
 				16810E9A2BFB7B0A0082F746 /* ListViewModel+Flashcard.swift */,
 				16810EA02BFB7F700082F746 /* PracticeListViewModel.swift */,
 				16889DC32BDD52FB00E09A9C /* BaseViewModel.swift */,
@@ -828,6 +857,7 @@
 				168D57222BD3D0E40034AEA2 /* FlashCardPractice.swift in Sources */,
 				16889DB22BDD2C5F00E09A9C /* DeckDetailPresenter.swift in Sources */,
 				16A577342BECFE6800C410FD /* RefreshDTO.swift in Sources */,
+				160BB3C02C00EDAE00CD6794 /* TranslationPresenter.swift in Sources */,
 				16E89E452BDD73A800BFC761 /* FlashCardGridCell.swift in Sources */,
 				16889D802BDCFDFD00E09A9C /* GenericBasicServiceProtocol.swift in Sources */,
 				16E89E3C2BDD6B2700BFC761 /* FlashCardPracticeDTO.swift in Sources */,
@@ -862,8 +892,11 @@
 				168D576A2BD3EBB50034AEA2 /* BookListScreen.swift in Sources */,
 				168D572A2BD3D1D00034AEA2 /* DeckService.swift in Sources */,
 				16810EA52BFBAE790082F746 /* StackPushModifiers.swift in Sources */,
+				160BB3BE2C00EB1B00CD6794 /* TranslationLanguageQueries.swift in Sources */,
+				160BB3C22C00EDCB00CD6794 /* TranslationViewModel.swift in Sources */,
 				168D572C2BD3D1D70034AEA2 /* BookService.swift in Sources */,
 				168D56E42BD3CDFE0034AEA2 /* BetterFlashcardsApp.swift in Sources */,
+				160BB3C92C01279900CD6794 /* AddButton.swift in Sources */,
 				16889D822BDCFEB600E09A9C /* UserDTO.swift in Sources */,
 				168D57462BD3DB5C0034AEA2 /* DeckNetworkRepository.swift in Sources */,
 				168D571E2BD3CFB90034AEA2 /* BookRepositoryProtocol.swift in Sources */,
@@ -885,7 +918,9 @@
 				16810E892BFB61750082F746 /* LanguageNetworkRespository.swift in Sources */,
 				16810E8B2BFB61FE0082F746 /* LanguageServiceProtocol.swift in Sources */,
 				168D574E2BD3DFC90034AEA2 /* AuthProvider.swift in Sources */,
+				160BB3BC2C00EA3F00CD6794 /* Translation.swift in Sources */,
 				16810E952BFB721F0082F746 /* FlashCardDetailScreen.swift in Sources */,
+				160BB3C72C01166A00CD6794 /* TranslationScreen.swift in Sources */,
 				16F31DE72BD5AD5700BCC67B /* DeckListPresenter.swift in Sources */,
 				168D57712BD3EFD90034AEA2 /* MockFlashCardService.swift in Sources */,
 				168D57282BD3D1C50034AEA2 /* AuthProtocols.swift in Sources */,
@@ -899,6 +934,7 @@
 				160BB3B02C0099F600CD6794 /* BookViewModel.swift in Sources */,
 				168D57482BD3DD1F0034AEA2 /* BaseNetworking.swift in Sources */,
 				168D574A2BD3DD400034AEA2 /* BookNetworkRepository.swift in Sources */,
+				160BB3C52C0113E800CD6794 /* LanguagePicker.swift in Sources */,
 				16889DB02BDD2C1100E09A9C /* DeckViewModel.swift in Sources */,
 				16889DC22BDD509A00E09A9C /* DefaultRouterModifier.swift in Sources */,
 			);

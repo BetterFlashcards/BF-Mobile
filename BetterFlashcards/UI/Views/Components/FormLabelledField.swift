@@ -14,6 +14,7 @@ struct FormLabelledField<Field: View>: View {
     var body: some View {
         HStack {
             Text(label)
+            Spacer()
             fieldBuilder()
                 .multilineTextAlignment(.trailing)
         }

@@ -10,7 +10,6 @@ import Foundation
 struct Language {
     let id: Int
     let name: String
-    let nameLocal: String
     let isocode: String
     let sorting: Int
 }
