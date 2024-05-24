@@ -10,6 +10,7 @@ import Foundation
 struct Translation {
     let word: String
     let translation: String
+    let id = UUID()
 }
 
-extension Translation: Codable { }
+extension Translation: Codable, Identifiable { }
