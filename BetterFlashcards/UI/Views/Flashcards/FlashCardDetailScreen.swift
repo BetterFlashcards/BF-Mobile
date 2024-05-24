@@ -57,6 +57,13 @@ struct FlashCardDetailScreen: View {
                     FormLabelledField(label: "Back") {
                         TextField("Back", text: $viewModel.backText)
                     }
+                    
+                    if !viewModel.frontText.isEmpty {
+                        NavigationLink(to: .translation(viewModel.frontText, onSelect: { presenter.accept(translation: $0)})) {
+                            Text("Translate")
+                                .foregroundColor(.blue)
+                        }
+                    }
                 }
 
                 Button("Save") { presenter.save(isDraft: false) }

@@ -13,6 +13,38 @@ enum NavigationDestination: Hashable {
     case deckList
     case deckDetails(Deck)
     case cardDetails(FlashCard)
+    case languagePicker(onSelect: (Language) -> Void, id: UUID = UUID())
+    case translation(String, onSelect: (Translation) -> Void)
+}
+
+extension NavigationDestination: Identifiable {
+    var id: String {
+        switch self {
+        case .bookList:
+            return "BookList"
+        case .bookDetails(let book):
+            return "BookDetails-\(book.id)"
+        case .deckList:
+            return "DeckList"
+        case .deckDetails(let deck):
+            return "DeckDetails-\(deck.id)"
+        case .cardDetails(let card):
+            return "CardDetails-\(card.id)"
+        case .languagePicker(_, let id):
+            return "LanguagePicker-\(id)"
+        case .translation(let word, _):
+            return "Translation-\(word)"
+        }
+    }
+    
+    static func == (lhs: NavigationDestination, rhs: NavigationDestination) -> Bool {
+        lhs.id == rhs.id
+    }
+    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
+    }
+    
 }
 
 enum SheetDestination: Hashable, Identifiable {
@@ -46,6 +78,10 @@ private struct DefaultRouterModifier<V: BaseViewModel>: ViewModifier {
                     DeckDetailScreen(deck: deck)
                 case .cardDetails(let card):
                     FlashCardDetailScreen(card: card)
+                case .languagePicker(let selectLanguage, _):
+                    LanguagePicker(onSelect: selectLanguage)
+                case .translation(let word, let selectTranslation):
+                    TranslationScreen(word: word, onSelect: selectTranslation)
                 }
             }
             .sheet(item: $viewModel.sheet, content: view(for:))
@@ -62,7 +98,9 @@ private struct DefaultRouterModifier<V: BaseViewModel>: ViewModifier {
         case .deckCreation:
             DeckDetailScreen()
         case .cardCreation(let deckID):
-            FlashCardDetailScreen(in: deckID)
+            NavigationStack {
+                FlashCardDetailScreen(in: deckID)
+            }
         case .cardList(let deckID):
             CardList(for: deckID)
                 .presentationDetents([.medium, .large])
