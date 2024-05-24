@@ -13,6 +13,7 @@ class BookViewModel: BaseViewModel {
     @Published var author: String
     
     @Published var fileURL: URL?
+    @Published var openingURL: URL?
     @Published var isImporting = false
     
     @Published var isLoading = false

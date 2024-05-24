@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import QuickLook
 import GRDBQuery
 
 struct BookDetailScreen: View {
@@ -63,7 +64,7 @@ struct BookDetailScreen: View {
                 isPresented: $viewModel.isImporting,
                 allowedContentTypes: [.pdf],
                 onCompletion: { presenter.handleImport(result: $0) }
-            )
+            ).quickLookPreview($viewModel.openingURL)
             .withDefaultRouter(viewModel: presenter.viewModel)
             .buttonStyle(.borderedProminent)
         }

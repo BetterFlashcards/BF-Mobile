@@ -108,7 +108,7 @@ class BookDetailPresenter: ObservableObject {
     }
     
     func read(url: URL) {
-        print("Reading url: \(url)")
+        viewModel.openingURL = url
     }
     
     func handle(_ event: BookServiceEvent) {
