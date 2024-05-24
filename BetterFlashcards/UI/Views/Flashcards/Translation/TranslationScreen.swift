@@ -61,11 +61,13 @@ struct TranslationScreen: View {
                     }
                     
                     if let translations = viewModel.translations {
-                        ForEach(translations) { translation in
-                            Text(translation.translation)
-                                .onTapGesture {
-                                    presenter.select(translation: translation)
-                                }
+                        Section(header: Text("Translations")) {
+                            ForEach(translations) { translation in
+                                Text(translation.translation)
+                                    .onTapGesture {
+                                        presenter.select(translation: translation)
+                                    }
+                            }
                         }
                     } else if viewModel.isLoading {
                         ProgressView()
@@ -77,7 +79,7 @@ struct TranslationScreen: View {
                     Button("Translate") { presenter.translate() }
                         .buttonStyle(.borderedProminent)
                 }
-            }
+            }.navigationBarTitle("Translate")
             .withDefaultRouter(viewModel: presenter.viewModel)
         }
     }
