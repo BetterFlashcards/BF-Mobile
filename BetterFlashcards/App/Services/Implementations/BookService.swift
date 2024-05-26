@@ -64,7 +64,10 @@ class BookService: BookServiceProtocol {
     
     func importFile(at url: URL, for book: Book) throws -> URL {
         let destinationURL = try expectedURL(for: book)
-        try fileManager.copyItem(at: url, to: destinationURL)
+        if url.startAccessingSecurityScopedResource() {
+            defer { url.stopAccessingSecurityScopedResource() }
+            try fileManager.copyItem(at: url, to: destinationURL)
+        }
         return destinationURL
     }
 }
